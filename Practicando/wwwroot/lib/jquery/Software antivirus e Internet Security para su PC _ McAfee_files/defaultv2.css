@@ -1,0 +1,1156 @@
+﻿/* OpenSans Fonts */
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url('/UIDesign/fonts/OpenSans-Regular.ttf') format("truetype"), url('/UIDesign/fonts/OpenSans-Regular.woff') format("woff"), url('/UIDesign/fonts/OpenSans-Regular.eot?#iefix"') format("eot");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans-Bold";
+    src: url('/UIDesign/fonts/OpenSans-Bold.ttf') format("truetype"), url('/UIDesign/fonts/OpenSans-Bold.woff') format("woff"), url('/UIDesign/fonts/OpenSans-Bold.eot?#iefix"') format("eot");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans-Light";
+    src: url('/UIDesign/fonts/openSans-Light.ttf') format("truetype"), url('/UIDesign/fonts/openSans-Light.woff') format("woff"), url('/UIDesign/fonts/openSans-Light.eot?#iefix"') format("eot");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans-SemiBold";
+    src: url('/UIDesign/fonts/OpenSans-Semibold.ttf') format("truetype"), url('/UIDesign/fonts/OpenSans-Semibold.woff') format("woff"), url('/UIDesign/fonts/OpenSans_Semibold.eot?#iefix"') format("eot");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url('/UIDesign/fonts/Poppins-Regular.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url('/UIDesign/fonts/Poppins-Bold.ttf') format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url('/UIDesign/fonts/Poppins-SemiBold.ttf') format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+body#m_Rootv2 #bdy {
+    width: 60%;
+    margin: 6% 0% 2% 20%;
+    font-family: OpenSans-Regular;
+    min-height: 71.7vh;
+}
+body#m_Rootv2 {
+    background: #F5F6FA;
+    min-width: 765px;
+    width: auto;
+}
+body#m_Rootv2 #footer {
+    float: right;
+    width: -webkit-fill-available;
+}
+#m_Rootv2 .navCountryLogo {
+    margin-top: -3px;
+}
+#m_Rootv2 #headerContainer .header {
+    padding: 0;
+}
+#m_Rootv2 #headerContainer .dropbtn {
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'OpenSans-Regular';
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    #m_Rootv2 .box.dashboard {
+        min-width: 649px;
+        width: auto;
+    }
+}
+#m_Rootv2 #dashBoard .slideNotification {
+    margin-left: 70px;
+}
+#m_Rootv2 .box #prev, #m_Rootv2 .box #next {
+    top: 38px;
+}
+#m_Rootv2 .box #prev {
+    left: -3px;
+}
+#m_Rootv2 #dashBoard .appContainer h3, #m_Rootv2 h1.dashB, #m_Rootv2 .dBdCntr .dBdsHd, #m_Rootv2 h1 {
+    font-family: Poppins-Bold !important;
+    color: #000;
+}
+#m_Rootv2 #dashBoard #SelSubAppsDetails .btnUi, #m_Rootv2 .btnMfeBlue input {
+    border-radius: 24px;
+}
+ #m_Rootv2 .appDashboard .deviceDesc .btnWrapper a {
+    width: -webkit-fill-available !important;
+}
+#m_Rootv2 a.btnSecondary, input.btnSecondary, #dashMpop.appMpop .btnSecondary.popCancel {
+    background-color: #ffffff;
+    color: #4A4F5D;
+    border: 1px solid #4A4F5D;
+}
+#m_Rootv2 a.btnUi.btnSecondary {
+    margin-right: 20px !important;
+}
+#m_Rootv2 .appDashboard .btnWrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+#m_Rootv2 .appDashboard .deviceDesc .btnWrapper a {
+    //width: auto !important;
+    white-space: nowrap;
+}
+#m_Rootv2 .appDashboard .deviceDesc .btnWrapper a#A1 {
+    width: auto !important;
+}
+#m_Rootv2 #bdy .subNavWelcome {
+    font-size: 16px;
+    color: #000000;
+}
+#m_Rootv2 .ajxLodImg {
+    left: 45%;
+}
+#m_Rootv2 #processingDiv {
+    left: 250px;
+}
+#m_Rootv2 h1.dashB {
+    font-size: 32px;
+}
+#m_Rootv2 #dashBoard .dropdown {
+    border: 1px solid #848FAA;
+    border-radius: 12px;
+    padding: 0px 10px;
+}
+
+#m_Rootv2 .currentdevice {
+    position: relative;
+    top: 6px;
+    margin-right: 5px;
+}
+
+#m_Rootv2 .labelcss {
+    width: 50%;
+    font-size: 14px;
+    line-height: 2px;
+    position: relative;
+    bottom: 15px
+}
+
+#m_Rootv2 .leftlabel {
+    margin-left: 1%
+}
+
+#m_Rootv2 .rightlabel {
+    margin-left: 2%
+}
+
+#m_Rootv2 .divlabel {
+    display: flex
+}
+
+#m_Rootv2 .dropdowndevice {
+    position: relative;
+    top: 6.5px;
+}
+
+
+    #m_Rootv2 #dashBoard .dropdown:hover {
+        border: 1px solid #4258FF;
+    }
+#m_Rootv2 #ddlSubscriptions dd ul li:hover {
+    background-color: #4258FF;
+    color: #212934;
+}
+#m_Rootv2 #ddlSubscriptions.open dt a, #m_Rootv2 #ddlSubscriptions dd li.active a {
+    color: #212934
+}
+#m_Rootv2 #bdy {
+    background-color: #F5F6FA;
+}
+#m_Rootv2 .box, .box.mfp {
+    background-color: #ffffff;
+    border-radius: 0px 12px 12px 12px;
+}
+#m_Rootv2 #dashBoard .appContainer {
+    background-color: #ffffff;
+}
+#m_Rootv2 .deviceWrap .addDevice, #m_Rootv2 .deviceWrap .dashboardIcn {
+    background: none;
+}
+#m_Rootv2 .deviceWrap li {
+    background: #DEDBDB;
+    border-radius: 12px 12px 0px 0px;
+    padding: 0px 4px;
+}
+#m_Rootv2 .appDashboard .dashboardIcn div {
+    margin-bottom: 0px;
+}
+#m_Rootv2 .appDashboard .dashboardIcn.on div, #m_Rootv2 .appDashboard .dashboardIcn div {
+    background-image: url(https://secureimages.mcafee.com/myAccount/reskin/carouselIcon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+}
+#m_Rootv2 .deviceWrap .addDevice.on, #m_Rootv2 .deviceWrap li.on {
+/*    border-top: 5px solid #4258FF;*/
+    background-color: #ffffff;
+}
+#m_Rootv2 .deviceWrap .addDevice.on span, #m_Rootv2 .deviceWrap li.on span{
+    color: #4258FF;
+}
+#m_Rootv2 #flexBoxWrap.themeWarning .box, #m_Rootv2 #flexBoxWrap.themeError .box {
+    background-color: #ffffff !important;
+}
+#m_Rootv2 .deviceWrap span {
+    background: none;
+    margin-top: 0;
+}
+#m_Rootv2 .PhoneActive span {
+    background: url(https://secureimages.mcafee.com/myAccount/download/Phone.svg) no-repeat center;
+}
+#m_Rootv2 .PhoneWarning span {
+    background: url(https://secureimages.mcafee.com/myAccount/download/PhoneWarning.svg) no-repeat center;
+}
+#m_Rootv2 .PhoneError span {
+    background: url(https://secureimages.mcafee.com/myAccount/download/PhoneError.svg) no-repeat center;
+}
+#m_Rootv2 .PCActiveWin10 span, #m_Rootv2 .LinuxActive span, #m_Rootv2 .PCActiveWin8 span, #m_Rootv2 .PCActive span {
+    background: url(https://secureimages.mcafee.com/myAccount/download/PC.svg) no-repeat center;
+}
+#m_Rootv2 .PCWarning span, #m_Rootv2 .LinuxWarning span, #m_Rootv2 .PCWarningWin8 span, #m_Rootv2 .PCWarningWin10 span {
+    background: url(https://secureimages.mcafee.com/myAccount/download/PCWarning.svg) no-repeat center;
+}
+#m_Rootv2 .PCError span, #m_Rootv2 .LinuxError span, #m_Rootv2 .PCErrorWin8 span, #m_Rootv2 .PCErrorWin10 span {
+    background: url(https://secureimages.mcafee.com/myAccount/download/PCError.svg) no-repeat center;
+}
+#m_Rootv2 .MacActive span {
+    background: url(https://secureimages.mcafee.com/myAccount/download/Mac.svg) no-repeat center;
+}
+#m_Rootv2 .MacWarning span {
+    background: url(https://secureimages.mcafee.com/myAccount/download/MacWarning.svg) no-repeat center;
+}
+#m_Rootv2 .MacError span {
+    background: url(https://secureimages.mcafee.com/myAccount/download/MacError.svg) no-repeat center;
+}
+#m_Rootv2 .TabletActive span {
+    background: url(https://secureimages.mcafee.com/myAccount/download/Tablet.svg) no-repeat center;
+}
+#m_Rootv2 .TabletWarning span {
+    background: url(https://secureimages.mcafee.com/myAccount/download/TabletWarning.svg) no-repeat center;
+}
+#m_Rootv2 .TabletError span {
+    background: url(https://secureimages.mcafee.com/myAccount/download/TabletError.svg) no-repeat center;
+}
+#m_Rootv2 .dropdown dd ul {
+    border-top: 1px solid #b1babf;
+    width: 105%;
+    right: -5px;
+    left: -9px;
+}
+#m_Rootv2 .deviceWrap .dashboardIcn span, #m_Rootv2 .deviceWrap span {
+    color: #000000;
+}
+#m_Rootv2 #flexBoxWrap .box .bx-window {
+    border-left: 5px solid #4258FF;
+}
+#m_Rootv2 a.btnPrimary, #m_Rootv2 input.btnPrimary, #m_Rootv2 #dashMpop.appMpop .btnPrimary.popCancel,
+#m_Rootv2 #dashMpop.appMpop .css3.popCancel, #m_Rootv2 .mpop .popCancel, #m_Rootv2 .mpop .popRefresh,
+#m_Rootv2 .mpop.maapop .addDevice .mpopContent .btn, #m_Rootv2 .mpop .css3.action,
+#m_Rootv2 .btnMfeBlue input#ctl00_MainContent_ucUpdateProfileForm_m_SaveButton, #m_Rootv2 .btnMfeBlue input#ctl00_MainContent_m_BackButton,
+#m_Rootv2 .adFooter #btnDownload, #m_Rootv2 .adFooter2 #btnDownload {
+    background-color: #4258FF;
+    border-radius: 24px;
+    border: none;
+    color: #fff;
+}
+
+#m_Rootv2 .appDashboard .messageLinks a, #m_Rootv2 .appDashboard .widgetStatus a, #m_Rootv2 .appDashboard p.blockwrap a {
+    color: #4258FF;
+}
+#m_Rootv2 #ddlSubscriptions dd ul {
+    border: 1px solid #ABB2C3;
+}
+#m_Rootv2 .dropdown dd ul {
+    border-radius: 8px;
+    top: 4px;
+    padding-bottom: 0px;
+}
+#m_Rootv2 .dropdown dd ul li a:hover, #m_Rootv2 .dropdown dd ul li a:focus {
+    color: #212934;
+    background-color: #CCEFFC;
+}
+#m_Rootv2 .appDashboard .deviceDesc, #m_Rootv2 #SelSubAppsDetails .deviceSub.wide .deviceDesc {
+    width: 60%;
+    padding: 0 5% 0 5%;
+}
+#m_Rootv2 .appDashboard .subContainer > div, #m_Rootv2 #SelSubAppsDetails .deviceSub,
+#m_Rootv2 #SelSubAppsDetails .deviceSub.wide, #m_Rootv2 #SelSubAppsDetails .subContainer > div + #prodVrs.wide {
+    width: 120%;
+}
+#m_Rootv2 #dashMpop.appMpop, #m_Rootv2 #eCardEula.appMpop .mpop, #m_Rootv2 #dashMpop {
+    border-radius: 24px;
+    background: #fff;
+}
+#m_Rootv2 #eCardEula.appMpop .mpop .mpopHead, #m_Rootv2 .mpopContent {
+    background-color: #fff;
+}
+#m_Rootv2 #btnManageDevices {
+    width: -webkit-fill-available !important;
+}
+#m_Rootv2 .widgetOptionBtns li input {
+    background: #4258FF;
+    border-radius: 24px;
+}
+#m_Rootv2 #bdy .subNavWelcome strong {
+    color: #4258FF;
+}
+#m_Rootv2 .deviceWrap .jcarousel-clip-horizontal {
+    width: 615px;
+}
+#m_Rootv2 #adminDashboardLinker {
+    margin: 0 100px;
+    background: #F5F6FA;
+    border: none;
+}
+#m_Rootv2 #dashBoard #SelSubAppsDetails .btnUi {
+    margin: 16px 0 6px;
+}
+#m_Rootv2 .btnWrapper #btnidps {
+    background: url(https://secureimages.mcafee.com/legacy/dashboardv2/Vector.svg) no-repeat;
+    background-color: #4258FF;
+    background-position-x: 85%;
+    background-position-y: 45%;
+    padding: 10px 55px 12px 40px;
+    min-width: 50%;
+}
+#m_Rootv2 .btnWrapper #btnAntiTracker {
+    background-color: #4258FF;
+    min-width: initial;
+    padding: 12px 0px;
+}
+#m_Rootv2 .btnWrapper #btnAntiTracker .popup_icon {
+    background: url(https://secureimages.mcafee.com/legacy/dashboardv2/Vector.svg) no-repeat;
+    background-position: center;
+    padding-left: 30px;
+}
+
+#m_Rootv2 .btn.disabled, #m_Rootv2 .btn[disabled], #m_Rootv2 fieldset[disabled] .btn, #m_Rootv2 .noOsSuppported .btnMain, 
+#m_Rootv2 .noOsSuppported .btnMain:hover, #m_Rootv2 .noOsSuppported .btnMain:focus,
+#m_Rootv2 .noOsSuppported .btnMainSmall, #m_Rootv2 .noOsSuppported .btnMainSmall:hover, #m_Rootv2.noOsSuppported .btnMainSmall:focus {
+    background: #ffffff !important;
+    border: 1px solid #C1C7D2;
+    border-radius: 24px;
+    color: #ABB2C3 !important;
+}
+#m_Rootv2 #dashMpop.appMpop #magic-line {
+    background: #4258FF;
+}
+#m_Rootv2 #btnpersonaldatacleanup {
+    background: url(https://secureimages.mcafee.com/legacy/dashboardv2/Vector.svg) no-repeat;
+    background-color: #4258FF;
+    background-position-x: 92%;
+    background-position-y: 45%;
+    padding: 10px 55px 12px 40px;
+    min-width: 90%;
+}
+/*#m_Rootv2 #btncreditmonitoring {
+    background: url(https://secureimages.mcafee.com/legacy/dashboardv2/Vector.svg) no-repeat;
+    background-color: #4258FF;
+    background-position-x: 92%;
+    background-position-y: 45%;
+    padding: 10px 55px 12px 40px;
+    min-width: 90%;
+}*/
+#m_Rootv2 #btnonlineaccountcleanup {
+    background: url(https://secureimages.mcafee.com/legacy/dashboardv2/Vector.svg) no-repeat;
+    background-color: #4258FF;
+    background-position-x: 92%;
+    background-position-y: 45%;
+    padding: 10px 55px 12px 40px;
+    min-width: 90%;
+}
+
+#m_Rootv2 .btnWrapper #btnidentityrestoration {
+    background: url(https://secureimages.mcafee.com/legacy/dashboardv2/Vector.svg) no-repeat;
+    background-color: #4258FF;
+    background-position-x: 90%;
+    background-position-y: 45%;
+    padding: 10px 55px 12px 40px;
+    min-width: 56%;
+}
+
+#m_Rootv2 .dropdown dt a span {
+    padding: 0px;
+}
+
+
+/*#m_Rootv2 .deviceWrap .dashboardIcn div {
+    background-image: url(https://secureimages.mcafee.com/myAccount/reskin/carouselIcon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}*/
+/*Start popup*/
+#m_Rootv2 #dashMpop.appMpop .tabContent input[type=text], #m_Rootv2 #dashMpop.appMpop .tabContent .ui-autocomplete-input, #m_Rootv2 #dashMpop.appMpop .inputStyle, #m_Rootv2 #dashMpop.appMpop select#ddlCountries {
+    border-radius: 12px;
+}
+#m_Rootv2 #dashMpop.appMpop .tabContent .ui-autocomplete-input, #m_Rootv2 #dashMpop.appMpop .inputStyle {
+    min-width: 255px;
+}
+#m_Rootv2 #dashMpop.appMpop .sendLinkTabs li.active, #m_Rootv2 #dashMpop.appMpop #magic-line {
+    color: #4258FF;
+}
+#m_Rootv2 #dashMpop.appMpop, #eCardEula.appMpop .mpop {
+    background: #ffffff;
+    border-radius: 24px;
+}
+#m_Rootv2 #dashMpop .mpopHead {
+    background: none;
+    box-shadow: none;
+}
+#m_Rootv2 #dashMpop.appMpop .mpopHead {
+    padding: 24px 24px 8px;
+    margin-left: 16px;
+}
+#m_Rootv2 #dashMpop .mpopHead h3 {
+    color: #212934;
+    font-family: Poppins-Bold;
+}
+#m_Rootv2 #dashMpop.appMpop .tabContent input.btnUi {
+    border-radius: 24px;
+}
+#m_Rootv2 .btnDisabled:focus ~ .msgDisabled, #m_Rootv2 .inputStyle:focus a.btnBlank,
+#m_Rootv2 input.btnBlank, #m_Rootv2 #dashMpop.appMpop .btnBlank.popCancel,
+#m_Rootv2 .mpop.maapop .addDevice .btn.btn3.cdBtn, #m_Rootv2 .adFooter #btnBack, #m_Rootv2 .adFooter2 #btnBack {
+    color: #4A4F5D;
+    border: 1px solid #6D7895;
+    background-color: #ffffff;
+    border-radius: 24px;
+}
+#m_Rootv2 .mpop.maapop .addDevice .btn.btn3.cdBtn {
+    background: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#fff))
+}
+#m_Rootv2 .mpop .mpopBody {
+    background: #fff;
+    border-radius: 24px;
+}
+#m_Rootv2 .addDevice #btnCancel {
+    border-radius: 24px;
+}
+#m_Rootv2 .mpop.maapop .mpopBody.addDevice {
+    padding: 20px 30px 25px;
+}
+    #m_Rootv2 .mpop.maapop .mpopBody.addDevice a.close {
+        top: 10px;
+        right: 20px;
+    }
+/*End popup*/
+/*Start Subscription Page*/
+#m_Rootv2 .css3.buy {
+    border-radius: 100px;
+    background-color: #4258FF;
+}
+#m_Rootv2 .outrWrap {
+    margin-top: 20px;
+}
+#m_Rootv2 .mcAccordion.psTabContent .outrWrap {
+    margin-top: -16px;
+}
+#m_Rootv2 li h2 {
+    float: none;
+}
+#m_Rootv2 .dbGrid, #m_Rootv2 li h2 {
+    width: 880px;
+}
+#m_Rootv2 #breadcrum {
+    background: #F5F6FA;
+    margin: 3em 0 0 25px;
+}
+#breadcrum a:link, #breadcrum a:visited, #breadcrum a:active, .breadcrum a:link, .breadcrum a:visited, .breadcrum a:active {
+    color: #4258FF;
+}
+#m_Rootv2 .dbGrid td a {
+    color: #4258FF;
+}
+
+/*End Subscription Page*/
+/*Start Profile Page*/
+#m_Rootv2 .viewProInfo, #m_Rootv2 .viewBillInfo {
+    width: 100%;
+    background-color: #ffffff;
+}
+#m_Rootv2 .viewAccClmOne h4, #m_Rootv2 .viewAccClmTwo h4, #m_Rootv2 .viewAccRow, #m_Rootv2 .viewAccClm, #m_Rootv2 .viewAccClmOne, #m_Rootv2 .viewAccClmTwo {
+    width: 100%;
+}
+#m_Rootv2 #viewAccContainer .lblAccIp, #m_Rootv2 #viewAccContainer .lblAccOp {
+    width: 48%;
+}
+#m_Rootv2 .upProBodyInput {
+    border-radius: 12px;
+}
+#m_Rootv2 #ctl00_MainContent_ucUpdateProfileForm_m_CancelButton {
+    border-radius: 24px;
+    border: 1px solid #6D7895;
+    color: #4A4F5D;
+    background-color: #fff;
+}
+#m_Rootv2 #upProBody fieldset {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 12px;
+    width: 100%;
+}
+#m_Rootv2 .viewAccClmOne h4, .viewAccClmTwo h4 {
+    background-color: #E6E9F0;
+    color: #000000;
+    font-family: 'Poppins-SemiBold';
+}
+#m_Rootv2 .editLnk a:link, #m_Rootv2 .editLnk a:visited, #m_Rootv2 .editLnk a:active {
+    color: #4258FF;
+}
+#m_Rootv2 .editLnk a:hover {
+    color: #4258FF;
+    background: url('https://secureimages.mcafee.com/common/media/images/style/arrow-small-blue-right.gif') no-repeat right center;
+}
+#m_Rootv2 select:focus, #m_Rootv2 input:focus {
+    border: 1px solid #4258FF;
+    outline: none;
+}
+#m_Rootv2 #MyPersonalDataReport:hover {
+    color: #4258FF;
+    text-decoration: underline;
+}
+#m_Rootv2 #MyPersonalDataReport {
+    color: #4258FF;
+}
+/*End Profile Page*/
+/*Start Keycard Page*/
+#m_Rootv2 .keycardContent .btnMain, #m_Rootv2 .keycardContent .btnMainSmall, #m_Rootv2 #eCardEula .mpop .btnRight button {
+    border-radius: 24px;
+    background-color: #4258FF;
+    color: #ffffff;
+}
+#m_Rootv2 #eCardEula .mpop .btnRight a {
+    border-radius: 24px;
+    border: 1px solid #6D7895;
+    color: #4A4F5D;
+    padding: 10px 32px;
+}
+#m_Rootv2 .keycardVisual, #m_Rootv2 .keycardContent {
+    background: none;
+}
+#m_Rootv2 .tabContent, #m_Rootv2 .tabsContainer {
+    background-color: #ffffff;
+    border-radius: 0 24px 24px 24px;
+}
+#m_Rootv2 ul.keycardTabs li.active {
+    background-color: #fff;
+    border-radius: 12px 12px 0px 0px;
+}
+#m_Rootv2 ul.keycardTabs li.active a {
+    color: #4258FF;
+}
+#m_Rootv2 #magic-line {
+    background: #4258FF;
+}
+#m_Rootv2 .keycardContent h2 {
+    font-family: Poppins-Bold;
+}
+#m_Rootv2 .keycardProdSub h2 {
+    font-family: Poppins-SemiBold !important;
+}
+#m_Rootv2 #eCardEula .mpop .mpopHead h3 {
+    color: #000;
+    font-family: 'Poppins-Bold' !important;
+}
+#m_Rootv2 #eCardEula .mpop {
+    left: 26%;
+    border-radius: 24px;
+}
+#m_Rootv2 .activationCode, #m_Rootv2 .activationCodeDesc {
+    color: #101419 !important;
+}
+#m_Rootv2 ul.keycardTabs {
+    border-bottom: none;
+}
+#m_Rootv2 #eCardEula {
+    border-radius: 24px;
+}
+#m_Rootv2 #eCardEula .mpop .btnRight button {
+    border: none;
+    border-bottom: none;
+    padding: 10px 32px;
+}
+#m_Rootv2 #eCardEula .mpop .mpopHead {
+    background: none;
+}
+#m_Rootv2 .instSteps .stepConnect {
+    width: 400px;
+}
+#m_Rootv2 .footerLogo {
+    display: block;
+}
+
+/*End Keycard Page*/
+/*Start Autodownload Page*/
+#m_Rootv2 .oneClickSuccess {
+    padding: 20px 20px 20px 50px;
+    background-color: #fff;
+    margin: 20px 20px 20px 50px;
+    min-height: 535px;
+    border-radius: 24px;
+}
+#m_Rootv2 .oneClickSuccess * {
+    color: #000000;
+}
+#m_Rootv2 .oneClickSuccess .mgrT2 {
+    font-family: 'Poppins-SemiBold';
+}
+#m_Rootv2 .serialKey span {
+    font-size: 16px;
+}
+#m_Rootv2 .oneClickSuccess h2, #m_Rootv2 .serialKey span {
+    font-family: 'Poppins-Bold';
+}
+/*End Autodownload Page*/
+/*start popup*/
+#m_Rootv2 .lsPop .css3.lsaction, .lsPop .css3.lscancel {
+    padding: 0 20px;
+    border-radius: 24px;
+}
+#m_Rootv2 .lsPop .css3.lscancel {
+    border-radius: 24px;
+}
+#m_Rootv2 .lsPop {
+    border-radius: 24px;
+}
+/*end popup*/
+/*start smart download */
+#m_Rootv2 .smartDownload h2 {
+    font-family: 'Poppins-Bold';
+}
+#m_Rootv2 .smartDownloadBox {
+    border: none;
+    background: #fff;
+}
+#m_Rootv2 .smartLicense input {
+    top: -0.3em;
+}
+/*end smart download*/
+
+#m_Rootv2 .cmp-partnerlogo__separator {
+    margin-top: -23px;
+    height: 2.8125rem;
+}
+
+/*Error Page*/
+#m_Rootv2 #keycardError {
+    border-top: none;
+}
+
+
+/*Monitoring Admin Console*/
+
+#m_Rootv2 .db-widget .button a {
+    color: #fff;
+}
+#m_Rootv2 .db-widget .button {
+    border: 2px solid #4258FF;
+    background-color: #4258FF;
+}
+@media only screen and (max-width: 768px) {
+    body#m_Rootv2 #bdy {
+        width: 100%;
+        margin: 10% 0% 2% 0%;
+        font-family: OpenSans-Regular;
+        min-height: 94.7vh;
+    }
+    #m_Rootv2 .appDashboard .deviceDesc, #m_Rootv2 #SelSubAppsDetails .deviceSub.wide .deviceDesc {
+        width: auto;
+    }
+    #m_Rootv2 #dashBoard .slideNotification{
+        margin-left: 0;
+    }
+    #m_Rootv2 .dbGrid, #m_Rootv2 li h2 {
+        width: 710px;
+    }
+    #m_Rootv2 #processingDiv {
+        left: 10px;
+    }
+}
+@media only screen and (max-device-width: 765px) and (orientation: portrait){
+    #m_Rootv2 #SelSubAppsDetails .btnUi {
+        font-size: larger;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1366px) {
+    body#m_Rootv2 #bdy {
+        width: 70%;
+        margin: 8% 0 2% 15%;
+        font-family: OpenSans-Regular;
+        min-height: 80.7vh;
+    }
+    #m_Rootv2 #dashBoard .slideNotification {
+        margin-left: 0;
+    }
+    #m_Rootv2 .dbGrid, #m_Rootv2 li h2 {
+        width: 760px;
+    }
+    #m_Rootv2 #processingDiv {
+        left: 150px;
+    }
+    #m_Rootv2 #btnpersonaldatacleanup {
+        background-position-x: 92%;
+        min-width: 92%;
+    }
+    #m_Rootv2 #btncreditmonitoring {
+        background-position-x: 92%;
+        min-width: 92%;
+    }
+    #m_Rootv2 #btnonlineaccountcleanup {
+        background-position-x: 92%;
+        min-width: 92%;
+    }
+}
+@media only screen and (min-width: 1366px) {
+    body#m_Rootv2 #bdy {
+        width: 60%;
+        margin: 6% 0% 2% 20%;
+        font-family: OpenSans-Regular;
+        min-height: 71.7vh;
+    }
+    #m_Rootv2 #processingDiv {
+        left: 300px;
+    }
+    #m_Rootv2 #btnpersonaldatacleanup {
+        background-position-x: 92%;
+        min-width: 90%;
+    }
+    #m_Rootv2 #btncreditmonitoring {
+        background-position-x: 92%;
+        min-width: 90%;
+    }
+    #m_Rootv2 #btnonlineaccountcleanup {
+        background-position-x: 92%;
+        min-width: 90%;
+    }
+}
+
+@media only screen and (min-width: 2048px) {
+    #m_Rootv2 .appDashboard .deviceDesc, #m_Rootv2 #SelSubAppsDetails .deviceSub.wide .deviceDesc {
+        width: 50%;
+        padding: 0 5% 0 5%;
+    }
+}
+
+.dbSubNav {
+    margin: 42px 0px 9px -175px;
+}
+
+/* Two Factor Authentication Styles Start */
+
+#m_Rootv2 .txtcls {
+    color: #777;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 0 12px 15px;
+}
+
+#m_Rootv2 .btnLeft {
+    text-align: right;
+}
+
+#m_Rootv2 .btnDisable {
+    border: 2px solid #f44336;
+    border-radius: 100px;
+    color: #f44336;
+    cursor: pointer;
+}
+
+#m_Rootv2 #dimMask {
+    background-color: #000000;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99999999 !important;
+    opacity: .5;
+    height: 100% !important;
+    -webkit-transition: 250ms opacity;
+    background: -webkit-radial-gradient(rgba(127, 127, 127, 0.5), rgba(127, 127, 127, 0.5) 35%, rgba(0, 0, 0, 0.7));
+    background: -moz-radial-gradient(rgba(127, 127, 127, 0.5), rgba(127, 127, 127, 0.5) 35%, rgba(0, 0, 0, 0.7));
+}
+
+#m_Rootv2 #dimMask {
+    background: -moz-radial-gradient(rgba(127, 127, 127, 0.5), rgba(127, 127, 127, 0.5) 35%, rgba(0, 0, 0, 0.7)) repeat scroll 0 0 transparent;
+    display: none;
+    left: 0;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    z-index: 99999999 !important;
+}
+
+#m_Rootv2 .mpop .css3.lsaction, .mpop .css3.lscancel {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 14px;
+    height: 30px;
+    padding: 0 20px 3px;
+    padding-top: 4px\9;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2px;
+    *width: auto;
+    *overflow: visible;
+    border-radius: 2px;
+}
+
+#m_Rootv2 .mpop .css3.lsaction {
+    background: #4258FF;
+    border-radius: 2px;
+    color: #fff;
+    border: none;
+}
+
+#m_Rootv2 .mpop .css3.lscancel {
+    background: none;
+    border: 1px solid #939598;
+    color: #939598;
+}
+
+/*Popup & Tooltip*/
+#m_Rootv2 .mpop {
+    display: none;
+    position: absolute;
+    z-index: 999999999999 !important;
+    -moz-box-shadow: 0px 5px 25px #333;
+    box-shadow: 0px 5px 25px #333;
+    -webkit-box-shadow: 0px 5px 25px #333;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f2f2f2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff, #f2f2f2); /* Chrome10+,Safari5.1+ */
+    background: -ms-linear-gradient(top, #ffffff, #f2f2f2); /* IE10+ */
+    background: linear-gradient(top, #ffffff, #f2f2f2); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=0 ); /*IE6-9*/
+}
+
+#m_Rootv2 .mpop a.close {
+    background: url(https://secureimages.mcafee.com/flexdashboard/icons.png) no-repeat -44px 0;
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    height: 22px;
+    width: 22px;
+    text-indent: 99999px
+}
+
+#m_Rootv2 .mpop {
+    background: #ececec url(https://secureimages.mcafee.com/legacy/common/curves_bg/bggraygrdt300.gif) repeat-x 0 -20px;
+    border: 1px solid #c4c4c4;
+    margin: -3px 0 0 -75px;
+    font-size: 12px;
+    padding: 0;
+    position: fixed;
+    text-align: left;
+    z-index: 999999999999 !important;
+    min-width: 450px;
+    -moz-box-shadow: 0px 5px 80px #505050;
+    box-shadow: 0px 5px 80px #505050;
+    -webkit-box-shadow: 0px 5px 80px #505050;
+}
+
+#m_Rootv2 .mpop .button1 {
+ background-color: #FF3838 !important; /* Red */
+ border-radius: 24px;
+ margin: 0px 20px;
+ cursor: pointer;
+}
+
+#m_Rootv2 .mpop .button3 {
+    background-color: #ffffff !important;
+    border-radius: 24px;
+    color: #A19C9C !important;
+    padding: 9px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px -5px 15px;
+    cursor: pointer;
+    font-family: Open Sans !important;
+}
+
+#m_Rootv2 .mpop .buttonText {
+    color: white !important;
+    padding: 8px 39px 7px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Open Sans !important;
+}
+
+#m_Rootv2 .mpop .buttonContinue {
+    background-color: #4258FF !important; /* Red */
+    border-radius: 24px;
+    margin: 0px 20px;
+    cursor: pointer;
+}
+
+#m_Rootv2 .mpop .buttonPh {
+    color: white !important;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Open Sans' !important;
+}
+
+#m_Rootv2 .mpopContentPh {
+    position: static;
+    width: 388px;
+    min-height: 50px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-size: 14px;
+    color: #5A6175;
+    margin: 10px 20px;
+    padding: 0px 20px !important;
+    line-height: 18px;
+}
+
+#m_Rootv2 .mpopHeadPh {
+    position: static;
+    width: 416px;
+    min-height: 38px;
+    left: 0px;
+    top: 0px;
+    padding: 1px 19px 0px !important;
+    font-family: Open Sans !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+    font-size: 24px !important;
+    line-height: 24px;
+    color: #212934;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 16px 0px 0px 0px;
+    border-bottom: none !important;
+}
+
+#m_Rootv2 .mpopHeadTO {
+    width: 389px;
+    height: 64px;
+    padding: 5px 14px 15px !important;
+    font-family: Open Sans !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+    font-size: 24px !important;
+    line-height: 24px;
+    color: #212934;
+}
+
+#m_Rootv2 .mpopContentTO {
+    position: static;
+    width: 396px;
+    height: 75px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    color: #5A6175;
+    margin: 24px 0px;
+    padding: 28px 30px 15px !important;
+}
+
+#m_Rootv2 .turnOffImage {
+    background: url('https://secureimages.mcafee.com/legacy/common/subtract.svg') no-repeat right center;
+    background-position-x: 87%;
+}
+
+#m_Rootv2 .turnOffImageRedBG {
+    background: url(https://secureimages.mcafee.com/legacy/common/subtract-redbg.svg) no-repeat right center;
+    background-position-x: 96%;
+}
+
+#m_Rootv2 .TFAbuttonText {
+    padding: 4px 35px 4px 10px;
+    text-align: -webkit-left;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    margin: 7px 16px -2px;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+#m_Rootv2 .phnEdit {
+    padding: 2px 147px !important;
+    color: #4258FF !important;
+    background: url(https://secureimages.mcafee.com/legacy/common/pencil.svg) no-repeat;
+    background-position-x: 123px;
+    font-size: 16px;
+    display: flex;
+    margin: 0px 0px 0px 3px;
+}
+
+#m_Rootv2 .phNumber {
+    padding: 23px 0px 0px 180px !important;
+    margin: -18px -180px 10px !important;
+}
+
+#m_Rootv2 .phNumberTitle {
+    padding: 0px 0px !important;
+    margin: 4px 18px 0px !important;
+}
+
+#m_Rootv2 .phText {
+    padding: 16px;
+    font-weight: normal !important;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    display: block;
+    margin: -8px 2px;
+}
+
+
+#m_Rootv2 .btnEnableText {
+    display: block;
+    width: fit-content;
+    margin: 16px 17px -5px;
+    line-height: 22px;
+    background: url(https://secureimages.mcafee.com/legacy/common/mobile-icon.svg) no-repeat right center;
+    background-position-x: 96%;
+}
+
+#m_Rootv2 .btnEnable {
+    color: #4258FF !important;
+    padding: 6px 35px 6px 10px;
+    text-align: center;
+    font-size: 16px;
+    border: 2px solid #4258FF;
+    border-radius: 100px;
+}
+
+#m_Rootv2 .btnDisable:hover {
+    color: none !important;
+}
+
+#m_Rootv2 .indicator {
+    background: #fff url(https://secureimages.mcafee.com/legacy/common/ajax-indicator.gif) no-repeat center 35%;
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .60;
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.60;
+    display: none;
+    z-index: 120000
+}
+
+#m_Rootv2 .indicator img {
+    display: none;
+}
+
+#m_Rootv2 .TFAText {
+    padding: 16px;
+    font-weight: normal !important;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    display: block;
+    margin: -20px 1px;
+    font-family: OpenSans-Regular !important;
+}
+#m_Rootv2 .tfaPop {
+    min-width: 0px !important;
+}
+
+#m_Rootv2 .dashboardloader {
+    position: fixed;
+    top: 45%;
+    left: 48%;
+    z-index: 9999;
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #3498db;
+    width: 80px;
+    height: 80px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#m_Rootv2 #dashboardMask {
+    background-color: rgba(127, 127, 127, 0.5) !important;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9000;
+    opacity: 1.0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    -webkit-transition: 250ms opacity;
+    /*background: -webkit-radial-gradient(rgba(127, 127, 127, 0.5), rgba(127, 127, 127, 0.5) 35%, rgba(0, 0, 0, 0.7));		
+    background: -moz-radial-gradient(rgba(127, 127, 127, 0.5), rgba(127, 127, 127, 0.5) 35%, rgba(0, 0, 0, 0.7));*/
+}
+
+#m_Rootv2 .ie7 #dashboardMask,
+#m_Rootv2 .ie8 #dashboardMask {
+    filter: alpha(opacity=50);
+}
+
+#m_Rootv2 .update2fabutton {
+    display: none;
+}
+
+/* Two Factor Authentication Styles End*/

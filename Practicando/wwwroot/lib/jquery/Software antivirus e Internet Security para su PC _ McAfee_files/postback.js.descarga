@@ -1,0 +1,132 @@
+﻿function DoPostBack(formname, eventfieldname)
+{
+    //Set the Page Segment to be active after postback
+    var elemEventtTriggerField = document.getElementById('evtTrigger');
+    var theForm = document.forms[formname];
+    if (theForm != null)
+    {
+       if (elemEventtTriggerField != null)
+        {
+            elemEventtTriggerField.value = eventfieldname;
+        }
+    }
+}
+
+
+function DoFormSubmit(formname, eventfieldname)
+{
+    window.onbeforeunload = function () { };
+    //Set the Page Segment to be active after postback
+    var elemEventtTriggerField = document.getElementById('evtTrigger');
+    var theForm = document.forms[formname];
+    if (theForm != null)
+    {
+       if (elemEventtTriggerField != null)
+        {
+            elemEventtTriggerField.value = eventfieldname;
+        }
+    }
+    theForm.submit();
+}
+
+function ClicklessSubmit(event, form, submitElem)
+{
+    var l_event = event || window.event;
+
+    if (l_event.keyCode == 13)
+    {
+        if (g_CurrentlyDisplayedWindow == null) {
+
+            var passwordEncPropControl = document.getElementById("pep");
+            if (passwordEncPropControl != 'undefined' && passwordEncPropControl != null) {
+                if (typeof encryptPasswordValue === 'function') {
+                    encryptPasswordValue();
+                }
+            }
+             DoFormSubmit(form, submitElem);
+        }
+        else
+        {
+            if (g_CurrentlyDisplayedWindow == "forgotpassword")
+                RetrievePassword();
+            else if (g_CurrentlyDisplayedWindow == "acctLocked")
+                RetrieveLockedAccountPassword();
+                
+            if(l_event.stopPropagation)
+                l_event.stopPropagation();
+            else if(l_event.cancelBubble)
+                l_event.cancelBubble = true;
+
+            if(l_event.preventDefault)
+                l_event.preventDefault();
+            else if(l_event.returnValue)
+                l_event.returnValue = false;
+            else
+            {
+                l_event.cancel = true;
+			    l_event.returnValue = false;
+			    l_event.keyCode = null;
+                return false;
+            }
+        }
+    }
+}
+
+function DoPostBackWithActiveSegment(formname, eventfieldname,activePageSegment)
+{
+    //Set the Page Segment to be active after postback
+    
+    var elemEventtTriggerField = document.getElementById('evtTrigger');
+    var elemActivePageSegment = document.getElementById('activesegment');
+    var theForm = document.forms[formname];
+    
+    if (theForm != null)
+    {
+       if (elemEventtTriggerField != null)
+        {
+            elemEventtTriggerField.value = eventfieldname;
+        }
+    
+        if (elemActivePageSegment != null)
+        {
+            elemActivePageSegment.value = activePageSegment;
+        }
+        theForm.submit();
+    }
+}
+
+function RedirectUser(location)
+{
+    window.location.href = location;
+    return false;
+} 
+
+function DisplayPasswordHint(show)
+{
+    try
+    {
+        var it = document.getElementById("passwordHint");
+        
+        if (show == 'true')
+        {
+            var parent = document.getElementById("txtPassword");
+            it.style.display = 'block';
+        }
+        else
+            it.style.display = 'none';
+    }
+    catch(e){}
+}
+
+//Fuction for AccountUnlock page
+function ClicklessSubmitForAccountUnlock(event)
+ {
+ var l_event = event || window.event;
+
+ if (l_event.keyCode == 13)
+  {
+      RetrieveLockedAccountPasswordPopup();
+      return false;
+  }
+  
+ }

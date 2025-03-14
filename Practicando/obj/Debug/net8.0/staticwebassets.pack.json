@@ -1,0 +1,409 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Practicando.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Practicando.xctn8nhrpj.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee.html",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee.html"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\AutoDownloadV3.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\AutoDownloadV3.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\CommonV3.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\CommonV3.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\McAfeeLogo.svg",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\McAfeeLogo.svg"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\NavHeaderFooter.css",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\NavHeaderFooter.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\Print.css",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\Print.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\ScriptResource(1).axd",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\ScriptResource(1).axd"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\ScriptResource(2).axd",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\ScriptResource(2).axd"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\ScriptResource(3).axd",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\ScriptResource(3).axd"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\ScriptResource(4).axd",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\ScriptResource(4).axd"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\ScriptResource(5).axd",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\ScriptResource(5).axd"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\ScriptResource(6).axd",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\ScriptResource(6).axd"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\ScriptResource.axd",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\ScriptResource.axd"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\UZ2YJ-H23CK-CSD9R-EXHE4-BZTKF",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\WebDownloadV3.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\WebDownloadV3.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\WebResource.axd",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\WebResource.axd"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\affiliates.css",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\affiliates.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\ajaxLoader.gif",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\ajaxLoader.gif"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\culture.css",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\culture.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\default.css",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\default.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\defaultv2.css",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\defaultv2.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\genericV3.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\genericV3.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\jquery-3.4.1.min.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\jquery-3.4.1.min.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\logo.png",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\oneClickTrial.css",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\oneClickTrial.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\pluginsV3.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\pluginsV3.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\postback.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\postback.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\rum.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\rum.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\saved_resource(1).html",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\saved_resource(1).html"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\saved_resource.html",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\saved_resource.html"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\spacer.gif",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\spacer.gif"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\trb29LOis",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\utag.331.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\utag.331.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\utag.356.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\utag.356.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\utag.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\utag.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\webdownload.css",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\webdownload.css"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\webdownload.html",
+      "PackagePath": "staticwebassets\\lib\\jquery\\Software antivirus e Internet Security para su PC _ McAfee_files\\webdownload.html"
+    },
+    {
+      "Id": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\lib\\jquery\\jquery-3.7.1.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery-3.7.1.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Practicando.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Practicando.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Practicando.props",
+      "PackagePath": "build\\Practicando.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Practicando.props",
+      "PackagePath": "buildMultiTargeting\\Practicando.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Practicando.props",
+      "PackagePath": "buildTransitive\\Practicando.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

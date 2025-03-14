@@ -1,0 +1,85 @@
+﻿$(document).ready(function () {
+    var $frmDownload = $('#frmDownload');
+    if ($frmDownload.length) {
+        var iframeSrc = $frmDownload.attr('src');
+        if (iframeSrc.toLowerCase().indexOf('webdownload.aspx') == -1)
+            triggerAutoDownload();
+    }
+    coachMark();
+});
+
+function triggerAutoDownload() {
+    document.domain = "mcafee.com";
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.indexOf('trident') != -1 || ua.indexOf('msie') != -1 || (ua.indexOf('safari') != -1 && ua.indexOf('chrome') == -1)) {
+        $('#frmDownload').on("load", function () {
+            $('#frmDownload').contents().find('#btnDownload').trigger('click');
+        });
+    }
+    else {
+        function downloadEXE() {
+            var mainFrame = document.getElementById('frmDownload');
+            if (mainFrame && mainFrame.contentWindow) {
+                var childOneFrame = mainFrame.contentWindow.document.getElementById('idDwnlButtonFrame');
+                if (childOneFrame && childOneFrame.contentWindow) {
+                    childOneFrame.contentWindow.document.domain = "mcafee.com";
+                    var linkDownload = childOneFrame.contentWindow.document.getElementById('idLnkPlaceholder');
+                    if (linkDownload && linkDownload.download) {
+                        linkDownload.click();
+                        clearInterval(nonIE);
+                    }
+                }
+                else {
+                    $('#frmDownload').on("load",function () {
+                        $('#frmDownload').contents().find('#btnDownload').trigger('click');
+                    });
+                }
+            }
+        }
+        var nonIE = setInterval(function () { downloadEXE(); }, 1000);
+    }
+};
+
+function coachMark() {
+    var ua = navigator.userAgent.toLowerCase();
+
+    const POSITION = { TOP_RIGHT: "TOP_RIGHT", BOTTOM_LEFT: "BOTTOM_LEFT", OTHER: "OTHER" };
+    const browser = (function (ua) {
+        const arr = new Array(
+            ["EDGE", /edg/i, POSITION.TOP_RIGHT],
+            ["FIREFOX", /firefox/i, POSITION.TOP_RIGHT],
+            ["OPERA", /opr/i, POSITION.TOP_RIGHT],
+            ["INTERNET_EXPLORER", /trident/i, POSITION.BOTTOM_LEFT],
+            ["CHROME", /chrome/i, POSITION.TOP_RIGHT],
+            ["SAFARI", /safari/i, POSITION.OTHER]
+        );
+        const result = arr.reduce(function (prev, curr) { return Object.assign(prev, { [curr[0]]: curr[1].test(ua) }); }, {});
+        const pos = arr.find(function (curr) { return curr[1].test(ua); })[2];
+
+        return Object.assign(result, { downloadIconPosition: pos });
+    })(ua);
+
+    if (browser.FIREFOX || browser.EDGE || browser.CHROME || browser.OPERA)  {
+        appendMark(browser.downloadIconPosition);
+    }
+
+    function appendMark(pos) {
+        const src = pos === POSITION.TOP_RIGHT ? m_CoachTR : (pos === POSITION.BOTTOM_LEFT ? m_CoachChrome : "");
+        const iState = { top: -438, bottom: -475 };
+        const styles = { position: 'fixed', "z-index": 10000, cursor: "pointer" };
+
+        if (typeof src == "string" && src != "") {
+            if (!$('.coach').length)
+                $('body').append("<div class='coach'> <img class='coachMarkImg' src='" + src + "' /> </div>");
+
+            if (pos === POSITION.TOP_RIGHT) {
+                Object.assign(styles, { top: iState.top, right: 0, opacity: 0 });
+                $(".coach").css(styles).delay(3000).animate({ top: 0, opacity: 1}, "slow").on('click', function () { $(this).animate({ top: iState.top }, "2000"); })
+
+            } else if (pos === POSITION.BOTTOM_LEFT) {
+                Object.assign(styles, { bottom: iState.bottom });
+                $(".coach").css(styles).delay(3000).animate({ bottom: 0 }, "slow").on('click', function () { $(this).animate({ bottom: iState.bottom, left: 0 }, "2000"); });
+            }
+        }
+    }
+};

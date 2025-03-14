@@ -1,0 +1,434 @@
+(function(a){a.fn.bgiframe=(mc_utils.browser.msie&&/msie 6\.0/i.test(navigator.userAgent)?function(d){d=a.extend({top:"auto",left:"auto",width:"auto",height:"auto",opacity:true,src:"javascript:false;"},d);var c='<iframe class="bgiframe"frameborder="0"tabindex="-1"src="'+d.src+'"style="display:block;position:absolute;z-index:-1;'+(d.opacity!==false?"filter:Alpha(Opacity='0');":"")+"top:"+(d.top=="auto"?"expression(((parseInt(this.parentNode.currentStyle.borderTopWidth)||0)*-1)+'px')":b(d.top))+";left:"+(d.left=="auto"?"expression(((parseInt(this.parentNode.currentStyle.borderLeftWidth)||0)*-1)+'px')":b(d.left))+";width:"+(d.width=="auto"?"expression(this.parentNode.offsetWidth+'px')":b(d.width))+";height:"+(d.height=="auto"?"expression(this.parentNode.offsetHeight+'px')":b(d.height))+';"/>';return this.each(function(){if(a(this).children("iframe.bgiframe").length===0){this.insertBefore(document.createElement(c),this.firstChild)}})}:function(){return this});a.fn.bgIframe=a.fn.bgiframe;function b(c){return c&&c.constructor===Number?c+"px":c}})(jQuery);
+//jQuery.noConflict();
+/* Copyright (c) 2010 Brandon Aaron (http://brandonaaron.net)* Licensed under the MIT License (LICENSE.txt).** Version 2.1.2*/
+
+(function($){
+var ie6 = mc_utils.browser.msie && (mc_utils.browser.version == "6.0");
+var isRtl = $("html").attr("dir");
+//Adding Browser as a class in HTML
+var userAgent = navigator.userAgent.toLowerCase();
+if (mc_utils.browser.safari) { $('html').addClass('safari'); }
+if (mc_utils.browser.chrome) { $('html').addClass('chrome'); }
+if (mc_utils.browser.firefox) { $('html').addClass('firefox'); }
+if(mc_utils.browser.msie){userAgent = mc_utils.browser.version;userAgent = userAgent.substring(0,userAgent.indexOf('.'));version = userAgent;$('html').addClass('ie'+userAgent);}
+
+/*
+userAgent.indexOf() = chrome || firefox || ie;
+html addclass = 
+if ( userAgent.indexOf("chrome") === -1 ) { $('html').addClass('safari');}else{$('html').addClass('chrome');}
+else if(userAgent.indexOf('firefox') != -1){$('html').addClass('firefox');}
+else if($.browser.msie){userAgent = $.browser.version;userAgent = userAgent.substring(0,userAgent.indexOf('.'));version = userAgent;$('html').addClass('ie'+userAgent);}
+*/
+
+     /*plugin name - mtooltip - Common Tooltip plugin
+	 HTML
+		<span class="mtt">Mouseover or onclick me to invoke tooltip
+			<span class="mtip">I am the tooltip</span>
+		</span>
+	Use the below code when you use common  container to load the content.
+		<{TAG} class="mtt" id="tooltipid"></{TAG}>
+		<{TAG} class="mtip" id="tooltippopid">Tooltip content</{TAG}>
+	Secnarios:
+	1. Simple tooltip with static content
+	2. Postback content with multiple tooltip elem
+	3. Postback content single tooltip elem
+	 */
+	 //The below FN is to fix the Dropshadow effect issue in IE
+    jQuery.fn.fadeIn = function(speed, callback) {
+        return this.animate({ opacity: 'show' }, speed, function() {
+            if (mc_utils.browser.msie)
+                this.style.removeAttribute('filter');
+            if (jQuery.isFunction(callback))
+                callback();
+        });
+    };
+    jQuery.fn.mposition = function(optin) {
+        var settings = {
+            // Basics			//Options
+            parnt: '',
+            chldObj: '',
+            offsetX: '',
+            offsetY: '',
+            pos: ''
+        };
+        var opt = jQuery.extend(settings, optin);
+        var pagLft, pagX, pgX, direc, pagY = opt.parnt.offset().top, ttip = $(this), ttX = opt.parnt.offset().left;
+        var parWidth = opt.parnt.outerWidth(), parHgt = opt.parnt.outerHeight();
+        var wWidth = $(window).width(), eWidth = $(this).outerWidth(), wHeight = $(window).height(), eHeight = $(this).outerHeight();
+        if (($('body').css('position') === "relative")) {
+            pgX = $('body').outerWidth();
+        } else {
+            if (mc_utils.browser.opera || (mc_utils.browser.safari && parseInt(mc_utils.browser.version, 10) > 520)) {
+                pagX = window.innerWidth - (($(document).width() > window.innerWidth) ? getScrollbarWidth() : 0);
+            } else if (mc_utils.browser.safari) {
+                pagX = window.innerWidth;}
+            else {
+                pagX = $.boxModel && document.documentElement.clientWidth || document.body.clientWidth;
+            }
+            pgX = ttX;
+        }
+        switch (opt.pos) {
+        default:
+            if (ie6) {
+                $(this).css({
+                        'left': (pgX / 2 - eWidth / 2) + opt.offsetX
+                    });
+            } else {
+                $(this).css({ 'top': (wHeight / 2 - eHeight / 2) + opt.offsetY });
+                if (isRtl == 'rtl') {
+                    $(this).css({ 'right': (wWidth / 2 - eWidth / 2) + opt.offsetX })
+                }
+                else {
+                    $(this).css({ 'left': (wWidth / 2 - eWidth / 2) + opt.offsetX })
+                }
+            }
+            break;
+        case "FixedTopPosition":
+            $(this).css({ 'top': '135px' });
+            if (isRtl == 'rtl') {
+                    $(this).css({ 'right': (wWidth / 2 - eWidth / 2) + opt.offsetX })
+                }
+            else {
+                    $(this).css({ 'left': (wWidth / 2 - eWidth / 2) + opt.offsetX })
+            }
+            break;
+        case "bottomrightRTL":
+            $(this).css({
+                    'top': (pagY + parHgt) + opt.offsetY,
+                    'left': (ttX - $(this).width()) + (parWidth)
+                });
+            break;
+        case "bottomleft":
+            $(this).css({
+                    'top': (pagY + parHgt) + opt.offsetY,
+                    'left': (pgX - $(this).outerWidth()) - (parWidth / 2 - opt.offsetX)
+                });
+            break;
+        case "bottomCenter":
+            $(this).css({
+                    'top': (pagY + parHgt) + opt.offsetY,
+                    'right': (pgX - $(this).width())
+                });
+            break;
+        }};
+    jQuery.fn.startsWith = function(str) {
+        return (this.indexOf(str) === 0);
+    };
+ /*
+ // Basics			//Options
+	cntr	: '.ttcntr',//Container
+	pc		: '.mtt',	//Parent elem class/id
+	tp		: '.mtip',	//Tooltip popup class
+	ac 		: 'hover', 	//hover/click
+	pos 	: 'bottomleft', 	//right, left, top, bottom
+	offstX	: 10,  //X Offset value
+	offstY	: 10  //Y Offset value
+  */
+    jQuery.fn.mtooltip = function(options) {
+        var defaults = {
+            tcntr: '.ttcntr',
+            tpc: '.mtt',
+            ttp: '.mtip',
+            tac: '',
+            tpos: 'bottomleft',
+            toffstX: 10,
+            toffstY: 10
+        };
+        var o = jQuery.extend(defaults, options);
+        var ttip = $(o.ttp), $this = $(this), offset, parCntr;
+        function parentContainer(par) {
+            parCntr = par;
+            if ((o.ttp.startsWith('.')) && (parCntr.closest(o.tcntr).length !== 0)) {
+                ttip = parCntr.closest(o.tcntr).find(o.ttp);
+            } else if ((o.ttp.startsWith('.')) && (parCntr.closest(o.tcntr).length === 0)) {
+                ttip = $this.find(o.ttp);
+            } else if (o.ttp.startsWith('#')) {
+                ttip = $(o.ttp);
+            }}
+        return this.each(function() {
+            switch (o.tac) {
+            case "click":
+                $('html').on('click.mtooltip', function() {
+                    $(o.ttp).css({ display: 'none' });
+                });
+                $this
+                    .on('click', function() {
+                        parentContainer($(this));
+                        ttip
+                            .fadeIn('fast')
+                            .mposition({ parnt: parCntr, chldObj: $(this), offsetX: o.toffstX, offsetY: o.toffstY, pos: o.tpos });
+                        return false;
+                    });
+                ttip.on('click', function(evt) {evt.stopPropagation();$(this).css({ display: 'block' });return false;});
+                break;
+            default:
+                $this.on('mouseenter', function(e) {
+                    parentContainer($(this));
+                    parCntr.parent().parent().bind('mouseleave.mtooltip', function() {
+                        $(o.ttp).css({ display: 'none' });
+                    });
+                    e.stopPropagation();
+                    ttip
+                        .stop(true, true)
+                        .fadeIn('slow')
+                        .mposition({ parnt: parCntr, chldObj: $(this), offsetX: o.toffstX, offsetY: o.toffstY, pos: o.tpos });
+                });
+            }
+        });
+    };
+    jQuery.fn.mcAccordion = function(confg) {
+        var o = $.extend({
+                accordion: false,
+                parentElem: 'li',
+                toggleHandler: 'h4',
+                toggleHandlerClass: 'accToggle',
+                toggleChild: 'accExpCol',
+                defaultOpen: true,//true(all open) / false (none open) / int (specific one open)
+                toggleIcon: true,//true(to add the expand image)/false(No expand image)
+                toggleIconDefaultClass: 'accPlus',
+                toggleIconClass: 'accMinus',
+                hideOtherElem: '.mpop'
+            }, confg);
+        return this.each(function() {
+            var obj = $(this);
+            var parHandler = $(obj).find(o.toggleHandler);
+            var childElem = $(obj).find('.' + o.toggleChild);
+            if (o.toggleIcon == true) {
+                if (!$(childElem).find('.' + o.toggleIconDefaultClass).length) {
+                    $(parHandler).prepend("<span class='" + o.toggleIconDefaultClass + "'></span>");
+                }
+            }
+            $(parHandler).on('click',function() {
+                var findPar = $(this).closest(o.parentElem);
+                if ((o.toggleIcon == true) && (o.accordion == true)) {
+                    var $visibleElem = $(obj).find('.' + o.toggleChild + ':visible');
+                    var $hidnElem = $(findPar).find('.' + o.toggleChild).not(':visible');
+                    $visibleElem.closest(o.parentElem).find('.' + o.toggleIconDefaultClass).removeClass(o.toggleIconClass);
+                    $visibleElem.slideUp('fast');
+                    $hidnElem.closest(o.parentElem).find('.' + o.toggleIconDefaultClass).addClass(o.toggleIconClass);
+                    $hidnElem.slideDown('fast');
+                } else if ((o.toggleIcon == true) && (o.accordion == false)) {
+
+                    $(this).find('.' + o.toggleIconDefaultClass).toggleClass(o.toggleIconClass);
+                    $(findPar).find('.' + o.toggleChild).slideToggle(100);
+
+                } else {
+                    $(findPar).find('.' + o.toggleChild).slideToggle(100);
+                }
+            });
+            if (o.defaultOpen) {
+                if (parseInt(o.defaultOpen, 10)) {
+                    $(this).find(o.parentElem).eq(o.defaultOpen - 1).find('.' + o.toggleChild).slideToggle(100);
+                    $(this).find(o.parentElem).eq(o.defaultOpen - 1).find('.' + o.toggleIconDefaultClass).toggleClass(o.toggleIconClass);
+                }
+            }
+        });
+    };
+
+    jQuery.fn.hasScrollBar = function() {
+        return ($('body').outerHeight() > $(window).height());
+    };
+
+    jQuery.fn.mpop = function(options) {
+        var $mcpop = $(this);
+        var seti = {
+            iwrap: 'body',
+            width: '',
+            dim: '',
+            dimmer: '.dimmed',
+            mpopshow: 'show',
+            offstX: 10,  //X Offset value
+            offstY: 5,  //Y Offset value
+            parent: this,
+            scrollelem: '.mpopCntr', //Add <div class="mpopCntr"> to add Scroll for the inner content
+            scrlHgtAdjust: 40,
+            position: 'absolute',
+            posi: 'bottomCenter'
+        };
+        var o = $.extend(seti, options);
+        var parCntr = o.parent;
+        var offset;
+        if (o.dimmer == '') {o.dimmer = '.dimmed';$(o.dimmer).css({ width: $(o.iwrap).width(), height: $(o.iwrap).height() });} else {$(o.dimmer).css({ 'width': '100%', 'height': $(window).height() });$('.dimmed').css('background-color', 'transparent');}
+        return this.each(function() {
+            switch (o.mpopshow) {
+            case "show":
+                if (!$($mcpop).find('.indicator').length) {$("<div class='indicator'><img src='https://secureimages.mcafee.com/legacy/common/ajax-indicator.gif' alt='' title='' /></div>").appendTo($mcpop);}
+                var mcpopIndx = $mcpop.css("z-index") + $mcpop.attr('class').length;
+                if (o.position == 'fixed') {
+                    var hasVerticalScrollbar = $('html').hasScrollBar(); //Used To Check scroll bar exists or not.                  
+                    if (hasVerticalScrollbar) {if (isRtl == 'rtl') {$('html').css('margin-left', '18px');} else {$('html').css('margin-right', '18px');}}
+
+                    if ($('html').hasClass('firefox')) {$("body").css("overflow", "hidden");} else {$("html,body").css("overflow", "hidden");} }
+                $mcpop
+                    .fadeIn(375)                    
+                    .css({ 'z-index': mcpopIndx });
+                if ($mcpop.height() > screen.height) {
+                    var etcHeight = ($mcpop.find('.mpopHead').outerHeight() + $mcpop.find('.mpopFoot').outerHeight()) + o.scrlHgtAdjust;
+                    $mcpop.css({ 'height': screen.height / 2 });
+                    $(o.scrollelem)
+                        .addClass('mpopScroll')
+                        .css({ 'height': $mcpop.height() - etcHeight });
+                }
+                $mcpop.mposition({ parnt: o.parent, chldObj: $(this), offsetX: o.offstX, offsetY: o.offstY, pos: o.posi });
+                $(window).bind('resize.mpop', function() {
+                    $mcpop.mposition({ parnt: o.parent, chldObj: $(this), offsetX: o.offstX, offsetY: o.offstY, pos: o.posi });
+                });
+                $mcpop.scrollTop(o.pageeY - 30);
+                if (o.dim == 'block') { $(o.dimmer).css({ 'opacity': '.50', 'filter': 'alpha(opacity=50)', 'display': 'block' }); }
+                break;
+            case "hide":
+                $mcpop
+                    .fadeOut();
+                $(window).unbind('resize.mpop');
+                if (o.dim == 'none') {$(o.dimmer).hide('slow');}
+                if (o.position == 'fixed') {$("html,body").css("overflow", "");$('html').css('margin', '0px');}
+					break;
+			case "lshide":
+				$mcpop
+					.fadeOut();
+				$(window).unbind('resize.mpop');
+				if (o.dim == 'none') { $(o.dimmer).hide(); }
+				if (o.position == 'fixed') { $("html,body").css("overflow", ""); $('html').css('margin', '0px'); }
+					break;
+            }
+        });
+    };
+    jQuery.fn.mTab = function(confg) {
+        var o = $.extend({
+                tabClass: '.mTabs',
+                tabItem: 'li',
+                tabItemLink: 'a',
+                activeClass: 'activeTab',
+                tabContentClass: '.mTabContent',
+                defaultOpen: 1
+
+            }, confg);
+        return this.each(function() {
+            var obj = $(this);
+            //Hide All tab Contanr Divs
+            $(obj).find(o.tabContentClass).hide();
+            var tabItems = $(obj).find(o.tabClass);
+			$(tabItems).find(o.tabItemLink).on('click',function(e) {
+                e.preventDefault();
+            });
+
+            $(tabItems).find(o.tabItem).on('click', function() {
+                if (!$(this).hasClass(o.activeClass)) {
+                    $(tabItems).find(o.tabItem).removeClass(o.activeClass);
+                    $(obj).find(o.tabContentClass).hide();
+                    $(this).addClass(o.activeClass);
+                    $(obj).find($(this).find(o.tabItemLink).attr('href')).show();
+                }
+            });
+            if (o.defaultOpen) {
+                if (parseInt(o.defaultOpen, 10)) {
+                    var tabItem = $(tabItems).find(o.tabItem).eq(o.defaultOpen - 1);
+                    /*$(tabItem).addClass(o.activeClass);
+							$(obj).find($(tabItem).find(o.tabItemLink).attr('href')).slideDown();*/
+                    $(tabItem).trigger('click');
+                }
+            }
+        });
+    };
+    jQuery.fn.getUrlVars = function() {
+        // Read a page's GET URL variables and return them as an associative array.        
+        var vars = [], hash;
+        var hashes = decodeURIComponent(window.location.href).slice(window.location.href.indexOf('?') + 1).split('&');
+        for (var i = 0; i < hashes.length; i++) {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+        }
+        return vars;
+    };
+    jQuery.fn.getUrlVar = function(name) {
+        return jQuery.fn.getUrlVars()[name];
+    };
+    
+    /* Get object of URL parameters
+        var allVars = $.getUrlVars();
+
+        Getting URL var by its nam
+        var byName = $.getUrlVar('name');*/
+
+		if(isRtl=='rtl'){
+			$('body').addClass('rtl');
+			$('.mtt').mtooltip({tpos:'bottomrightRTL'});
+		}
+		else{
+			$('body').addClass('ltr');
+			$('.mtt').mtooltip();
+		}
+	$('.accExpCol table').find('tr:first-child').addClass('flexTr');
+		$("[id*=_mlnk]").each(function(index){
+			var popId = $(this).attr('id');
+			$(this).attr('id',popId+index);
+		});
+		$("[id*=_mpop]").each(function(index1){
+			var popId1 = $(this).attr('id');
+			$(this).attr('id',popId1+index1);
+		});
+
+
+	$("body").on("click", "[id*=_mlnk]", function(){
+			$("[id*=_mpop], .ambHelpPopup").hide();
+			var popI = $(this).attr('id');
+			var popIndx = popI.split('_mlnk');
+			$("#"+popIndx[0]+"_mpop"+popIndx[1]).mpop({ mpopshow: 'show', dim: 'none', parent: $(this), offstX: 75, offstY: 0, posi: '' });
+		});
+
+	$("body").on("click", "[id *= _mpop] a.close, [id *= _mpop] .popCancel, [id *= Mpop] a.close, [id *= Mpop] .popCancel ", function(){
+			$(this).closest('.mpop').mpop({ mpopshow: 'hide'});
+			$('.dimmed,#dimMask').fadeOut();
+			$('.mpop:visible').find('.indicator').hide();
+		});
+		
+	$("body").on("click","[id*=_mpop] .iagree-ruapp-blue-btn", function(){
+			$(this)
+				.addClass('disabled-btn')
+				.removeClass('iagree-ruapp-blue-btn')
+				.attr('disabled','disabled');
+		});
+    // Registering Ajax Loader FNs
+	if (typeof (Sys) != 'undefined' && Sys != null) {
+    Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(ajaxLoadStart);
+    Sys.WebForms.PageRequestManager.getInstance().add_endRequest(ajaxLoadStop);
+	}
+
+	function ajaxLoadStart() {
+		$('.mpop:visible .indicator').show();
+		$('.mpop:visible .indicator').find('img').show();
+
+		var elementUpdateProgress = document.getElementById('ctl00_PopupController_UpdateProgress1');
+		if (typeof (elementUpdateProgress) != 'undefined' && elementUpdateProgress != null) {
+		    $('#ctl00_PopupController_UpdateProgress1').css({ 'display': 'none', 'border': '0', 'background-color': 'transparent' });
+		    $('#ctl00_PopupController_UpdateProgress1').find('img').attr({ 'src': 'https://secureimages.mcafee.com/brand/images/spacer.gif', 'alt': '' });		    
+		}
+		
+    }
+	function ajaxLoadStop() {
+		$('.mpop:visible').find('.indicator').hide();
+		$('.mpop:visible').find('.iagree-ruapp-blue-btn')
+			.removeClass('disabled-btn')
+			.addClass('iagree-ruapp-blue-btn')
+			.prop('disabled',false);
+		var elementUpdateProgress = document.getElementById('ctl00_PopupController_UpdateProgress1');
+		if (typeof (elementUpdateProgress) != 'undefined' && elementUpdateProgress != null) {
+		    $('#ctl00_PopupController_UpdateProgress1').css({ 'border': '2px solid #DADADA', 'background-color': '#fff' });
+		    $('#ctl00_PopupController_UpdateProgress1').find('img').attr({ 'src': 'https://secureimages.mcafee.com/legacy/common/ajaxLoader.gif', 'alt': 'Loading' });
+		}
+	}
+
+	window.setTimeout(function() {
+			$('.skype_pnh_container').html('');
+			$('.skype_pnh_print_container').removeClass('skype_pnh_print_container');
+	}, 800);
+})(jQuery);
+
+$(document).keyup(function(e) {
+if (e.keyCode == 27) {
+		if($('.childMpop').is(':visible')){
+			$('.childMpop').find('a.close').click();
+		}else{$('.mpop, #invoiceWindow').find('.popCancel').click();}
+  }
+});

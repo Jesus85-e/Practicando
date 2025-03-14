@@ -1,0 +1,183 @@
+/* Opinion Lab CSS Styles */
+@import url("/UIDesign/LegacySite/Styles/es-es/oo_style.css");
+
+/* Hiding Advice center navigation menu for temporary */
+
+/*#nav ul.main li a[title="Consejo de seguridad"] {display:none;}*/
+
+.prodDetails {padding: 5px 0 0 0; margin: 10px 10px 20px 0; *margin: 10px 10px 20px 0;}
+.prodDetailsWrap .included 
+{
+    width: 202px;
+	*width: 200px;
+}
+.prodDetails .btnGlossInput input{*width: 180px;}
+
+.mtp-barchart big{font-size:11px}
+
+/*Expire*/
+
+.expire-bg .Status{font-size:32px}
+.expire-bg .ExpiryMessage{font-size:16px}
+#page .btn-inline .price-sec b, .pp-btm-price b {font-size:18px;}
+#page.col2 button.btn-sml-buynow span, #page.col3 button.btn-sml-buynow span{padding:4px 10px 4px 16px;*padding: 4px 3px 4px 6px; font-size:11px;} 
+
+.singleProduct .prodInfo275, .singleProduct .prodInfo, .singleProduct .prodInfo273 {width:460px;}
+
+tfoot .btn-inline #PriceOptionsContainer span i{display:block; height:16px;}
+#page .btn-inline h3 {height:25px;}
+
+#mainPricingSec .pp-boxshot span.bv-splat {font-size:11px}
+#mainPricingSec .pp-boxshot span.bv-splat b {font-size:15px;}
+.expire-msg .Status{font-size:32px;}
+.expire-msg .ExpiryMessage{font-size:14px;}
+.Feol #PriceOptionsContainer I{font-size:11px;}
+.Feol #PriceOptionsContainer B{font-size:13px;font-weight:bold}
+ /*style for Digital Music Banner */
+#acpromoad_fis #ad_fis dt{
+	 font-size:15px;
+	 line-height:20px;}
+.mainpromo .promodiv a.promo-leanmore {
+	font-size:1.0em;
+	width:200px;}
+/*Mac GTM*/
+/*WebKit Engine Fix*/	
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	{
+	    button.btn-sml-buynow{margin-left:0}
+	    .prodOptions .price-sec button.btn-sml-buynow span{margin:-1px -1px 0 0;height:19px}
+	}
+/*added for full banner text - Safe Searching  */
+
+#acpromoad_sfs  #ad_sfs dt {
+	font-size: 20px;
+	line-height:20px;
+	color:#aa0828
+}
+#acpromoad_sfs #ad_sfs dd p {	
+	margin: 8px 0 10px 0;
+	color:#FFF;
+	font-size:17px;
+	line-height:20px;
+	width:390px;
+
+}
+#acpromoad_sfs #ad_sfs a.promo-leanmore {
+	color:#aa0828; float:right;
+}
+#acpromoad_sfs #ad_sfs {
+margin-left:5px;
+}
+div#footer{height:65px;}
+
+/* Product Compare */
+td #PriceOptionsContainer i {display:block;}
+.v2012 .PCTbl3Column tfoot td{*padding-bottom:25px;}
+
+/*arrow button fix for 1e7 */
+.mainpromo span.promo-leanmore-icon {*line-height:24px;}
+
+/* Emerald GTM */
+.v2012 .coreProdTab button.btn-sml-buynow span, .v2012 .coreProdTab button.buynow-btn span{padding:4px 7px 0 9px}
+.v2012 .fTrials .prodcntr button.btn-sml-trynow, .v2012 .prodcntr button.btn-sml-buynow, .v2012 .prodcntr button.buynow-btn{margin-right:2%}
+/*#nav ul.main a, ul.main li#currency {padding-left:7px;}*/
+.up .countrydiv .countrylabel{width:270px;}
+
+/*Account Extension*/
+.mpop .phoneInput{width:150px}
+/* IntelAT */
+.command h3, .securityDetails h3 {height:36px;}
+.command, .securityDetails {min-height: 131px !important;}
+
+
+/* BZ 798656 */
+.v2013 .cMed .wrap .price-sec span.priceDisplay b {font-size:18px;}
+
+/* GTM 2013 */
+.v2014 .homeBanner .boxshot span.splat {background-image:url("https://secureimages.mcafee.com/legacy/ProductDetail/es-mx/bs_splat_90x108.png")}
+
+/* BZ 806578 */
+.v2014 .cBig .wrap .prodcntr.p358 {background: transparent url("https://secureimages.mcafee.com/legacy/store/macLogo_grey.png") no-repeat right bottom;}
+.v2014 .cBig .wrap .prodcntr.p358 #PriceOptionsContainer .btnSet-2Column .price-sec .btn-sml-buynow {margin-bottom:50px;}
+
+/* BZ 812474 */
+.ie7 #bdy .v2013 .compare button {padding: 3px 3px 3px 0px;}
+.ie7 #bdy .v2013 .compare button span {font-size:12px;}
+
+/* BZ 812729 */
+.prodcntr.pmms .btnSet-2Column.price-sec .priceDisplay b, .prodcntr.p358 .btnSet-2Column .price-sec .priceDisplay b {font-size:18px;}
+
+/*ChooseProd Q Mark Wrap new Line Fix*/	
+.newLblWidthQMarkFix{width:90%!important;}
+
+/*Introduction Wizard*/
+.introScroll{height:485px}
+#introMpop .introMain{top:107px}
+
+/* NP 6672 MMS 3.1 Kindle Fire Support */
+.v2013.prodId379 .pp-btm-price .bwc-ctr, .v2013.prodId381 .pp-btm-price .bwc-ctr { height:140px !important; }
+.pp-top-promo.pp-379 .logodesc, .pp-top-promo.pp-381 .logodesc { bottom: -10px !important; }
+.v2013 .pp-top-promo.pp-379 .price-sec button, .v2013 .pp-top-promo.pp-381 .price-sec button {font-size:1em !important; padding:5px 10px !important;}
+
+/* NP 6817 */
+.v2014 .CP .wrap{background:transparent url('//secureimages.mcafee.com/legacy/store/store-cp-banner.png') no-repeat scroll 0 0;}
+
+/* GTM 2014 PDP */
+.v2014.v2 .pkg-sec .pkg-main .prod-pricing h1.sale-price{font-size:20px !important;} 
+
+/* 903145 */
+.ie7 .prodOptionsDetailsV2 button{min-width:170px;}
+
+/*Cross Device 2.8*/
+.widgetOptionBtns li input{padding:0 7px 3px}
+
+/*NP9231 */
+.v2014.prodId466 .logodesc{padding-top: 10px;}
+
+/*NP9231 */
+.v2014.prodId466 .bwc-ctr{min-height:136px;padding-bottom:3px;}
+
+/* NP 7020 */
+/* .v2014 #CP .cBig{background:transparent url('//secureimages.mcafee.com/legacy/store/store-cp-banner.png') no-repeat scroll 0 0;}*/
+
+/*BZ944885*/
+.v2014 .cSmall.PCSecurity .wrap.cBig .prodcntr,.v2014 .cMed.PCSecurity .wrap.cBig .prodcntr, .v2014 .cMed.PCSecurity .wrap.wrapFirst .prodcntr .price-sec{background:transparent url('//secureimages.mcafee.com/legacy/store/winLogo_grey.png') no-repeat right 100%;}
+
+/* BZ 970473 */
+.gNav .main li{border-width:0px 0px !important;}
+
+/*BZ1012917*/
+#ecardResp #redemption .prodKey-ImgDiv{left:-4.6em;*left:-2.6em;}
+
+/* OneClickTrial.aspx */
+.mainBuyNow{top: 151px;}
+.mainBuyNow .title {font-size: 3em;width: 6.4em;line-height: 1.1em;margin-bottom: 50px;}
+.mainBanner .subTitle{width: 14.3em;line-height: 1.2em;}
+.buyBtn {font-size: 1.5em;padding: 8px 5px;width: 14em;}
+.mainBanner input{width: 14em;font-size: 1.5em;}
+.emailForm .lblErr{margin: 22px 0px 5px;width:26em}
+.yourDigitalLife h3{font-size: 2.8em;}
+
+/*OM102 : Allpago Mexico*/
+.what .tt {background-color: #e7e7e7;}
+.ccImg118, .ccImg119, .ccImg120, .ccImg121, .ccImg122 {background: url(https://secureimages.mcafee.com/cart/ipt_cvv2_amex2.png) top left no-repeat;   margin-left: .4em; width: 155px;height: 202px;float: left;}
+.ES-MX-118, .ES-MX-119, .ES-MX-120, .ES-MX-121, .ES-MX-122 {float: left; margin-top: .3em;}
+.ES-MX-1 {float:left;clear:left; display:inline-block;  margin-top: .3em; }
+.ES-MX-2, .ES-MX-3 {float:left;  margin-top: .3em;}
+.ES-MX-101 { float:left;clear:left; display:inline-block;  margin-top: .3em;}
+.bankCardAcceptanceNote { margin: 5px 0; float: left;} 
+
+
+
+.vppOPC .vppCont{background: url(https://secureimages.mcafee.com/ecard/VPP/VPP_Logo_Large_es.png) no-repeat scroll left; padding: 25px 0 25px 140px;}
+.vppOPE .vppCont{background: url(https://secureimages.mcafee.com/ecard/VPP/VPP_Logo_Large_es.png) no-repeat scroll left; padding: 25px 0 25px 140px;}
+.vppOPF .vppCont{background: url(https://secureimages.mcafee.com/ecard/VPP/VPP_Logo_Large_es.png) no-repeat scroll left; padding: 25px 0 25px 140px;}
+.vppOPH .vppCont{background: url(https://secureimages.mcafee.com/ecard/VPP/VPP_Logo_Large_es.png) no-repeat scroll left; padding: 25px 0 25px 140px;}
+.vppOPDF .vppCont{background: url(https://secureimages.mcafee.com/ecard/VPP/VPP_Logo_Large_es.png) no-repeat scroll left; padding: 25px 0 25px 140px;}
+.vppOPD .vppCont{background: url(https://secureimages.mcafee.com/ecard/VPP/VPP_Logo_Large_es.png) no-repeat scroll left; padding: 25px 0 25px 130px;}
+.ebOPC .ebImg1 {background : url(https://secureimages.mcafee.com/ecard/VPP/VPP_Logo_Large_es.png) no-repeat scroll left; padding : 10px 0 0px 140px; display : inline-block}
+.ebOPD .ebOptDImg1 {background : url(https://secureimages.mcafee.com/ecard/VPP/VPP_Logo_Large_es.png) no-repeat scroll left; padding : 15px 0 20px 125px; display : inline-block}
+
+
+#receiptVPPIcn{background:url(https://secureimages.mcafee.com/legacy/arOptOutDefense/badge_71x71_es.png) no-repeat center;width:71px;height:71px;float:left;margin-bottom:15px;padding-top:3px;}
+#receiptARPopup.mpop .VPPIcn{background: url(https://secureimages.mcafee.com/legacy/arOptOutDefense/badge_71x71_es.png) no-repeat center;width:71px;float:left;margin-right:10px;height:90px;}

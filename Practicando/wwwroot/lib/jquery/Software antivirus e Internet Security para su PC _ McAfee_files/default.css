@@ -1,0 +1,1188 @@
+/*	Global Reset & Standards Eric Meyer's CSS Reset */	
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input {
+margin: 0;padding: 0;border: 0;font: inherit;vertical-align: baseline;font-family:Arial, Verdana, Helvetica, sans-serif;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block;}
+body {line-height: 1;background:#9B9B9B url(https://secureimages.mcafee.com/legacy/2013/common/layout/bg.png) left top repeat-x;
+font:normal 12px arial, helvetica, sans-serif;color: #555; position: relative; -webkit-font-smoothing: antialiased;
+margin:0 auto 0 auto;width: 765px;height:100%;
+-moz-box-shadow: 0 0 8px #999;-webkit-box-shadow:  0 0 15px 4px rgba(0, 0, 0, .2);box-shadow:  0 0 15px 4px rgba(0, 0, 0, .2);}
+
+/* LATIN fonts */
+/* INTEL CLEAR fonts*/
+@font-face {
+    font-family: "intel-clear";
+    src: url('/UIDesign/LegacySite/Styles/en/fonts/intel-clear-web-regular.woff') format('woff'), url('/UIDesign/LegacySite/Styles/en/fonts/intel-clear-web-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "intel-clear";
+    src: url("/UIDesign/LegacySite/Styles/en/fonts/intel-clear-web-bold.woff") format("woff"), url("/UIDesign/LegacySite/Styles/en/fonts/intel-clear-web-bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "intel-clear";
+    src: url("/UIDesign/LegacySite/Styles/en/fonts/intel-clear-web-italic.woff") format("woff"), url("/UIDesign/LegacySite/Styles/en/fonts/intel-clear-web-italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "intel-clear";
+    src: url("/UIDesign/LegacySite/Styles/en/fonts/intel-clear-web-bold-italic.woff") format("woff"), url("/UIDesign/LegacySite/Styles/en/fonts/intel-clear-web-bold-italic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "intel-clear";
+    src: url("/UIDesign/LegacySite/Styles/en/fonts/intel-clear-web-light.woff") format("woff"), url("/UIDesign/LegacySite/Styles/en/fonts/intel-clear-web-light.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: "intel-clear";
+    src: url("/UIDesign/LegacySite/Styles/en/fonts/intel-clear-web-light-italic.woff") format("woff"), url("/UIDesign/LegacySite/Styles/en/fonts/intel-clear-web-light-italic.ttf") format("truetype");
+    font-weight: 200;
+    font-style: italic;
+}
+
+
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+sub {vertical-align: sub;}
+sup {vertical-align: super;}
+input{border:1px solid #969696;}
+address{margin-top:0.45em;font-style:normal;}
+caption,legend,.Hide,div#footer h1,.access-aid{display:none;}
+dt{margin-top:10px;padding-left:1px;}
+form#aspnetForm{height:100%;background:#FFF;padding:0;margin:0}
+strong, b{font-weight:bold}
+
+/*Link Set*/
+a, a:link{color:#166494;text-decoration:none;cursor:pointer;}
+a:hover{color:#cc0033;text-decoration:none;}
+a:focus {color: #cc4714; outline: none; }
+p a, p a:visited { line-height: inherit; }
+
+/*	Lists */
+ul {outline:0; }
+ol {list-style: decimal; }
+ul.square, ul.circle, ul.disc {margin-left: 30px; }
+ul.square {list-style: square outside; }
+ul.circle {list-style: circle outside; }
+ul.disc {list-style: disc outside; }
+ul.large li {line-height: 21px; }
+
+/* Common Elements */
+.skiplink{position:absolute;left:-1000em;color:#fff;border:0;}
+h1{font-size:20px;line-height:1.2em;}
+h3{font-size:1.8em;font-weight:bold}
+h2,h4{color:#333;font-weight:bold}
+h2{margin-top:0.6em;font-size:1.32em;}
+h4{margin:0.6em 0 0 0;font-size:1em;}
+p{margin-top:10px;font-size:0.96em;}
+p,address,input,dt{color:#333;}
+
+h1,h3{margin-top:10px;color:#333333;}
+p,address,caption,th,td,a.lnkblk,.font-n{font-weight:normal;}
+a, a:link,h1,h3,h2,h4,dt,a.lnkblue-b,.alertBox h5,.aspxStrong,h1.styled,h2 a.lnkblue,.redLinkBold{font-weight:bold;}
+address{margin-top:0.45em;font-style:normal;}
+input{border:1px solid #969696;}
+caption,legend,.Hide,div#footer h1,.access-aid{display:none;}
+dt{margin-top:10px;padding-left:1px;}
+
+/* price */
+.priceinfo-b{margin-top:5px;font-weight: bold;}
+.hid{display:none;}
+/* tables still need 'cellspacing="0"' in the markup */
+table{border-collapse:separate;border-spacing:0;}
+caption, th, td{text-align:left;}
+blockquote:before, blockquote:after, q:before, q:after{content:"";}
+blockquote, q{quotes:"" "";}
+.tl, .tr, .bl, .br,.ftrcurve .bl,.ftrcurve .br,.leftnav ul.leftnavlist,.myaccountLeftNav ul.leftnavlist,
+#login_top1,#login_top2{background:url('https://secureimages.mcafee.com/legacy/common/curves_bg/curve-sprite.gif') no-repeat;}
+.dimmed{background-color:#606060;margin:0;padding:0;position:absolute;top:0;left:0;width:100%;height:100%;z-index:99999999;filter:alpha(opacity=90);-moz-opacity:0.90;opacity:0.90;}
+.dimmed span{position:fixed;top:30%;left:49%;margin:0;padding:0;display:block;text-align:center}
+
+.mRow:before, .mRow:after, .clearfix:before, .clearfix:after, .Btm2:before, .Btm2:after { content:""; display:table;}
+.mRow:after, .clearfix:after, .Btm2:after {clear:both;}
+.mRow, .clearfix, .Btm2 {zoom:1;}
+
+/* Error */
+.errorMessage{width:auto;min-height:15px;margin:0 10px 10px 10px;padding:8px 10px 9px 38px;border:1px solid #de0000;
+background:#fff5f3 url('https://secureimages.mcafee.com/legacy/common/advisoryBox/icon_exclamation.gif') no-repeat 6px 5px;
+color:#de0002;font-size:0.9em;line-height:1.2em;}
+.errorMessage ul{margin:0;padding:0;list-style:none;}
+.errorLabel{padding-left:10px;color:#de0002;}
+.attentionMsg{background:#fefddf url(https://secureimages.mcafee.com/legacy/common/advisoryBox/cross.gif) no-repeat 12px 6px;border:1px solid #cdd276;
+padding:10px 10px 10px 42px;margin-top:10px;}
+.attentionMsg h1{font-size:12px;margin:0;}
+.WarningPop{padding:16px 16px 16px 50px;margin-top:10px;border:1px solid #c8c7b5;color:#3d3a27;background:#fefddf url(https://secureimages.mcafee.com/legacy/account/myAccSprite.gif) no-repeat 14px -412px;}
+.btnCenter {text-align:center}
+
+.tl, .tr, .bl, .br,.ftrcurve .bl,.ftrcurve .br,.leftnav ul.leftnavlist,.myaccountLeftNav ul.leftnavlist,#login_top1,#login_top2{background:url('https://secureimages.mcafee.com/legacy/common/curves_bg/curve-sprite.gif') no-repeat;}
+.tl, .tr, .bl, .br{position:absolute;display:block;width:10px;height:10px;margin:0;padding:0;font-size:0;}
+.tl{top:0;left:0;}
+.tr{top:0;right:0;background-position:-9px 0;}
+.bl{left:0;bottom:0;background-position:0 -9px;}
+.br{right:0;bottom:0;background-position:-8px -9px;}
+.ftrcurve{display:none}
+
+/*GTM Fix for the FF common button padding bug*/
+button::-moz-focus-inner{border: 0;padding: 0;}
+/* BLUE BUTTON (input, not button) */
+span.btn-sml-blue,span.btn-sml-buynow,span.grdtredbtn,span.btnMfeBlue,span.btn-sml-gray,span.grdtgray-lnk,span.btn-sml-red,.oneRowWrap span.btnGlossInput,span.buynow-btn,button.btn-sml-buynow,button.buynow-btn{
+background:url('https://secureimages.mcafee.com/legacy/common/buttons/sprite_btn_left.gif') no-repeat;}
+.btn-sml-blue input,.btn-sml-buynow input,.grdtredbtn input,.btnMfeBlue input,.btn-sml-gray input,.dualBtn input,.btn-sml-red input,.oneRowWrap .btnGlossInput input,.buynow-btn input,.grdtgray-lnk a,.grdtgray-lnk a:link,.grdtgray-lnk a:visited,
+.grdtgray-lnk a:active,.grdtgray-lnk a:hover,button.btn-sml-buynow span,button.buynow-btn span{background:url('https://secureimages.mcafee.com/legacy/common/buttons/sprite_btn_right.gif') no-repeat;}
+span.btnMfeBlue{float:left;padding:0 0 0 3px;margin-top:10px;height:30px;background-position:left top;}
+.btnMfeBlue input{height:30px;padding:4px 22px 9px 22px;*padding:6px 22px 9px 22px;border:0;cursor:pointer;overflow:visible;background-position:right top;font-weight:bold;font-size:1.2em;color:#fff;}
+span.btn-sml-blue,.oneRowWrap span.btnGlossInput{float:left;background-position:left -40px;height:24px;padding:0 0 0 3px;}
+.btn-sml-blue input,.oneRowWrap .btnGlossInput input{background-position:right -40px;height:24px;margin:0;padding:2px 10px 6px 5px;*padding:0 10px 2px 5px;overflow:visible;border:0;cursor:pointer;font-size:1.0825em;font-weight:bold;color:#fff;}
+span.grdtredbtn,span.btn-sml-buynow {float:left;height:24px;padding:0 0 0 3px;background-position:left -109px;}
+.grdtredbtn input,.btn-sml-buynow input,.btn-sml-buynow span {width:auto;background-position:right -109px;height:24px;font-size:11px;padding:0 5px 4px 3px;*padding:2px .65em 4px .25em;width:auto;overflow:visible;border:0;cursor:pointer;font-weight:bold;color:#fff;}
+.center span.btnMfeBlue,span.btn-sml-blue{float:none;padding:7px 0 8px 3px;}
+span.btn-sml-blue{padding:4px 0 10px 3px;}
+input.button{cursor:pointer;border:1px solid #3e5966;background:#5e879c url(https://secureimages.mcafee.com/legacy/common/buttons/btnOldBlue.gif) repeat-x top left;color:#ffffff;font-size:0.88em;font-weight:bold;}
+p.resetpassword {*padding-bottom: 5px;}
+span.btnMfeBlue1 {float: none;display: inline-block;*display: inline;}
+/*span.btnMfeBlue{display:block;position:relative;}*/
+button.btn-sml-buynow, button.buynow-btn{padding:0 3px 0 0;background:transparent url(https://secureimages.mcafee.com/legacy/common/buttons/spriteBtnLeftV1.gif) no-repeat right -109px;border:0;height:25px;overflow: visible;cursor:pointer;outline:0;}
+button.btn-sml-buynow span, button.buynow-btn span{background:transparent url(https://secureimages.mcafee.com/legacy/common/buttons/spriteBtnRightV1.gif) no-repeat left -109px;float:left; margin:0;padding:4px 12px 0 15px;display:inline-block;height:26px;white-space:nowrap;}
+
+/*WebKit Engine Fix*/
+@media screen and (-webkit-min-device-pixel-ratio:0){button.btn-sml-buynow span, button.btn-sml-trynow span{margin:-1px -3px 0 0}}
+*|html[xmlns*=""] button.btn-sml-buynow span,*|html[xmlns*=""] button.btn-sml-trynow span{margin:0}
+/* New Button element style */
+/* Buttons */
+.btnGrayGrdt,.btnRedGrdt,.btnBlueGrdt{background:transparent url(https://secureimages.mcafee.com/legacy/common/buttons/spriteBtnLeftV1.gif) no-repeat right -142px;position:relative;overflow:visible;margin:0;padding:0 3px 0 0;height:30px;color:#fff;font:bold 13px "arial", helvetica, sans-serif;vertical-align:baseline;border:0;cursor:pointer}
+.btnGrayGrdt span,.btnRedGrdt span,.btnBlueGrdt span{background:transparent url(https://secureimages.mcafee.com/legacy/common/buttons/spriteBtnRightV1.gif) no-repeat left -142px;position:relative;display:block;margin:0;padding:6px 5px 0 8px;height:24px;white-space:nowrap;color:#777;}
+.btnRedGrdt{background-position:right -72px;}
+.btnRedGrdt span{background-position:left -72px;color:#fff;}
+/* Target FF all versions */
+.btnRedGrdt::-moz-focus-inner,
+.btnGrayGrdt::-moz-focus-inner{padding:0;border:none;} 
+
+/* Target Chrome+Safari all versions */
+@media screen and (-webkit-min-device-pixel-ratio:0) {.btnMfeBlue input{padding: 4px 22px 8px 22px;}.btnGrayGrdt span,.btnRedGrdt span{margin:-1px -3px 0 -3px}}
+*|html[xmlns*=""] .btnGrayGrdt span,*|html[xmlns*=""] .btnRedGrdt span{margin:0}
+
+/*Old Nav Styles*/
+#sidebar{float:left;width:150px;height:158px;margin-top:1em;margin-left:11px}
+#breadcrum,.breadcrum{clear:both;width:95%;height:auto;margin:1em 0 0 25px;padding:0;background:#fff;list-style-type:none;color:#666;font-size:.8em;font-weight:bold}
+#breadcrum li,.breadcrum li{display:inline;margin-right:5px;padding-left:10px;background:url('https://secureimages.mcafee.com/common/icons/breadCrumSep_4x7.gif') no-repeat left center}
+#breadcrum li.bcStart,.breadcrum li.bcStart{padding-left:0;background:0}
+    #breadcrum a:link, #breadcrum a:visited, #breadcrum a:active, .breadcrum a:link, .breadcrum a:visited, .breadcrum a:active {
+        color: #4258FF;
+        text-decoration: none
+    }
+    #breadcrum a:hover, .breadcrum a:hover {
+        color: #4258FF
+    }
+.midcol2 ul,.midcol2 ol,.cntcol1 ul{margin:.6em 0 0 1.8em;font-size:.99em}
+.midcol2 ul li,.cntcol1 ul li{margin-bottom:.45em}
+.midcol2 .pageimg{width:607px;height:167px}
+.midcol3 .pageimg{width:412px;height:127px}
+.pageimgcol1{width:753px;height:167px;margin-left:5px}
+#topnav{float:left;width:100%;margin:0 auto;background:#FFF;font-size:11px;line-height:15px}
+#topnav ul{list-style-type:none}
+#topnav ul li{float:left}
+#topnav .topnavmain{float:left;margin:10px 0 0 12px;padding:0;list-style:none}
+#topnav .topnavmain li{padding:.2em .4em 0 .4em}
+#topnav .topnavmain li a{color:#727272;font-weight:bold;text-decoration:none}
+#topnav .topnavmain li{background:url("https://secureimages.mcafee.com/legacy/common/nav/topNavSprite.gif") no-repeat 0 -52px}
+#topnav .topnavmain li.hideBG{background:0}
+#topnav .topnavmain li a{display:block;position:relative;top:-1px;margin:0;padding:.7em .4em .4em .4em}
+#topnav .topnavmain li a:hover{color:#c03;text-decoration:none}
+#topnav .topnavmain .tabHome{padding:0;background:#a3c0bc url("https://secureimages.mcafee.com/legacy/common/nav/topNavSprite.gif") no-repeat 0 0}
+#topnav .topnavmain .tabHome a{margin:0 0 0 .4em;padding:.8em .7em .5em .4em;background:#a3c0bc url("https://secureimages.mcafee.com/legacy/common/nav/topNavSprite.gif") no-repeat 100% -24px;color:#FFF}
+#topnav .topnavmain .tabHome a:hover{color:#fff}
+#topnav .topsubnav{clear:both;width:758px;height:30px;margin-left:.3em;background:url("https://secureimages.mcafee.com/legacy/common/nav/topNavSprite.gif") repeat-x 0 -123px}
+#topnav .topsubnav ul{float:left;width:100%;background:url("https://secureimages.mcafee.com/legacy/common/nav/topNavSprite.gif") no-repeat 100% -411px}
+#topnav .topsubnav li{padding:6px 8px 9px 9px;background:url("https://secureimages.mcafee.com/legacy/common/nav/topNavSprite.gif") no-repeat 0 -88px}
+#topnav .topsubnav li a{color:#1b536f;font-weight:bold;text-decoration:none}
+#topnav .topsubnav li a:hover{color:#c03;text-decoration:none}
+#topnav .topsubnav .first{padding-left:1.3em;padding-right:.7em;background:url("https://secureimages.mcafee.com/legacy/common/nav/topNavSprite.gif") no-repeat 0 -359px}
+#topnav .topsubnav .personalnav{float:right;width:auto;margin-top:-29px;margin-right:1.5em;background:url("https://secureimages.mcafee.com/legacy/common/nav/topNavSprite.gif") repeat-x 0 -260px;color:#0d6c98;font-size:10px}
+#topnav .personalnav li{padding:.5em .6em .650em .6em;background:0}
+#topnav .topsubnav .personalnav a{font-weight:normal}
+#topnav .personalnav .first,#topnav .personalnav .last{background:url("https://secureimages.mcafee.com/legacy/common/nav/topNavSprite.gif") no-repeat}
+#topnav .personalnav .first{background-position:0 -181px}
+#topnav .personalnav .last{padding-right:1.2em;background-position:100% -221px}
+#topnav .personalnav .cart{padding:.4em 0}
+#topnav .personalnav .cart a{display:block;padding:.1em .6em;border:#9abcb8 solid;border-width:0 1px}
+.leftnav,.myaccountLeftNav{float:left;width:138px;margin:15px 0 0 4px;padding-bottom:130px;background:url('https://secureimages.mcafee.com/legacy/common/nav/pageNavBg.gif') bottom left repeat-x;line-height:15px}
+.leftnav ul,.myaccountLeftNav ul{margin:0;padding:0}
+.leftnav li,.myaccountLeftNav li{padding-top:4px;font-size:11px;list-style-type:none}
+#bdy .leftnav li.Root,#bdy .myaccountLeftNav li.Root{background:0}
+.leftnav li.Root a,.myaccountLeftNav li.Root a{padding-left:10px;padding-bottom:3px;border-bottom:#f1f1f1 1px solid;font-size:14px}
+.leftnav ul.leftnavlist,.myaccountLeftNav ul.leftnavlist{padding-top:6px;background-position:-40px 0;background-color:#e1e1e1}
+.leftnav ul li,.myaccountLeftNav ul li{margin:0;padding:5px 0}
+.leftnav ul ul,.leftnav ul ul ul,.myaccountLeftNav ul ul,.myaccountLeftNav ul ul ul{height:auto;margin:0;padding:0;background:0}
+.leftnav ul ul li,.leftnav ul ul ul li,.myaccountLeftNav ul ul li,.myaccountLeftNav ul ul ul li{padding-left:.8em;border-bottom:1px solid #f1f1f1}
+.leftnav li a,.myaccountLeftNav li a{display:block;color:#096b97;font-weight:bold;text-decoration:none}
+.leftnav li.Leaf a:link,.leftnav li.Leaf a:visited,.leftnav li.Leaf a:active,.leftnav li.Parent ul li a:link,.leftnav li.Parent ul li a:visited,.leftnav li.Parent ul li a:active,.myaccountLeftNav li.Leaf a:link,.myaccountLeftNav li.Leaf a:visited,.myaccountLeftNav li.Leaf a:active,.myaccountLeftNav li.Parent ul li a:link,.myaccountLeftNav li.Parent ul li a:visited,.myaccountLeftNav li.Parent ul li a:active{position:relative;padding-bottom:0;padding-left:8px;padding-right:3px;background:url('https://secureimages.mcafee.com/legacy/common/arrowset.gif') 0 5px no-repeat;border:0;font-size:11px}
+.leftnav ul ul li a:hover,.leftnav li.Parent ul li a:hover,.leftnav li.Leaf a:hover,.myaccountLeftNav ul ul li a:hover,.myaccountLeftNav li.Parent ul li a:hover,.myaccountLeftNav li.Leaf a:hover{color:#c03;background:url('https://secureimages.mcafee.com/legacy/common/arrowset.gif') 0 -59px no-repeat}
+.leftnav ul ul li.Parent,.myaccountLeftNav ul ul li.Parent{padding-bottom:0;background:#e1e1e1}
+.leftnav li.Parent a:link,.leftnav li.Parent a:visited,.leftnav li.Parent a:active,.myaccountLeftNav li.Parent a:link,.myaccountLeftNav li.Parent a:visited,.myaccountLeftNav li.Parent a:active{font-size:11px;background:url('https://secureimages.mcafee.com/legacy/common/arrowset.gif') 0 5px no-repeat;border:0;margin:0;padding:0 0 4px 8px}
+.leftnav li.Parent a:hover,.myaccountLeftNav li.Parent a:hover{background:url('https://secureimages.mcafee.com/legacy/common/arrowset.gif') 0 -59px no-repeat;margin:0;padding:0 0 4px 8px}
+.leftnav ul li.Parent ul li,.myaccountLeftNav ul li.Parent ul li{margin-left:-9px;padding:3px 0 3px 9px;background:#f0f0f0}
+.leftnav ul li.Parent ul li a,.myaccountLeftNav ul li.Parent ul li a{font-weight:normal}
+#bdy .leftnav li.Root.ChildSelected li.Leaf.Selected,#bdy .myaccountLeftNav li.Root.ChildSelected li.Leaf.Selected{background:#fff}
+.leftnav ul.leftnavlist li.Parent.Selected,.leftnav ul.leftnavlist ul li.Parent.ChildSelected,.myaccountLeftNav ul.leftnavlist li.Parent.Selected,.myaccountLeftNav ul.leftnavlist ul li.Parent.ChildSelected{background:#d2d2d2}
+.leftnav ul.leftnavlist li.Root li.Parent.Selected a,.leftnav ul.leftnavlist li.ChildSelected li.Parent.ChildSelected a,.myaccountLeftNav ul.leftnavlist li.Root li.Parent.Selected a,.myaccountLeftNav ul.leftnavlist li.ChildSelected li.Parent.ChildSelected a{background:url('https://secureimages.mcafee.com/legacy/common/arrowset.gif') 0 -127px no-repeat;margin:0}
+.leftnav ul.leftnavlist li.Root li.Parent.Selected a:hover,.leftnav ul.leftnavlist li.ChildSelected li.Parent.ChildSelected a:hover,.myaccountLeftNav ul.leftnavlist li.Root li.Parent.Selected a:hover,.myaccountLeftNav ul.leftnavlist li.ChildSelected li.Parent.ChildSelected a:hover{background:url('https://secureimages.mcafee.com/legacy/common/arrowset.gif') 0 -191px no-repeat;margin:0}
+.leftnav ul.leftnavlist li.Parent.Selected li.Leaf.ParentSelected,.myaccountLeftNav ul.leftnavlist li.Parent.Selected li.Leaf.ParentSelected{margin:0 0 0 -9px;padding:5px 0 0 18px}
+.leftnav ul.leftnavlist li.Root li.Leaf.Selected a,.leftnav ul.leftnavlist li.Root li.Parent.Selected li a,.leftnav ul.leftnavlist li.Parent.ChildSelected li a,.myaccountLeftNav ul.leftnavlist li.Root li.Leaf.Selected a,.myaccountLeftNav ul.leftnavlist li.Root li.Parent.Selected li a,.myaccountLeftNav ul.leftnavlist li.Parent.ChildSelected li a{background:url('https://secureimages.mcafee.com/legacy/common/arrowset.gif') 0 5px no-repeat;margin:0;padding:0 0 4px 8px}
+.leftnav ul.leftnavlist li.Root li.Leaf.Selected a:hover,.leftnav ul.leftnavlist li.Root li.Parent.Selected li a:hover,.leftnav ul.leftnavlist li.Parent.ChildSelected li a:hover,.myaccountLeftNav ul.leftnavlist li.Root li.Leaf.Selected a:hover,.myaccountLeftNav ul.leftnavlist li.Root li.Parent.Selected li a:hover,.myaccountLeftNav ul.leftnavlist li.Parent.ChildSelected li a:hover{background:url('https://secureimages.mcafee.com/legacy/common/arrowset.gif') 0 -59px no-repeat}
+.leftnav ul.leftnavlist li.Root.ChildSelected ul li.ChildSelected li a:hover,.myaccountLeftNav ul.leftnavlist li.Root.ChildSelected ul li.ChildSelected li a:hover{margin-left:8px;background:url('https://secureimages.mcafee.com/legacy/common/arrowset.gif') 0 -59px no-repeat}
+.leftnav ul.leftnavlist li.Root.ChildSelected ul li.ChildSelected li a,.myaccountLeftNav ul.leftnavlist li.Root.ChildSelected ul li.ChildSelected li a{margin-left:8px;background-position:0 5px}
+.loadbar{position:absolute;top:20em;left:32em}
+div.rightcol{width:170px;height:auto;margin:20px 0 0 0;padding:0 0 0 1em;background:transparent url('https://secureimages.mcafee.com/legacy/common/dotVertical.gif') repeat-y}
+.rightcol h2,.rightcol .ad_managerPkgRight h3,.greybold{color:#666;font-size:.94em;text-align:left}
+.rightcol .ad_managerPkgRight h3{padding-bottom:5px}
+.rightcol input{margin-top:8px}
+.rightcol fieldset{padding:0}
+.rightcol .helpLinks li{margin-left:0}
+ul.lsarwblues{margin-left:0}
+/*Old Nav Style End*/
+
+/* Header */
+.header{background:#FFF;float:left;height:auto;line-height:15px;padding:14px 0;position:relative;width:100%;z-index:999;}
+.header a.brandlogo,.header img.brandlogoimg{display:block;float:left;height:38px;margin:0 0 0 14px;position:relative;top:11px;}
+.header .hslogo{bottom:-6px;display:block;height:37px;overflow:hidden;position:absolute;right:18px;z-index:0;}
+.logoHomeTxt{color:#727272;font-size:1.3em;margin-left:4px;_margin-left:0;padding:0;font-family: "intel-clear", Arial,Verdana,Helvetica,sans-serif; display:none;}
+.header a.HSLogo{display:none}
+.Btm2 .ISLogo{display:none}
+
+.utilitynav{color:#797979;font-size:11px;position:absolute;right:10px;top:1em;}
+.utilitynav ul li a{color:#797979;font-weight:400;padding:0 5px;text-decoration:none;}
+.utilitynav ul{float:left;list-style:none;}
+.utilitynav ul li{background:url(https://secureimages.mcafee.com/common/nav/navSprite.gif) no-repeat 0 -520px;float:left;padding:.1em .4em 0;}
+.utilitynav .srchlbl{float:left;margin:0 .8em 0 .5em;}
+.utilitynav .srchtxtbox{border:1px solid #9c9c9c;font-size:11px;padding:0 .2em;width:10em;height:14px;float:left;margin-right:3px}
+.utilitynav .srchbtn{background:url(https://secureimages.mcafee.com/common/nav/navSprite.gif) no-repeat 0 -704px;border:none;height:16px;position:relative;vertical-align:top;width:14px;}
+.utilitynav ul li ul.sitelist{background:#fff;border:#9c9c9c solid 1px;display:none;margin:0;padding:5px 0 10px 5px;position:absolute;top:17px;border-radius: 4px;-moz-box-shadow: 0 0 4px #999;-webkit-box-shadow:  0 0 10px 2px rgba(0, 0, 0, .2);box-shadow:  0 0 10px 2px rgba(0, 0, 0, .2);}
+.utilitynav ul li#global_country ul.sitelist{background:#fff;left:-0.8em;width:378px;z-index:999;}
+.utilitynav ul li#global_language ul.sitelist{background:#fff;left:5.6em;width:138px;}
+#globalNav li ul.sitelist li{background:none;clear:both;cursor:pointer;width:94%;}
+.utilitynav ul.sitelist li ul li a{text-decoration:none;}
+.utilitynav ul li:hover ul,.utilitynav ul li ul li:hover ul,li.over ul{display:block;}
+li#global_country,li#global_language{background-position:right -57px;cursor:pointer;margin-right:7px;padding:1px 11px;z-index:9999;}
+.utilitynav li#global_language ul{padding:0 0 2px!important;}
+.utilitynav li#global_country ul.sitelist li{background:none;}
+.utilitynav li#global_country ul.sitelist li ul,.utilitynav li#global_language ul.sitelist li ul{border:none;cursor:default;float:left;margin:0 8px 0 0 !important;position:relative;top:.2em!important;width:110px;}
+.utilitynav li#global_country ul li ul li,.utilitynav li#global_language ul li ul li{padding:1px;width:110px;}
+.utilitynav li#global_country ul li ul li a,.utilitynav li#global_language ul li ul li a{background:none;color:#9c9c9c;display:block;padding:0 0 0 8px;width:110px;}
+.utilitynav li#global_country ul li ul li a:hover,.utilitynav li#global_language ul li ul li a:hover{background:#9c9c9c;color:#fff;}
+
+/* navigation for GTM 2013 */
+.gNav{background-color:#fff;float:left;width:100%;margin-top:0px;padding-top:20px;font-size:.9em;z-index:995;position:relative;}
+.gNav ul, #footer ul{list-style:none}
+.gNav ul.main{background:url("https://secureimages.mcafee.com/common/nav/navSprite.png") repeat-x 0 -249px;color:#454545;list-style:none;width:100%;float:left;height:27px}
+.gNav .main li{border-width:0 1px;border-style:solid;border-color:transparent;float:left;z-index:99;position:static;height:100%;background: url("https://secureimages.mcafee.com/common/nav/navSprite.gif") no-repeat scroll -2px -380px transparent;}
+.gNav .main li.products {background:none;}
+.gNav .main > li:first-child{background-image:none;height:100%;display:none}
+.gNav .main.personal > li:first-child{display:block;}
+.gNav .main a, .gNav .main li#currency span{color: #535353;font-weight:bold;display:block;padding:7px 7px 5px 8px;cursor:pointer;position:relative;}
+.gNav .main > li.mHover, .gNav li#currency.mHover{background:#bab9b9 url(https://secureimages.mcafee.com/common/nav/2013/nav-bg.png) repeat-x;border-color:transparent}
+.gNav .main > li.mHover a, .gNav .main li#currency:hover span{color:#000}
+.gNav .main > li li a:hover{color:#CC0033;}
+.gNav .main a .arrowSelect {background:none;position:absolute;bottom:-6px;margin-left: 40%;left: 0;}
+.gNav .main > li.mHover a .arrowSelect {background:url(https://secureimages.mcafee.com/common/nav/navSprite.png) no-repeat transparent;background-position:right -850px;*background-position:right -852px;position:absolute;bottom:-6px;margin-left: 40%;left: 0;z-index:1;display:none}
+.gNav .main > li.products.mHover a .arrowSelect {background:url(https://secureimages.mcafee.com/common/nav/navSprite.png) no-repeat transparent right -833px;*background-position:right -833px;position:absolute;bottom:-7px;margin-left: 40%;left: 0;z-index:1;display:block}
+.gNav .main  span{background:url(https://secureimages.mcafee.com/common/nav/navSprite.gif) no-repeat right -59px;padding:0 10px 0 0;}
+.gNav .main li.mHover span{background-position: right -818px}
+.gNav .main li#currency  span{background-position:98% -51px;padding:7px 11px 5px 8px}
+.gNav .main li#currency.mHover  span{background-position:98% -810px}
+.gNav .main a span.home, .gNav .main span#cart, .gNav .main span#cartSpan{background:url(https://secureimages.mcafee.com/common/nav/navSprite.gif) no-repeat 0 -742px;padding:0 10px 0 0;
+-khtml-opacity:.70; -moz-opacity:.70;-ms-filter:"alpha(opacity=70)";filter:alpha(opacity=70);opacity:.70;}
+.gNav .main span#cart, .gNav .main span#cartSpan{background-position: right -779px;padding:1px 0 0 17px;}
+.gNav .main a:hover span.home, .gNav .main a:hover span#cart, .Gtm2013 .main a:hover span#cartSpan{-khtml-opacity:1; -moz-opacity:1;-ms-filter:"alpha(opacity=100)";filter:alpha(opacity=100);opacity:100;}
+.gNav .main li.mHover span.home {-khtml-opacity:1; -moz-opacity:1;-ms-filter:"alpha(opacity=1)";filter:alpha(opacity=1);opacity:1;}
+.gNav ul ul, .gNav ul#ulCurrency ul {display:none;width:100%;position:absolute;background:#b7b6b6;left:0;overflow:hidden;margin-top:-1px}
+.gNav ul#ulCurrency, .gNav ul#ulCurrency ul{overflow:visible}
+.gNav li.mHover ul.sub, .gNav li.mHover ul#ulCurrency ul{display:block;-moz-box-shadow: 0 0 4px #999;-webkit-box-shadow:  0 0 10px 2px rgba(0, 0, 0, .2);box-shadow:  0 0 10px 2px rgba(0, 0, 0, .2);width:100%;border:0;margin-left:auto;z-index:-1;}
+
+.gNav ul.personal li.verticalMyAccountLi span.arrowSelect { display: none; }
+.gNav ul.personal li.verticalMyAccountLi.mHover span.arrowSelect { display: inline; background: url("https://secureimages.mcafee.com/common/nav/navSprite.gif") no-repeat right -833px; left: 50%; margin-left: -5px; position: relative; top: -7px; }
+.ie9 .gNav ul.personal li.verticalMyAccountLi.mHover span.arrowSelect { top: -6px; }
+.gNav ul.personal li.verticalMyAccountLi ul.sub { background-color: #ffffff; border: 1px solid #A5A5A5; left: 0; width: auto;min-width: 170px; padding: 5px 0;}
+.gNav ul.personal li.verticalMyAccountLi ul.sub li { float: none; }
+.gNav ul.personal li.verticalMyAccountLi ul.sub li a { padding: 7px 8px; color: #555555; }
+.gNav ul.personal li.verticalMyAccountLi ul.sub li a:hover { color: #CC0033;	}
+
+.gNav .main li li{background-image:none;font-weight:bold}
+.gNav li li a:hover, .gNav ul#ulCurrency ul li:hover{color:#cc0033;cursor:pointer}
+.gNav ul.sub li a, .gNav ul#ulCurrency ul li{font-weight:bold;font-size:11px;padding:11px 8px 8px 8px}
+.gNav ul ul.productSub li{ margin-left: 1%;margin-right: 0.2%;width: 176px;*width:175px;}
+.gNav ul ul.productSub li li{margin:0;}
+.gNav ul ul.productSub li div a {padding:0;color:#555;font-weight:bold;white-space: pre;white-space: pre-wrap;white-space: pre-line;white-space:pre-wrap;word-wrap:break-word;display:block;*white-space: pre;}
+.gNav .main > li.mHover ul.productSub a{padding:0;color:#555;font-weight:bold;white-space: pre;white-space: pre-wrap;white-space: pre-line;white-space:pre-wrap;word-wrap:break-word;display:block;*white-space: pre;width:160px;}
+.gNav ul ul.productSub li div a{*display:inline}
+.gNav .main > li.mHover ul.productSub a:hover{color:#cc0033}
+.gNav .main li.mHover ul.productSub li div .viewAll a {color:#139cff;font-size:11px;font-weight:normal;padding:0;}
+.gNav ul ul.productSub li div a:hover, .gNav .main li.mHover ul.productSub li div .viewAll a:hover {color:#CC0033;}
+.gNav ul ul.productSub .first, .gNav li ul.productSub li.first:hover {background:none no-repeat right -1px;width:160px;}
+.gNav ul ul.productSub .second{margin-left:3%;}
+.gNav ul ul.productSub div p {font-size: 15px;font-weight: bold;margin-bottom: 4px;word-wrap: break-word;white-space: pre-wrap;margin-top:0;cursor:default}
+.gNav ul ul.productSub .first .prodList0{padding-right:0px;position:relative;}
+.gNav ul ul.productSub .first .prodList0 ul {padding-bottom: 20px;padding-right: 10px;}
+.gNav ul ul.productSub .first .prodList0 .prodHeading a {font-weight:bold;background:none;font-size:12px;display:block;width:auto;}
+.gNav ul ul.productSub .first .prodList0 .prodImage {text-align:center;margin:0;padding:10px 0;}
+.gNav ul ul.productSub .first ul li {margin:0;width:auto;}
+.gNav ul ul.productSub .first .prodList0 .borderBt {position:absolute;bottom:1px;height:50px;right:-1px;background:url(https://secureimages.mcafee.com/common/nav/2013/product_nav_bg_bt.png) no-repeat right 11px;*width:2px;}
+.gNav ul ul.productSub li div ul {display:block;position:relative;background:none;}
+.gNav ul ul.productSub li div ul li {float:none;font-weight:bold;padding:2px 0;*padding:0;}
+.gNav li.mHover ul li:hover{background: none;border-color: transparent;}
+.gNav ul ul.productSub .last {margin-top:20px;float:right;margin-right:5.5%;}
+.gNav ul.personal{background-position:0 -176px; background-repeat:repeat;float:right;list-style-type:none;position:relative;margin-top:-27px;width:auto;}
+.gNav ul.personal:hover span.noArrow{background:none;}
+.gNav ul.personal li{background-position:-1px -449px;}
+.gNav .personal .noArrow{padding:0}
+.gNav ul.personal ul.sub{left:auto;right:0}
+
+.gNav ul.sub li, .gNav ul.sub li li{background:transparent none;-moz-box-shadow: none;-webkit-box-shadow: none;box-shadow:none;-ms-filter: none;filter:none}
+.gNav ul.main li ul.productSub{background:#fff;padding:20px 0 25px 0;border:1px solid #DDD;border-width:0 0 1px 0}
+/* Navigation for GTM 2013 ends here */
+#oo_tab{border-radius: 6px;-moz-box-shadow: 0 0 4px #999;-webkit-box-shadow:  0 0 8px 3px rgba(0, 0, 0, .2);box-shadow:  0 0 8px 3px rgba(0, 0, 0, .2);}
+
+/*gTheme
+.gTheme{margin:0 auto;background:#9B9B9B url(https://secureimages.mcafee.com/legacy/2013/common/layout/bg.png) left top repeat-x;}*/
+.v2013 a, .v2013  a:link {color:#0595FF;font-weight:normal}
+.v2013  a:hover {color:#CC0033;}
+
+.v2014 a, .v2014  a:link {color:#0595FF;font-weight:normal}
+.v2014.v2 a, .v2014.v2  a:link {color:#008ee5;font-weight:normal}
+.v2014  a:hover {color:#CC0033;}
+
+.gNav .loginHolder{top:46px;/*z-index:20;*/z-index:-2;}
+
+/* Nav */
+.loginFrame{position:absolute;top:0;left:0;z-index:9999;border:0;display:none;width:100%;height:100%;_height:650px}
+.loginHolder, .loginHolder #ajaxLoginLoad{display:none}
+.loginHolder #ajaxLoginLoad{position:absolute;left:110px;top:171px;}
+.loginFrameCnt{width:257px;height:95%;}
+.loginHolder a.close, .loginHolder{background: #fff url(https://secureimages.mcafee.com/legacy/home/login-sprite.gif) no-repeat;}
+.loginHolder{background-repeat:repeat-x;background-position:0 121px;border:1px solid #a5a5a5;display:none;height:450px;top:111px;*top:106px;width:258px;position:absolute;right:0;z-index:9;}
+.loginHolder a.close{float:right;background-position:-2px -443px;width:15px;height:15px;overflow:hidden;margin:3px 3px 0 0;}
+.ajxLodImg{display:none;border:2px solid #d2d2d2;background:white;height:50px;width:50px;position:absolute;top:224px;left:354px;margin:0 auto;z-index:800;}
+.ajxLodImg img{margin:8px 0 0 10px}
+.logoutContainer{float:left;width:590px;height:150px;margin:0 8px}
+.chatContainerSmall{display: block; margin: 27px 0 0; *margin-top: 25px; padding: 0; position: absolute; right: 145px; z-index: 0; overflow: hidden; }
+
+/* Nicolas Gallagher's micro clearfix */
+.row:before, .row:after, .clearfix:before, .clearfix:after , .us-ctr:after, .virus-modules:after, .crvset10x10cntr:after, .crvsetbdr10x10:after{ content:""; display:table; }
+.row:after, .clearfix:after, .us-ctr:after , .virus-modules:after, .crvset10x10cntr:after, .crvsetbdr10x10:after{ clear: both; }
+.row, .clearfix, .us-ctr, .virus-modules, .crvset10x10cntr, .crvsetbdr10x10 { zoom: 1; }
+
+body #bdy{float:left;width:100%;background:#ffffff;z-index:2;padding-bottom: 10px;min-height:350px;font-family:'Open Sans'}
+
+#bdy.errorpage{height:550px;}
+#bdy.errorpage img{margin:30px;}
+#bdy.errorpage h1,#bdy.errorpage p{padding:0 30px;}
+#bdy.errorpage ul{margin:10px 48px;}
+/* helpLinks */
+ul.helpLinks,div.helpLinks ul{margin:0;padding-left:0;font-size:0.94em;line-height:1.15em;}
+.helpLinks li a{color:#096B97;font-weight:normal;text-decoration:none;}
+.helpLinks li:hover{background:url('https://secureimages.mcafee.com/legacy/common/arrowset.gif') no-repeat 0pt -60px;}
+.helpLinks li:hover a{color:#cc0033;}
+.helpLinks li{position:relative;padding-left:6px;margin:8px 0 0 10px;background:url('https://secureimages.mcafee.com/legacy/common/arrowset.gif') no-repeat 0pt 4px;list-style-image:none;list-style-position:outside;list-style-type:none;}
+/* liststyle arrow small blue*/
+ul.lst-arw-blue,.midcol2 dl dd a{margin:1em 0;list-style-type:none;}
+ul.lAlign{list-style:inside;list-style-type:none;margin-left:0;}
+ul.lst-arw-blue li a,ul.lAlign li a,dl dd a:link,dl dd a:active,dl dd a:visited {padding-left:.6em;color:#096b97;font-size:0.9em;font-weight:normal;background:url('https://secureimages.mcafee.com/legacy/common/arrowset.gif') no-repeat 0pt 5px;text-decoration:none;}
+ul.lst-arw-blue li a:hover,ul.lAlign li a:hover,dl dd a:hover{background:url('https://secureimages.mcafee.com/legacy/common/arrowset.gif') no-repeat 0pt -60px;color:#cc0033;}
+dl dd a:link{display:block;margin:0.4em 0 0 0;}
+/* black link*/
+a.lnkblk{color:#000000;}
+a.lnkblue,a.lnkblue-b{color:#096B97;font-weight:normal;}
+a.lnkblk-b,a.lnkblk-b:active,a.lnkblk-b:visited{color:#000000;text-decoration:none;}
+a.lnkblk-b:hover{text-decoration:underline;}
+.alertBox{margin-top:10px;padding:10px 0 10px 60px;border:1px solid #d5cc7e;background:#fefddf url('https://secureimages.mcafee.com/legacy/common/alertIcon.gif') no-repeat 15px 15px;}
+.alertBox h5{margin-top:12px;color:#cc0132;font-size:1em;}
+.alertBox p{margin:0 0 5px 0;}
+/*footer*/
+
+
+
+/* bottom section GTM 2013 */
+#footer p{clear:both;padding:10px;text-align:center;color:#FFF}
+div#footer.Gtm2013 {background:#444444;overflow:hidden;clear:both;margin:0;color:#fefefe;margin:0;padding:5px 0 30px 0;width:100%;position:relative;height:auto;}
+#footer.Gtm2013 .BtmMain {margin-top:15px;overflow:hidden;margin-bottom: 22px;}
+#footer.Gtm2013 .BtmMain li {background:none;display:block;float:left;margin:0 0 0 62px;padding:0}
+#footer.Gtm2013 .BtmMain li a {color: #C4C4C4;width:143px;white-space:pre-wrap;display:block;}
+#footer.Gtm2013 .BtmMain li a:hover {color: #FFF;}
+#footer.Gtm2013 .BtmMain li a.last {color:#0595ff;}
+#footer.Gtm2013 .BtmMain li a.last:hover {color:#fff;}
+#footer.Gtm2013 .BtmMain li.first {margin-left:20px;margin-right:10px;}
+#footer.Gtm2013 .BtmMain li span:first-child {text-transform:capitalize;color:#e1e1e1;font-weight:bold;}
+#footer.Gtm2013 .BtmMain li h3:first-child {text-transform:capitalize;color:#e1e1e1;font-weight:bold;font-size:12px;margin:0;padding:0;width:143px}
+#footer.Gtm2013 .BtmMain li ul li {float:none;margin-left:0; color: #C4C4C4;font-size: 11px;/*line-height: 31px;*/padding-top:12px;}
+#footer.Gtm2013 .Btm2 {border-top: 1px solid #666;border-bottom: 1px solid #666;margin: 0 auto;padding: 10px 9px;width: 95%;}
+#footer.Gtm2013 .Btm2 ul {overflow:hidden;}
+#footer.Gtm2013 .Btm2 ul  ul{float:left;width:auto}
+#footer.Gtm2013 .Btm2 ul ul li{width:auto}
+#footer.Gtm2013 .Btm2 h3 {display:block;text-transform:capitalize;color:#e1e1e1;font-weight:bold;clear:both;font-size:12px;margin:0;padding:0;width:81%}
+    /*#footer.Gtm2013 .Btm2 span.signupHeading {margin-bottom: 8px;}*/
+#footer.Gtm2013 .Btm2 span.signupNews {background:#505050;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;padding:6px 8px 6px 9px;display:block;}
+#footer.Gtm2013 .Btm2 span.signupNews input:first-child {border: 1px solid #CCCCCC;margin-right: 5px;background: #B8B8B8;width:130px;padding:2px 1px 3px 1px;vertical-align: baseline;}
+#footer.Gtm2013 .Btm2 span.signupNews input:first-child:focus, .utilitynav .srchtxtbox:focus{background: #FFF;border: 1px solid #ffc000;}
+#footer.Gtm2013 .Btm2 span.signupNews input.mButton {
+border: 0; box-shadow:inset 0 1px 0 #55b6ed;color: #fff;background: #217aaa;
+background: -moz-linear-gradient(top, #55b6ed 0%, #217aaa 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#55b6ed), color-stop(100%,#217aaa));background: -webkit-linear-gradient(top, #55b6ed 0%,#217aaa 100%);background: -o-linear-gradient(top, #55b6ed 0%,#217aaa 100%);background: -ms-linear-gradient(top, #55b6ed 0%,#217aaa 100%);-ms-filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#55b6ed', endColorstr='#217aaa',GradientType=0 );background: linear-gradient(top, #55b6ed 0%,#217aaa 100%);
+font-size:11px;padding:5px 7px;*padding:3px 5px;cursor:pointer;text-shadow:none;border-radius: 3px; -moz-border-radius:3px; -webkit-border-radius:3px
+}
+#footer.Gtm2013 .Btm2 span.signupNews input.mButton:hover{background: -moz-linear-gradient(top, #217aaa 0%, #55b6ed 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#217aaa), color-stop(100%,#55b6ed));background: -webkit-linear-gradient(top, #217aaa 0%,#55b6ed 100%);background: -o-linear-gradient(top, #217aaa 0%,#55b6ed 100%);background: -ms-linear-gradient(top, #217aaa 0%,#55b6ed 100%);-ms-filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#217aaa', endColorstr='#55b6ed',GradientType=0 );background: linear-gradient(top, #217aaa 0%,#55b6ed 100%);}
+#footer.Gtm2013 .Btm2 ul li {background:none;display:block;float:left;margin: 0;width:30%;padding:0}
+#footer.Gtm2013 .Btm2 li.second{width:40%}
+#footer.Gtm2013 .Btm2 li.first a {text-indent:-9999px;display:block;height:24px;width:24px;padding:0}
+#footer.Gtm2013 .Btm2 li.first a.twitter {background:url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-light.png) 0 -624px no-repeat;}
+#footer.Gtm2013 .Btm2 li.first a.twitter:hover {background:url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-dark.png) 0 -624px no-repeat;}
+#footer.Gtm2013 .Btm2 li.first a.YouTube {background:url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-light.png) 0 -720px no-repeat;}
+#footer.Gtm2013 .Btm2 li.first a.YouTube:hover {background:url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-dark.png) 0 -720px no-repeat;}
+#footer.Gtm2013 .Btm2 li.first a.facebook {background:url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-light.png) 0 -168px no-repeat;}
+#footer.Gtm2013 .Btm2 li.first a.facebook:hover {background:url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-dark.png) 0 -168px no-repeat;}
+#footer.Gtm2013 .Btm2 li.first a.google {background: url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-light.png) no-repeat scroll 0 -312px transparent;}
+#footer.Gtm2013 .Btm2 li.first a.google:hover {background: url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-dark.png) no-repeat scroll 0 -312px transparent;}
+#footer.Gtm2013 .Btm2 li.first a.linkedin {background: url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-light.png) no-repeat scroll 0 -360px transparent;}
+#footer.Gtm2013 .Btm2 li.first a.linkedin:hover {background: url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-dark.png) no-repeat scroll 0 -360px transparent;}
+#footer.Gtm2013 .Btm2 li.first a.pinterest {background: url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-light.png) no-repeat scroll 0 -456px transparent;}
+#footer.Gtm2013 .Btm2 li.first a.pinterest:hover {background: url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-dark.png) no-repeat scroll 0 -456px transparent;}
+#footer.Gtm2013 .Btm2 li.first a.blog {background: url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-light.png) no-repeat scroll 0 -744px transparent;}
+#footer.Gtm2013 .Btm2 li.first a.blog:hover {background: url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-dark.png) no-repeat scroll 0 -744px transparent}
+#footer.Gtm2013 .Btm2 ul li ul li{float:none;margin-left:0;margin-top:8px;}
+#footer.Gtm2013 .Btm2 ul li.first ul li{float:left;margin-left:5px;}
+#footer.Gtm2013 .Btm2 ul li.first ul li:first-child {margin-left:0;}
+#footer.Gtm2013 .Btm2 li:first-child {margin-left:0}
+#footer.Gtm2013 .Btm2 ul li.third ul li {margin-top:15px;}
+#footer.Gtm2013 .Btm3 {margin-top:12px;margin: 0 auto;padding: 10px 9px;width: 95%;}
+#footer.Gtm2013 .Btm3 ul {overflow:hidden;}
+#footer.Gtm2013 .Btm3 li {float:left;margin-left:20px}
+#footer.Gtm2013 .Btm3 li a {font-weight:normal;color:#e5e5e5;font-size:11px;}
+#footer.Gtm2013 .Btm3 li a:hover {font-weight:normal;color:#FF7800;font-size:11px;}
+#footer.Gtm2013 .Btm3 li:first-child {margin-left:0;}
+#footer.Gtm2013 .Btm3 div.copy {font-size:10px;color:#e5e5e5;display:block;margin-top:10px;clear:both;margin-bottom:10px;}
+
+div#footer.Gtm2013 ul li{display:inline;padding:0 13px;margin-top:4px;font-size:11px;float:left;}
+div#footer.Gtm2013 ul li a{padding:0 0 2px 0;text-decoration:none;font-weight:normal;color:#e2e2e2;white-space:nowrap;}
+div#footer.Gtm2013 ul li a:hover{color:#FFF;background:none;}
+div#footer.Gtm2013 p,div#footer.Gtm2013 p b{padding:0 0 4px 0;color:#848484;text-align:center;font-size:11px;}
+div#footer.Gtm2013 .footerLnk ul li {line-height:18px;}
+#footer.Gtm2013 .copyRight{color:#b0afaf;clear:both;padding: 15px 10px 10px 25px;text-align:left}
+#footer.Gtm2013 .weAccept{display:none}
+#footer.Gtm2013 .footerLnk{width:98%;padding: 5px 0 0 13px;}
+#footer.Gtm2013 .footerLnk ul{margin:0 auto}
+/* bottom section GTM 2013 ends here*/
+
+/* bottom section GTM 2014 */
+#footer p{clear:both;padding:10px;text-align:center;color:#FFF}
+div#footer.Gtm2014 {background:#444444;overflow:hidden;clear:both;margin:0;color:#fefefe;margin:0;padding:5px 0 30px 0;width:100%;position:relative;height:auto;}
+#footer.Gtm2014 .BtmMain {margin-top:15px;overflow:hidden;margin-bottom: 22px;}
+#footer.Gtm2014 .BtmMain li {background:none;display:block;float:left;margin:0 0 0 52px;padding:0}
+#footer.Gtm2014 .BtmMain li a {color: #C4C4C4;width:143px;white-space:pre-wrap;display:block;}
+#footer.Gtm2014 .BtmMain li a:hover {color: #FFF;}
+#footer.Gtm2014 .BtmMain li a.last {color:#0595ff;}
+#footer.Gtm2014 .BtmMain li a.last:hover {color:#fff;}
+#footer.Gtm2014 .BtmMain li.first {margin-left:20px;margin-right:10px; display:none;}
+#footer.Gtm2014 .BtmMain li.second {margin-left: 15px;}
+#footer.Gtm2014 .BtmMain li span:first-child {text-transform:capitalize;color:#e1e1e1;font-weight:bold;}
+#footer.Gtm2014 .BtmMain li h3:first-child {text-transform:capitalize;color:#e1e1e1;font-weight:bold;font-size:12px;margin:0;padding:0;width:143px}
+#footer.Gtm2014 .BtmMain li ul li {float:none;margin-left:0; color: #C4C4C4;font-size: 11px;/*line-height: 31px;*/padding-top:12px;}
+#footer.Gtm2014 .Btm2 {border-top: 1px solid #666;border-bottom: 1px solid #666;margin: 0 auto;padding: 10px 9px;width: 95%;}
+#footer.Gtm2014 .Btm2 ul {overflow:hidden;}
+#footer.Gtm2014 .Btm2 ul  ul{float:left;width:auto}
+#footer.Gtm2014 .Btm2 ul ul li{width:auto}
+#footer.Gtm2014 .Btm2 h3 {display:block;text-transform:capitalize;color:#e1e1e1;font-weight:bold;clear:both;font-size:12px;margin:0;padding:0;width:81%}
+    /*#footer.Gtm2014 .Btm2 span.signupHeading {margin-bottom: 8px;}*/
+#footer.Gtm2014 .Btm2 span.signupNews {background:#505050;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;padding:6px 8px 6px 9px;display:block;}
+#footer.Gtm2014 .Btm2 span.signupNews input:first-child {border: 1px solid #CCCCCC;margin-right: 5px;background: #B8B8B8;width:130px;padding:2px 1px 3px 1px;vertical-align: baseline;}
+#footer.Gtm2014 .Btm2 span.signupNews input:first-child:focus, .utilitynav .srchtxtbox:focus{background: #FFF;border: 1px solid #ffc000;}
+#footer.Gtm2014 .Btm2 span.signupNews input.mButton {
+border: 0; box-shadow:inset 0 1px 0 #55b6ed;color: #fff;background: #217aaa;
+background: -moz-linear-gradient(top, #55b6ed 0%, #217aaa 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#55b6ed), color-stop(100%,#217aaa));background: -webkit-linear-gradient(top, #55b6ed 0%,#217aaa 100%);background: -o-linear-gradient(top, #55b6ed 0%,#217aaa 100%);background: -ms-linear-gradient(top, #55b6ed 0%,#217aaa 100%);-ms-filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#55b6ed', endColorstr='#217aaa',GradientType=0 );background: linear-gradient(top, #55b6ed 0%,#217aaa 100%);
+font-size:11px;padding:5px 7px;*padding:3px 5px;cursor:pointer;text-shadow:none;border-radius: 3px; -moz-border-radius:3px; -webkit-border-radius:3px
+}
+#footer.Gtm2014 .Btm2 span.signupNews input.mButton:hover{background: -moz-linear-gradient(top, #217aaa 0%, #55b6ed 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#217aaa), color-stop(100%,#55b6ed));background: -webkit-linear-gradient(top, #217aaa 0%,#55b6ed 100%);background: -o-linear-gradient(top, #217aaa 0%,#55b6ed 100%);background: -ms-linear-gradient(top, #217aaa 0%,#55b6ed 100%);-ms-filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#217aaa', endColorstr='#55b6ed',GradientType=0 );background: linear-gradient(top, #217aaa 0%,#55b6ed 100%);}
+#footer.Gtm2014 .Btm2 ul li {background:none;display:block;float:left;margin: 0;width:24%;padding:0}
+#footer.Gtm2014 .Btm2 li.second{width:35%;}
+#footer.Gtm2014 .Btm2 li.third{width:30%;}
+#footer.Gtm2014 .Btm2 li.fourth{width:11%; text-align: right;margin-top: 18px;}
+#footer.Gtm2014 .Btm2 li.first a {text-indent:-9999px;display:block;height:24px;width:24px;padding:0}
+#footer.Gtm2014 .Btm2 li.first a.twitter {background:url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-light.png) 0 -624px no-repeat;}
+#footer.Gtm2014 .Btm2 li.first a.twitter:hover {background:url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-dark.png) 0 -624px no-repeat;}
+#footer.Gtm2014 .Btm2 li.first a.YouTube {background:url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-light.png) 0 -720px no-repeat;}
+#footer.Gtm2014 .Btm2 li.first a.YouTube:hover {background:url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-dark.png) 0 -720px no-repeat;}
+#footer.Gtm2014 .Btm2 li.first a.facebook {background:url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-light.png) 0 -168px no-repeat;}
+#footer.Gtm2014 .Btm2 li.first a.facebook:hover {background:url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-dark.png) 0 -168px no-repeat;}
+#footer.Gtm2014 .Btm2 li.first a.google {background: url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-light.png) no-repeat scroll 0 -312px transparent;}
+#footer.Gtm2014 .Btm2 li.first a.google:hover {background: url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-dark.png) no-repeat scroll 0 -312px transparent;}
+#footer.Gtm2014 .Btm2 li.first a.linkedin {background: url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-light.png) no-repeat scroll 0 -360px transparent;}
+#footer.Gtm2014 .Btm2 li.first a.linkedin:hover {background: url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-dark.png) no-repeat scroll 0 -360px transparent;}
+#footer.Gtm2014 .Btm2 li.first a.pinterest {background: url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-light.png) no-repeat scroll 0 -456px transparent;}
+#footer.Gtm2014 .Btm2 li.first a.pinterest:hover {background: url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-dark.png) no-repeat scroll 0 -456px transparent;}
+#footer.Gtm2014 .Btm2 li.first a.blog {background: url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-light.png) no-repeat scroll 0 -744px transparent;}
+#footer.Gtm2014 .Btm2 li.first a.blog:hover {background: url(https://secureimages.mcafee.com/legacy/home/2013/banner/social-media-dark.png) no-repeat scroll 0 -744px transparent}
+#footer.Gtm2014 .Btm2 ul li ul li{float:none;margin-left:0;margin-top:8px;}
+#footer.Gtm2014 .Btm2 ul li.first ul li{float:left;margin-left:5px;}
+#footer.Gtm2014 .Btm2 ul li.first ul li:first-child {margin-left:0;}
+#footer.Gtm2014 .Btm2 li:first-child {margin-left:0}
+#footer.Gtm2014 .Btm2 ul li.third ul li {margin-top:15px;}
+#footer.Gtm2014 .Btm3 {margin-top:12px;margin: 0 auto;padding: 10px 9px;width: 95%;}
+#footer.Gtm2014 .Btm3 ul {overflow:hidden;}
+#footer.Gtm2014 .Btm3 li {float:left;margin-left:20px}
+#footer.Gtm2014 .Btm3 li a {font-weight:normal;color:#e5e5e5;font-size:11px;}
+#footer.Gtm2014 .Btm3 li a:hover {font-weight:normal;color:#FF7800;font-size:11px;}
+#footer.Gtm2014 .Btm3 li:first-child {margin-left:0;}
+#footer.Gtm2014 .Btm3 div.copy {font-size:10px;color:#e5e5e5;display:block;margin-top:10px;clear:both;margin-bottom:10px;}
+
+div#footer.Gtm2014 ul li{display:inline;padding:0 13px;margin-top:4px;font-size:11px;float:left;}
+div#footer.Gtm2014 ul li a{padding:0 0 2px 0;text-decoration:none;font-weight:normal;color:#e2e2e2;white-space:nowrap;}
+div#footer.Gtm2014 ul li a:hover{color:#FFF;background:none;}
+div#footer.Gtm2014 p,div#footer.Gtm2014 p b{padding:0 0 4px 0;color:#848484;text-align:center;font-size:11px;}
+div#footer.Gtm2014 .footerLnk ul li {line-height:18px;}
+#footer.Gtm2014 .copyRight{color:#b0afaf;clear:both;padding: 15px 10px 10px 25px;text-align:left}
+#footer.Gtm2014 .weAccept{display:none}
+#footer.Gtm2014 .footerLnk{width:98%;padding: 5px 0 0 13px;}
+#footer.Gtm2014 .footerLnk ul{margin:0 auto}
+/* bottom section GTM 2014 ends here*/
+
+/*cookie disabled styles*/
+#cookieHelpContainer{padding:10px;}
+#cookieHelpContainer div.userHelpContent{padding:0 0 15px 0;border-bottom:2px solid #e9e9e9;}
+#cookieHelpContainer div.userHelpContent.last{border-bottom:none;}
+#cookieHelpContainer div.userHelpContent li{margin:6px 0 6px 12px;}
+#cookieHelpContainer div.userHelpContent li a{color:#0D6C98;text-decoration:underline;}
+#cookieHelpContainer div.userHelpContent li a:hover{color:#CC0033;}
+#cookieHelpContainer ol{margin-left:11px;}
+
+/*TLS support page styles*/
+#tlsVersionContainer{padding:10px;}
+#tlsVersionContainer div.userHelpContent{padding:0 0 15px 0;border-bottom:2px solid #e9e9e9;}
+#tlsVersionContainer div.userHelpContent.last{border-bottom:none;}
+#tlsVersionContainer div.userHelpContent li{margin:6px 0 6px 12px;}
+#tlsVersionContainer div.userHelpContent li a{color:#0D6C98;text-decoration:underline;}
+#tlsVersionContainer div.userHelpContent li a:hover{color:#CC0033;}
+#tlsVersionContainer ol{margin-left:11px;}
+
+/* about us */
+#bdy .midcol2,#bdy .midcol3,.rightcol{float:left;width:590px;height:auto;margin:20px 8px 20px 8px;}
+#bdy .midcol3{width:412px;margin-top: 20px;}
+.cntcol1{width:720px;margin:0 20px;}
+/*temp Class for nl error msg*/
+fieldset.mgnT10B20 .errorMessage{float:left;width:362px;height:auto;margin:0 0 10px 0;}
+fieldset.mgnT10B20 .lblLErrTxt{margin-bottom:0;}
+.dotlines{background:transparent url('https://secureimages.mcafee.com/legacy/common/dotHorizontal.gif') repeat-x;}
+span.noBdr input{border:0;}.ad_managerPkgLeft{padding-top:40px;overflow:hidden;}
+.ad_managerPkgRight{margin-top:16px;}
+.ad_managerPkgBottom{float:left;width:580px;margin-left:10px;padding-top:40px;text-align:center;overflow:hidden;}
+.midcol3 .ad_managerPkgBottom{width:410px;margin:0;padding:0;}
+.ad-ctnr{clear:both;margin-left:5px;}
+.ad-ctnr .ad_managerPkgLeft,.ad-ctnr .ad_managerPkgBottom{float:left;}
+div.promo{background-repeat:repeat-x;border-bottom-style:solid;border-bottom-width:1px;border-top-style:solid;border-top-width:1px;overflow:hidden;padding:3px 0 3px 0;position:relative;display:block;width:100%;
+border:none;/*Google DC project - bug fix 593612*/}
+.rightcol div.promo{margin-top:20px;}
+div.split135 div.left{float:left;padding:0 10px;margin-bottom:12px;overflow:hidden;position:relative;}
+div.split135 div.left a img{padding-top:5px;}
+div.split135 table{margin:0;padding:0;}
+div.split135 table th, div.split135 table td{margin:0;border:none;padding-right:5px;text-align:left;vertical-align:top;} 
+/*end*/
+h1.styled{margin:15px 10px;font-size:20px;}
+h2.hedblue{color:#09719f;font-size:1.2em;}
+h2 a.lnkblue{text-decoration:none;}
+h2 a.lnkblue:hover{color:#CC0033;}
+span.redTxt{margin-right:6px;color:#ae0000;}
+.red{color:#cb0032;}
+.redLink{color:#cb0032;text-decoration:underline;}
+.redLinkBold{color:#cb0032;text-decoration:underline;}
+/*virusnews newsletter form left 1208*/
+.VirusNews, #TriplePlay{margin:0;padding:10px 0 10px 4px;}
+.VirusNews h3, #TriplePlay h3{color:#666;font-size:1em;font-weight:bold;margin:10px 0 0 0;padding:0;}
+.VirusNews p{margin:10px 0 5px 0;padding:0;}
+.VirusNews .email{width:125px;margin:0 0 3px 0;font-size:.95em;}
+input.button_glossy{background:url("https://secureimages.mcafee.com/common/buttons/en-us/Glossy_btn_blue.gif") no-repeat 0 0 !important;width:76px;height:23px;border:0 !important;font-size:12px;font-weight:bold;color:#FFFFFF;
+cursor:pointer;padding-bottom:3px;}
+/*triple play*/
+div#TPimage span#TPpc, div#TPimage span#TPweb, div#TPimage span#TPmobile 
+{position:relative;top:65px;margin:0 0 10px 0;padding:0;color:#666;font-weight:normal;}
+div#TPimage span#TPpc{width:57px;left:25px;}
+div#TPimage span#TPweb{width:42px;left:40px;}
+div#TPimage span#TPmobile{width:50px;left:45px;}
+div#TPimage{background:url(https://secureimages.mcafee.com/common/icons/tripleplay_logo.gif) 4px 10px no-repeat;width:134px;height:80px;margin:0 0 5px 0;}
+div#TriplePlay a.styled{display:block;color:#336699;margin-left:8px;}
+body#myAccount p a#TriplePlayMoreInfo,body#prodpkg p a#TriplePlayMoreInfo{text-decoration:none;color:#336699;font-weight:normal;font-size:.9em;}
+p a:hover#TriplePlayMoreInfo{color:red;}
+/* password hint */
+.pwdToolTip{display:none;position:absolute;top:45px;left:195px;height:50px;}
+div#passwordHintTop{width:380px;height:25px;background:url(https://secureimages.mcafee.com/legacy/common/popups/toolTip/toolTip_top_w380.gif) no-repeat;}
+div#passwordHintContentArea,.passwordHintContentBg{width:350px;padding:5px 25px 10px 15px;background:url(https://secureimages.mcafee.com/legacy/common/popups/toolTip/toolTip_contentfill_w380.gif) repeat-y;font-size:0.9em;line-height:1.2em;}
+div#passwordHintBottom{overflow:hidden;width:380px;height:9px;margin:0;background:url(https://secureimages.mcafee.com/legacy/common/popups/toolTip/toolTip_bottom_w380.gif) no-repeat;}
+.accActivatedMain,.accActivateMain,.accActEamilMain{height:220px;margin:0 5px 0 10px;}
+#accActivatedBody p,#accActivateBody p,#accActEmail p{margin:0 15px 15px 0;/*font-size:0.9em;*/}
+#accActivatedBody li{list-style:none;}
+.accActTitle h1{margin:0 20px 10px 0;}
+.accActLArc,.accActRArc,#accActivateFooter,#accActEmailFooter,#accActivatedFooter{
+display:none;}
+/*ad code 1208*/
+#ctl00_MainContent_m_LeftNavigation{width:138px;float:left;}
+.ad_managerPkgLeft h3{color:#666;font-size:.9em;font-weight:bold;margin:10px 0 0 12px;padding:0;}
+.ad_managerPkgBottom h3{color:#666;font-size:.9em;font-weight:bold;margin:10px 0 0 0;padding:0;text-align:left;}
+.ad_managerPkgLeft{margin:20px 0 20px 1px;padding:0;float:left;}
+.ad_managerPkgBottom{padding:0;_padding:0;margin:0 0 0 164px;_margin:0 0 0 84px;width:580px;_width:582px;}
+.ad_managerPkgBottom.Left{padding:0;_padding:0;margin:0 0 0 4px;_margin:0 0 0 2px;width:134px;clear:left;}
+/* eula */
+.privacyDisagreed,.eulaDisagreed{margin:0 10px;}
+
+/* EULA SECTION for Login PAGE and Download page ------------------------------------------------------------------------------------------------ */
+#eulaContent {
+	text-align: justify;
+
+}
+#eulaContent p.eulaInnerListPara {
+	margin-top: 10px;
+	margin-left: 0; 
+	font-size: 1em;
+}
+#eulaContent li, #eulaContent li p {
+	margin: 10px 0;
+	}
+	#eulaContent   ol.eula  li ol li  {
+		list-style-type: decimal;
+	} 
+	#eulaContent  .eula  li ol li ol li {
+		list-style-type: upper-alpha;
+	}
+	#eulaContent  .eula  li ol li ol li ol li{
+		list-style-type: decimal;
+			font-size: 12px;
+	} 
+	#eulaContent.divTextAreaScroll p:last-child {
+    margin: 10px 0;
+}
+/*overwriting  styles for EULA, to make fonts consitent as part of K2-4429*/
+#eulaContent, #eulaContent p, #eulaContent ul li, #eulaContent ol li, #eulaContent  .eula, #eulaContent p.eulaInnerListPara{font-size:12px; color:#333;}
+
+/*liberary*/
+.clr{clear:both;}
+.brClr{clear:both;font-size:0;height:1px;line-height:0;font-weight:normal}
+.center{text-align:center;}
+.noBdr{border:none !important;}
+.no-bg{background:none !important;}
+.floatl{float:left;}
+.floatr{float:right;}
+.rel{position:relative;}
+/*width*/
+.w218{width:218px;}
+.w135{width:135px;}
+.w150{width:150px;}
+.w190{width:190px;}
+.w195{width:195px;}
+.w220{width:220px;}
+.w500{width:500px;}
+/* height */
+.h230{height:230px;}
+/*Margin*/
+.mgn0{margin:0 !important;}
+.mgnT5{margin-top:5px !important;}
+.mgn-l14{margin:0 0 0 14px !important;}
+.mgn-t15{margin-top:15px !important;}
+.mgnL10{margin-left:10px;}
+.mgnL15{margin-left:15px;}
+.mgnL230{margin-left:230px;}
+.mgnB10{margin-bottom:10px;}
+.mgnT10{margin:10px 0 0 0;}
+.mgnT20{margin-top:20px !important;}
+.mgnLR12{margin:0 12px;}
+.mgnT10L10{margin:10px 0 0 10px;}
+.mgnT10B20{margin:10px 0 20px 0;}
+.mgnL12B10{margin:0 0 10px 12px;}
+.mgnL190{margin:0 0 0 190px;}
+.mgnL295{margin-left:295px;}
+.mgnT50{margin-top:50px !important;}
+.mgnT10L39{ margin:10px 0 0 39px;}
+/*padding*/
+.padT10{padding-top:10px;}
+.padT10L10{padding:10px 0 0 10px;}
+.pad-l-40{padding-left:40px !important;}
+/*background colors*/
+.bggray2{background:#e7ece4;}
+/*text & color*/
+.font11{font-size:11px !important;}
+
+/*Modal Popup*/
+.modalBackground {background-color:Gray;filter:alpha(opacity=70);opacity:0.7}
+.modalPopup {background-color:transparent;border:none;padding:0;width:684px}
+
+
+/* Need Help Popup */
+.actPopup {width:510px;height:530px;background:#FDFBEC;border:#e5b757 4px solid}
+.actPopup .head {position:relative;z-index:2;height:28px;cursor:move;background:transparent;}
+.actPopup .head input.CloseBttn{background: url(https://secureimages.mcafee.com/legacy/common/popups/containerV1/close.gif) no-repeat;border:0;width:17px;height:20px;}
+.actPopup h2 {position:relative;top:-30px;margin:0;padding:6px 4px 10px 4px;width:502px;background:#e5b757;color:#fff;font-size:1.8em}
+.actPopup .body {width:490px;height:480px;margin-top:-30px;overflow-y:scroll;padding:0 10px 10px 10px;}
+.actPopup .head .CloseBttn {position:absolute;top:4px;right:10px;z-index:200;}
+.actPopup h3{font-size:18px;color:#000;margin-top:16px;}
+
+/* Learn more pop up */
+#ctl00_PopupController_m_PopupUpdatePanel {width: 0; height: 0;position:absolute;left:0;top:0;z-index:1000;}
+
+.packageLearnMore, .popupElm {position:relative;width: 420px; height: 450px;padding:0;margin:0;}
+.packageLearnMore h2, .popupElm h2 {line-height:20px;background: #e5b757; color: #FFFFFF; margin: 0 0 -4px 0;
+width: 408px; padding: 6px;cursor:move;z-index:0;}
+.packageLearnMore .inner,
+.popupElm .inner {width: 400px; height: 400px; overflow: auto; 
+border: 4px solid #e5b757; background: #fdfbec; padding: 6px;}
+.packageLearnMore .inner h3, .popupElm .inner h3 {font-size: 1.4em; font-weight: bold; margin: 1em 0; padding: 0;}
+.packageLearnMore .inner p, .popupElm .inner p{margin-bottom:14px;}
+.packageLearnMore ul#anchor, .packageLearnMore ul.content,
+.popupElm ul#anchor, .popupElm ul.content {margin-bottom: 2em;}
+.packageLearnMore ul.content li, .popupElm ul.content li{list-style-type: disc; margin-left: 1.2em; padding: 0;}
+ .popupElm ol.content li {margin-left: 1.6em;_margin-left: 2em;}
+.packageLearnMore h2 .popupClose,
+.popupElm .popupClose{position:absolute;top:2px;right:5px;}
+.packageLearnMore .popupClose a, .popupElm .popupClose a {color: #FFFFFF; text-decoration: none; font-size:11px;font-weight:normal;}
+.packageLearnMore .popupClose img, .popupElm .popupClose img {position: relative; top:5px;margin-left:4px;}
+.packageLearnMore a.note, .popupElm a.note {width: auto; margin: 0 auto 2em 150px; font-size: 90%;}
+.packageLearnMore, .popupElm{_position:absolute;_width:410px;}
+.DragElm{width:330px;height:30px;position:absolute;z-index:999;top:0;cursor:move;}
+.DragElm img {width:330px;height:30px;}
+#popupcontent{display:none;position:absolute !important;z-index:1000;}
+#ctl00_PopupController_UpdateProgress1{position:absolute;top:280px;left:50%;z-index:1000;border:#dadada 2px solid;padding:8px; background:#fff;}
+.popupElm h2 input.popupClose {position:absolute;right:8px;top:4px;width:18px;height:18px;cursor:pointer;}
+
+.packageLearnMore ul#anchor li a,.packageLearnMore ul#anchor li a:link,.packageLearnMore ul#anchor li a:visited,.packageLearnMore a.styled,.popupElm ul#anchor li a,.popupElm ul#anchor li a:link,.popupElm ul#anchor li a:visited,.popupElm a.styled,
+.prodDetails span.formText a.styled{display:inline-block;color:#096B97;background:transparent url(https://secureimages.mcafee.com/common/media/images/style/arrow-small-blue-right.gif) no-repeat scroll 0 0.4em;
+          padding-left:6px;text-decoration: none;font-weight: normal;}
+
+.packageLearnMore ul#anchor li a:hover,
+.popupElm ul#anchor li a:hover,
+.prodDetails span.formText a.styled:hover {font-weight: normal;color: #CC0033;padding-left:6px;text-decoration: none;	background:transparent url(https://secureimages.mcafee.com/common/media/images/style/arrow-small-red-right.gif) no-repeat scroll 0 0.4em;}
+.packageLearnMore iframe, .popupElm iframe{display:block;position:absolute;top:0;left:0;z-index:-1;filter:mask();width:420px;height:450px;}
+html>body .packageLearnMore iframe,
+html>body .popupElm iframe{display:none;}
+
+/*Pearl*/
+span.pcNote, .pcNote{clear: both;display: block;color: #999;font-size: 11px;margin-left: 20px;}
+
+/*Pearl Ribbon*/
+.awards{display: block;width: 98px;height:310px;float: left;font-size: 11px;background: transparent url(https://secureimages.mcafee.com/legacy/ProductDetail/awd-rib.png) no-repeat top center;padding: 7px 14px 0 14px;text-align: center;}
+#awdList{margin-top:15px;float:left;width:98px}
+.awards strong{display: block;}
+#dvAllAwards strong{display: inline;text-align: left;}
+.awards ul, .awards li{margin:0;padding:0;}
+.awards li{clear:both;float:left;position:relative;vertical-align:top;width:100%;text-align:center;}
+.awards a{font-size: 11px;font-weight: normal;color: #023062;display: block;padding-bottom: 2px;width:90px;margin:0 auto;}
+.awards a img{z-index: 90;}
+.awards .awd-hide{display:none;}
+.awards .ttip, .introOfferTip{display: none;background: #ffffc9;border: 1px solid #caa648;padding: 12px;position: absolute;top: -10px;right: 87px;width: 140px;text-align: left;z-index: 1120;}
+.awards .ttip .tt-arw, .introOfferTip .tt-arw {position: absolute;width: 8px;height: 10px;display: block;right: -8px;top: 20px;background: transparent url(https://secureimages.mcafee.com/legacy/common/popups/toolTipV1/ttip-arw.png) no-repeat 0 0;}
+.introOfferTip .tt-arw { /*width: 10px; right: 50%;*/ top: 50%;  background: transparent url(https://secureimages.mcafee.com/legacy/common/popups/toolTipV1/ttip-arw.png) no-repeat 0 0;}
+.awards .mback li{position:static;text-align: left;margin: 0;padding: 5px 10px 10px 10px;list-style-type:none;	width:78px;}
+.awards .mback li a b{color: #166494;font-size: 13px;margin-bottom: 15px;display: block;text-align: left;}
+.awards .mback a img{margin-left: 0;}
+.awards .mback li ul{margin:0 0 0 4px;clear: both;}
+.awards .mback ul li li{float:none;padding: 0;margin: 5px 0 0 0 ;list-style-type:none;vertical-align:text-top;width:60px; background:url(https://secureimages.mcafee.com/legacy/ProductDetail/list-black-sqr.gif) no-repeat 0 6px;padding-left:9px}
+.awards .mback .rgt-arrw-tt{display:none;}
+.mback .ttip li a, .bwc-ctr a, .mback .ttip span.tt-bdy, .bwc-ctr span{color: #000;font-size: 12px;font-weight: normal;}
+.bwc-ctr a{ *font-size:11px;}
+.bwc-ctr a.bwc-link, .tt-bdy a.bwc-link {color: #166494; font-weight: bold; text-decoration: underline;}
+.mback .ttip h4, .bwc-ctr .tt-bdy h4{color: #000;font-size: 15px;margin-bottom: 10px;margin-top: 0;}
+.mback .ttip b, .bwc-ctr b{color: #9d4142;font-size: 13px !important;display: block;margin-bottom: 0;margin-top: 10px;}
+
+.awards .rgt-arrw-tt, .rgt-arrw-tt{display:none;background: transparent url(https://secureimages.mcafee.com/legacy/common/popups/toolTipV1/rgt-arrw-top-curv.png) no-repeat 0 0;width: 240px;z-index: 1002;border: 0;left: auto;right:100px;top:157px;padding: 20px 0 0 0;margin: 0;position: absolute;}
+.awards .ttip .arrw-rgt, .ttip .arrw-rgt{background: transparent url(https://secureimages.mcafee.com/legacy/common/popups/toolTipV1/rgt-arrw.png) no-repeat top right;height: 29px;right: 0;overflow: hidden;position: absolute;top: 32px;width: 16px;z-index:1121}
+.awards .rgt-arrw-tt .tt-bdy{float:left;background: transparent url(https://secureimages.mcafee.com/legacy/common/popups/toolTipV1/rgt-arrw-bdy-bg.png) repeat-y 0 0;clear: both;margin: 0;display:block;padding: 0 25px 0 20px;z-index: 1120;}
+
+.view-all{clear:both;z-index:1120;position:relative;}
+.vew-all{clear:both;position:relative;}
+
+
+/*Pearl Bottom BWC Styles*/
+.bttm-arrw-tt{display: none;background: transparent url(https://secureimages.mcafee.com/legacy/common/popups/toolTipV1/bttm-top-410.png) no-repeat;overflow: hidden;position: absolute;bottom:100px;left: 0;width: 330px;}
+.bwc-ctr .bttm-arrw-tt{width: 410px;left:-10px;}
+#tool-tip .bttm-arrw-tt{bottom:auto;}
+.pp-btm-price .bttm-arrw-tt{padding-bottom: 10px; bottom: 100px;z-index:1002;}
+.rgt-arrw-tt .bttm-curv{clear: both;display: block;height: 20px;background: transparent url(https://secureimages.mcafee.com/legacy/common/popups/toolTipV1/rgt-arrw-bttm-curv.png) no-repeat;overflow: hidden;}
+.bttm-arrw-tt .tt-bdy{clear: both;display: block;margin-top: 21px;padding: 0 35px 10px 25px;background: transparent url(https://secureimages.mcafee.com/legacy/common/popups/toolTipV1/bttm-bdy-bg-410.png) repeat-y;overflow: hidden;}
+.bwc-ctr .bttm-arrw-tt .tt-bdy{width: 365px;}
+.tt-bdy div{position: relative;width: 300px;margin: 0 20px;padding: 0;}
+.bwc-ctr .tt-bdy div{width: 382px;}
+.bttm-arrw-tt .btm-curv{display: block;top: -1px;height: 31px;background: transparent url(https://secureimages.mcafee.com/legacy/common/popups/toolTipV1/bttm-arrw-bttm-410.png) no-repeat;overflow: hidden;}
+.bwc-ctr ul{margin: 5px 0 0 116px;list-style-type:square}
+.bwc-shld{float: left;margin-right: 10px;}
+.bwc-ctr h4{color: #166494;margin:10px 0 10px 0;font-size: 14px;}
+.bwc-ctr li{margin-bottom: 3px;}
+tfoot .bwc-ctr {padding:15px 0 0 10px;position:relative;margin:0 0 0 20px;text-align:left;}
+tfoot .bttm-arrw-tt{bottom:85px;}
+
+
+
+tfoot .bttm-arrw-tt.bwc-prod, x:-moz-any-link {bottom:65px;}
+*+html tfoot .bttm-arrw-tt.bwc-prod {  bottom:85px !important; }
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+tfoot .bttm-arrw-tt.bwc-prod {bottom: 65px;}
+}
+
+#cust-bwc span#bwc{bottom:65px;}
+
+
+
+.PCTbl3Column tfoot img, tfoot img{float:left;margin-right:12px;}
+
+/*Price Style  - GTM Pearl*/
+.price-sec{float: left;}
+.price-sec i{margin-top: 15px;display: block;font-size: 12px;color: #333;text-decoration: line-through;font-style: normal;}
+.price-sec b{display: inline-block;margin: 0 0 0 0;color: #cb0133;font-size: 18px;font-weight: normal;margin: 4px 10px 0 0;}
+.price-sec em{display: block;margin: 0;color: #cb0133;font-size: 14px;font-style: normal;}
+.price-sec big{font-size: 12px;font-weight: bold;display: block;padding: 10px 0 3px 0;}
+
+/*Pearl Old price & New Price in Same line*/
+.btn-inline .price-sec{margin: 10px 10px 0 0;}
+.btn-inline .price-sec span, .pp-btm-price .price-sec span{float: left;}
+.pp-btm-price .price-sec span {}
+.pp-btm-price .price-sec big, .us-ctr .price-sec big{display: none;}
+.pp-btm-price .trial big, .us-ctr .trial big{display: block;}
+.btn-inline .price-sec i, .pp-btm-price i{display: inline;color: #666;margin-right: 0;}
+.btn-inline .price-sec b, .pp-btm-price b{display: inline;font-size: 27px;margin: 4px 10px 0 0;}
+.btn-inline .price-sec em, .pp-btm-price em{clear: both;font-size: 12px;}
+.pp-btm-price .Trial big{display:block;padding:0}
+.btn-inline .price-sec span.btn-sml-buynow, .btn-inline .price-sec button.btn-sml-buynow{margin-top: 10px;}
+
+/*newsletter thank you*/
+ul.newslThankYou{list-style-type:disc; margin-left:20px; margin-top:10px; font-weight:normal;color:#333}
+li.newslThankYou{margin-bottom:7px;}
+
+/* NoAppAccess */
+.noAppAccess h1,
+.eulaDisagree h1,
+.browserNotSupported h1{display:none;}
+.noAppAccess a,
+.eulaDisagree a{text-decoration:underline;font-weight:normal;font-size:12px;}
+.noAppAccess a{padding-top:10px;display:block;}
+.noAppAccess,
+.eulaDisagree,
+.browserNotSupported{padding:16px 42px 0 42px;line-height:16px;}
+
+/* style for View Products for MAC link */
+.ViewStoreLink{padding:0 0 0 14px;clear:both}
+
+/*Logout page styles*/
+/*.logoutContainer{margin:0 15px;}
+ .leftCol{float:left;width:153px} - My Account module layout is breaking in all browsers */
+.aMidCor h3,.aBotMidCor{margin:10px 0;font-size:20px;}
+/*.aMidCor h3{font-size:18px;}*/
+.infoBox a,.aBotMidCor a{font-size:12px;}
+.logoutContainer{float:left;width:590px;height:150px;margin:0 8px}
+
+/* For Login popup */
+.loginFrame{position:absolute;top:0;left:0;z-index:9999;border:0;display:none;width:100%;height:100%;_height:650px}
+.loginHolder, .loginHolder #ajaxLoginLoad{display:none}
+.loginHolder #ajaxLoginLoad{position:absolute;left:110px;top:171px;}
+.loginFrameCnt{width:257px;height:95%;}
+.loginHolder a.close, .loginHolder{background: #fff url(https://secureimages.mcafee.com/legacy/home/login-sprite.gif) no-repeat;}
+.loginHolder{background-repeat:repeat-x;background-position:0 121px;border:1px solid #a5a5a5;display:none;height:450px;top:111px;*top:106px;width:258px;position:absolute;right:0;z-index:9;}
+.loginHolder a.close{float:right;background-position:-2px -443px;width:15px;height:15px;overflow:hidden;margin:3px 3px 0 0;}
+.ajxLodImg{display:none;border:2px solid #d2d2d2;background:white;height:50px;width:50px;position:absolute;top:224px;left:354px;margin:0 auto;z-index:800;}
+.ajxLodImg img{margin:8px 0 0 10px}
+
+/*NEWPROJ-3200*/
+.logoHomeTxt{color:#727272;font-size:1.6em;letter-spacing: 0.5px;position:relative;top:-10px;font-weight: 100; display:none;}
+/*End*/
+/* NewsLetter */
+.AspNet-FormView-Data p {word-wrap: break-word;}
+.benefit .improved, .PCTbl3Column .heighlight, #pcTblBdy .pcHeighlight, .pkg-tab .new, .pkg-tab .improved, .pkg-tab .heighlight{display:none}
+
+/*--- Button ----*/
+/*--Resetting Old Styles--*/
+.v2013 .prodcntr button.btn-sml-buynow span, .v2013 .prodcntr button.buynow-btn span, .v2013 .mButton.grdtgray-lnk, .v2013 span.btn-sml-blue, .v2013 span.btn-sml-trynow, .v2013 .mButton input.btn-sml-blue, .v2013 button.btn-sml-buynow span, 
+.v2013 span.btn-sml-buynow, .v2013 .btn-sml-trynow span
+{background:none;font-size:inherit;height:auto;padding:0;font-weight:normal;border:0}
+.v2013 input.mButton{font-weight:normal}
+#bdy .v2013 button, .v2013 .mButton, .v2013 span.btn-sml-buynow input, .v2013 button.btn-sml-buynow, .v2013 span.btn-sml-trynow input , .v2013 span.btn-sml-blue input, .v2013 button.btn-sml-trynow
+{padding: 5px 16px;*padding: 2px 14px;outline: none;height:auto;*width:auto;*overflow:visible;font-size:1.1em;text-shadow: 0 0 1px rgba(250,250,250,0.8);}
+
+/*--Resetting Old Styles--*/
+
+.v2013 button:hover, .v2013 .mButton:hover, .v2013 button.btn-sml-buynow 
+{text-decoration: none;}
+.v2013 button:active span, .v2013 .mButton:active span, .v2013 button.btn-sml-buynow 
+{position: relative; top: 1px}
+.v2013 button, .v2013 .mButton, .v2013 span.btn-sml-buynow input, 
+.v2013 span.btn-sml-blue input, .v2013 button.btn-sml-buynow, .refBtnBlue{
+cursor:pointer;border: 1px solid #b1224a;box-shadow:inset 0 1px 0 #e25f86; color: #FFF;background: #a70331;
+background: -moz-linear-gradient(top, #f1557e 0%, #a70331 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f1557e), color-stop(100%,#a70331));
+background: -webkit-linear-gradient(top, #f1557e 0%,#a70331 100%);
+background: -o-linear-gradient(top, #f1557e 0%,#a70331 100%);
+background: -ms-linear-gradient(top, #f1557e 0%,#a70331 100%);
+-ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1557e', endColorstr='#a70331',GradientType=0 );
+background: linear-gradient(top, #f1557e 0%,#a70331 100%);border-radius: 3px; -moz-border-radius:3px; -webkit-border-radius:3px;-webkit-transition:.4s linear;
+}
+.v2013 button:hover, .v2013 .mButton:hover, .v2013 span.btn-sml-buynow input:hover, .v2013 span.btn-sml-blue input:hover{
+box-shadow:0 1px 1px #ffd5e2 inset, 0 0 3px #888;background: -moz-linear-gradient(top, #a70331 0%, #f1557e 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a70331), color-stop(100%,#f1557e));
+background: -webkit-linear-gradient(top, #a70331 0%,#f1557e 100%);background: -o-linear-gradient(top, #a70331 0%,#f1557e 100%);
+background: -ms-linear-gradient(top, #a70331 0%,#f1557e 100%);-ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a70331', endColorstr='#f1557e',GradientType=0 );
+background: linear-gradient(top, #a70331 0%,#f1557e 100%);
+}
+.v2013 button:active, .v2013 .mButton:active, .v2013 span.btn-sml-buynow input:active, .v2013 span.btn-sml-blue input:active{box-shadow: 0 0 5px #c2c2c2 inset;}
+.v2013 .mButton.blue, .v2013 button.btn-sml-trynow input, .v2013 .mButton.grdtgray-lnk .mButton , .v2013 button.btn-sml-trynow, .refBtnBlue
+{border: 0; box-shadow:inset 0 1px 0 #58a4e9; color: #fff;border:1px solid #16577a;background: #4cabe1;
+background: -moz-linear-gradient(top, #58baf1 0%, #217aaa 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#58baf1), color-stop(100%,#217aaa));
+background: -webkit-linear-gradient(top, #58baf1 0%,#217aaa 100%);
+background: -o-linear-gradient(top, #58baf1 0%,#217aaa 100%);
+background: -ms-linear-gradient(top, #58baf1 0%,#217aaa 100%) !important;
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#58baf1', endColorstr='#217aaa',GradientType=0);
+background: linear-gradient(top, #58baf1 0%,#217aaa 100%);
+}
+.v2013 .mButton.blue:hover, #bdy .v2013 button.btn-sml-trynow input:hover,.v2013 button.btn-sml-trynow:hover, .refBtnBlue:hover 
+{box-shadow:0 1px 1px #58A4E9 inset, 0 0 2px #62A1E3;background: -moz-linear-gradient(top, #217aaa 0%, #58baf1 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#217aaa), color-stop(100%,#58baf1));
+background: -webkit-linear-gradient(top, #217aaa 0%,#58baf1 100%);
+background: -o-linear-gradient(top, #217aaa 0%,#58baf1 100%);
+background: -ms-linear-gradient(top, #217aaa 0%,#58baf1 100%) !important;
+filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#217aaa', endColorstr='#58baf1',GradientType=0 );
+background: linear-gradient(top, #217aaa 0%,#58baf1 100%);
+}
+.v2013 .mButton.blue:active, #bdy .v2013 button.btn-sml-trynow input:active,.v2013 button.btn-sml-trynow:active, .refBtnBlue:active {box-shadow: 0 0 5px #3067A2 inset;}
+.v2013 .mButton.black:hover {box-shadow:0 1px 1px #545454 inset, 0 0 2px #4D4D4D}
+.v2013 .mButton.black:active {box-shadow: 0 0 5px #232323 inset}
+.v2013 .small.mButton {font-size:0.8em; padding: 3px 5px}
+.v2013  .large.mButton {font-size:1.3em; padding: 7px 10px}
+.v2013 .mButton span, #bdy .v2013 button span, .v2013 button span, .v2013 button.btn-sml-trynow span{padding:0;margin:0}
+
+.v2014 .prodcntr button.btn-sml-buynow span, .v2014 .prodcntr button.buynow-btn span, .v2014 .mButton.grdtgray-lnk, .v2014 span.btn-sml-blue, .v2014 span.btn-sml-trynow, .v2014 .mButton input.btn-sml-blue, .v2014 button.btn-sml-buynow span, 
+.v2014 span.btn-sml-buynow, .v2014 .btn-sml-trynow span
+{background:none;font-size:inherit;height:auto;padding:0;font-weight:normal;border:0}
+.v2014 input.mButton{font-weight:normal}
+#bdy .v2014 button, .v2014 .mButton, .v2014 span.btn-sml-buynow input, .v2014 button.btn-sml-buynow, .v2014 span.btn-sml-trynow input , .v2014 span.btn-sml-blue input, .v2014 button.btn-sml-trynow
+{padding: 5px 16px;*padding: 2px 14px;outline: none;height:auto;*width:auto;*overflow:visible;font-size:1.1em;text-shadow: 0 0 1px rgba(250,250,250,0.8);}
+/*--Resetting Old Styles--*/
+
+.v2014 button:hover, .v2014 .mButton:hover, .v2014 button.btn-sml-buynow 
+{text-decoration: none;}
+.v2014 button:active span, .v2014 .mButton:active span, .v2014 button.btn-sml-buynow 
+{position: relative; top: 1px}
+.v2014 button, .v2014 .mButton, .v2014 span.btn-sml-buynow input, 
+.v2014 span.btn-sml-blue input, .v2014 button.btn-sml-buynow, .refBtnBlue{
+cursor:pointer;border: 1px solid #b1224a;box-shadow:inset 0 1px 0 #e25f86; color: #FFF;background: #a70331;
+background: -moz-linear-gradient(top, #f1557e 0%, #a70331 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f1557e), color-stop(100%,#a70331));
+background: -webkit-linear-gradient(top, #f1557e 0%,#a70331 100%);
+background: -o-linear-gradient(top, #f1557e 0%,#a70331 100%);
+background: -ms-linear-gradient(top, #f1557e 0%,#a70331 100%);
+-ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1557e', endColorstr='#a70331',GradientType=0 );
+background: linear-gradient(top, #f1557e 0%,#a70331 100%);border-radius: 3px; -moz-border-radius:3px; -webkit-border-radius:3px;-webkit-transition:.4s linear;
+}
+.v2014 button:hover, .v2014 .mButton:hover, .v2014 span.btn-sml-buynow input:hover, .v2014 span.btn-sml-blue input:hover{
+box-shadow:0 1px 1px #ffd5e2 inset, 0 0 3px #888;background: -moz-linear-gradient(top, #a70331 0%, #f1557e 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a70331), color-stop(100%,#f1557e));
+background: -webkit-linear-gradient(top, #a70331 0%,#f1557e 100%);background: -o-linear-gradient(top, #a70331 0%,#f1557e 100%);
+background: -ms-linear-gradient(top, #a70331 0%,#f1557e 100%);-ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a70331', endColorstr='#f1557e',GradientType=0 );
+background: linear-gradient(top, #a70331 0%,#f1557e 100%);
+}
+.v2014 button:active, .v2014 .mButton:active, .v2014 span.btn-sml-buynow input:active, .v2014 span.btn-sml-blue input:active{box-shadow: 0 0 5px #c2c2c2 inset;}
+.v2014 .mButton.blue, .v2014 button.btn-sml-trynow input, .v2014 .mButton.grdtgray-lnk .mButton , .v2014 button.btn-sml-trynow, .refBtnBlue
+{border: 0; box-shadow:inset 0 1px 0 #58a4e9; color: #fff;border:1px solid #16577a;background: #4cabe1;
+background: -moz-linear-gradient(top, #58baf1 0%, #217aaa 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#58baf1), color-stop(100%,#217aaa));
+background: -webkit-linear-gradient(top, #58baf1 0%,#217aaa 100%);
+background: -o-linear-gradient(top, #58baf1 0%,#217aaa 100%);
+background: -ms-linear-gradient(top, #58baf1 0%,#217aaa 100%) !important;
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#58baf1', endColorstr='#217aaa',GradientType=0);
+background: linear-gradient(top, #58baf1 0%,#217aaa 100%);
+}
+.v2014 .mButton.blue:hover, #bdy .v2014 button.btn-sml-trynow input:hover,.v2014 button.btn-sml-trynow:hover, .refBtnBlue:hover 
+{box-shadow:0 1px 1px #58A4E9 inset, 0 0 2px #62A1E3;background: -moz-linear-gradient(top, #217aaa 0%, #58baf1 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#217aaa), color-stop(100%,#58baf1));
+background: -webkit-linear-gradient(top, #217aaa 0%,#58baf1 100%);
+background: -o-linear-gradient(top, #217aaa 0%,#58baf1 100%);
+background: -ms-linear-gradient(top, #217aaa 0%,#58baf1 100%) !important;
+filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#217aaa', endColorstr='#58baf1',GradientType=0 );
+background: linear-gradient(top, #217aaa 0%,#58baf1 100%);
+}
+.v2014 .mButton.blue:active, #bdy .v2014 button.btn-sml-trynow input:active,.v2014 button.btn-sml-trynow:active, .refBtnBlue:active {box-shadow: 0 0 5px #3067A2 inset;}
+.v2014 .mButton.black:hover {box-shadow:0 1px 1px #545454 inset, 0 0 2px #4D4D4D}
+.v2014 .mButton.black:active {box-shadow: 0 0 5px #232323 inset}
+.v2014 .small.mButton {font-size:0.8em; padding: 3px 5px}
+.v2014  .large.mButton {font-size:1.3em; padding: 7px 10px}
+.v2014 .mButton span, #bdy .v2014 button span, .v2014 button span, .v2014 button.btn-sml-trynow span{padding:0;margin:0}
+
+span.win8-link {display:block;margin:10px 0px 0px 0px;}
+
+/*AC resource page control*/
+.tools-services .burgundy-lnk, .tools-services img {display:none !important;}
+
+/* Social Buttons in Free trails and MSS product pages in AU website */
+
+div.social-buttons{
+display:block;
+padding:5px 0px 0px 10px !important;
+position:relative !important;
+}
+.pkg-sec div.social-buttons{
+	padding:25px 0px 0px 0px !important; /*Over ridding padding for MSS Product page */
+}
+div.social-buttons .g-plusone{
+	display:none; /* In IE 7 browser google plus is not supported so hiding the same */
+}
+div.social-buttons #___plusone_0{
+display:inline-block !important;
+margin-top:0px !important;
+min-width:90px !important;
+margin-left:17px !important;
+width:auto !important;
+float:left !important;
+}
+div.social-buttons .twitter-count-horizontal  {
+float:left;
+display:inline-block !important;
+margin-top:0px !important;
+margin-left:10px !important;
+min-width:90px !important;
+width:90px !important;
+overflow:visible;
+}
+div.social-buttons .fb_iframe_widget, div.social-buttons iframe.fb_ltr{
+display:inline-block !important;
+margin-top:0px !important;
+min-width:90px !important;
+float:left !important;
+overflow: visible !important;
+}
+:root div.social-buttons span{
+	width:auto\9 !important;
+}
+
+/* Why McAfee Protection */
+#whyMcAfeeWidget{position: relative; height: 100%; display: block; *margin-bottom: auto;}
+#whyMcAfeeWidget .heading{padding: 20px 0 20px 25px;background-color:#fff;}
+h2#whyChooseHeading{color:#008ee5;font-size:12px;line-height:24px;background-repeat: no-repeat; background-position: 0 50%; padding-left: 15px; display: inline-block; vertical-align: middle; margin: 0; cursor: pointer;}
+#whyChooseArticle{background: #fff; padding: 0 100px 30px 40px; display: none;}
+#whyChooseArticle p{color:#444;font-size:12px;line-height:18px;margin:25px 0;}
+#whyChooseArticle section h3 + p{margin-top:10px;}
+#whyChooseArticle section{margin-bottom:40px;}
+#whyChooseArticle h3{margin:0;font-size:16px;color#404040;}
+#whyChooseArticle ul.aboutProducts{margin-top:-5px;line-height:18px;padding-left: 15px;}
+#whyChooseArticle ul.aboutProducts li a{color:#008ee5;}
+#whyChooseArticle ul.aboutProducts li a:hover{text-decoration:underline;}
+#whyMcAfeeWidget .heading h2:hover{text-decoration:underline;}
+#whyMcAfeeWidget .heading h2.close{background-image: url(https://secureimages.mcafee.com/legacy/home/plus_icon_off.png);}
+#whyMcAfeeWidget .heading h2.open{color:#b71234;background-image: url(https://secureimages.mcafee.com/legacy/home/minus_icon_off.png);}
+#whyMcAfeeWidget .heading h2.close:hover{background-image: url(https://secureimages.mcafee.com/legacy/home/plus_icon_on.png);}
+#whyMcAfeeWidget .heading h2.open:hover{background-image: url(https://secureimages.mcafee.com/legacy/home/minus_icon_on.png);}
+
+/* RR-575 */
+.appDldLtCol .pntBtn{margin:0 0 10px 0;text-align:right}
+.appDldLtCol .pntBtn a.print{padding:3px 12px 7px 26px;background:url(https://secureimages.mcafee.com/legacy/common/icons/icon_print.gif) no-repeat;font-size:12px}
+
+/* Mozy license Ext.*/
+.mozy-license { margin:15px; line-height:18px;}
+.mozy-license .errorMessage { color:#000; font-size:12px; padding-top:9px; margin:0px;}
+.mozy-license .mozy-lft .errorMessage { width:285px;}
+.mozy-license h2 { color:#605e5e; font-size:13px; padding:0px; margin:0px; font-size:12px; float:left; width:250px; margin-top:15px;}
+.mozy-license input.text-box {background: none repeat scroll 0 0 #FFFFFF;border: 1px solid #00AEF2;border-radius: 5px;box-shadow: 0 0 1px 1px #CCCCCC;color: #666666;float: left;height: 22px;margin-top: 5px;outline: medium none;width: 275px;padding:4px 0 4px 8px; font-size:18px;}
+.mozy-license input.text-box-error {border: 1px solid #CC0033; border-radius: 5px;box-shadow: 0 0 1px 1px #CCCCCC; color: #666666; float: left; height:22px; padding-top:4px; margin-top: 5px;outline: medium none; width: 275px; font-size:18px; padding:4px 0 4px 8px;  }
+.mozy-license .license-section { width:730px; float:left;}
+.mozy-license .mozy-entr-license-key { border-top:1px solid #b7b6b6; border-bottom:1px solid #b7b6b6; margin:20px 0; float:left;}
+.mozy-license .mozy-lft {float:left; width:365px; margin:5px 0;}
+.mozy-license .mozy-rht { float:left; width:330px; border-top:10px solid #00acf2; padding:15px 15px 25px 15px; margin:0; background-color:#e7ecee; margin:5px 0;}
+.mozy-license .mozy-rht table { margin:10px 0; line-height:18px;}
+.mozy-license .mozy-rht p{ margin:0; line-height:18px; }
+.mozy-license .mozy-license p {margin:10px 0;}
+.mozy-license .btnMfeBlue input {padding:4px 8px 9px;}
+.mozy-license .mozy-instructions { clear:both;} 
+.txt-bold { font-weight:bold; font-size:14px;}
+b.txt-bold { font-weight:bold; font-size:12px;}
+b.bluetxt { color:#00aef2; margin-right:8px;}
+.txt-margin { margin-bottom:25px;}
+.btnMozyBlue {border-radius: 3px;background: none repeat scroll 0 0 #00AEF2; color: #FFFFFF;cursor: pointer;display: block;font-size: 14px;font-weight: bold;height: 39px !important;margin: 0;padding: 8px 25px !important;margin:25px 0 0 0;float:left;}
+.btnMozyGry {border-radius: 3px;background: none repeat scroll 0 0 #a9aaab;color: #717171;cursor:text;display: block;font-size: 14px;font-weight: bold;height: 39px !important;margin: 0;padding: 8px 25px !important;margin:25px 0 0 0;	float:left;}
+ul.updated-language-support { margin:10px; padding:0;}
+ul.updated-language-support li { width:180px; color:#00adf2; color: #00aaf1;}
+ul.updated-language-support li span { color: #000; }
+.mozy-license .border-line, .refundRegisterFrom .border-line, #m_plcConfirmationContent .border-line   {border-top:1px solid #B7B6B6; margin:10px 0; height:5px;}
+
+/* Prorated Refund Page styles */
+.refundRegisterFrom .border-line, #m_plcConfirmationContent .border-line { float: left;width:98%;margin-top: 10px;height: auto;}
+.refundRegisterFrom,.refundReceiptPaneHeader{margin: 20px 10px 10px 22px;}
+#m_plcConfirmationContent .refund-license-pane { margin:10px 10px 10px 20px}
+#m_plcConfirmationContent .border-line { margin-left: 20px;width: 95%;}
+.refundHeaderPane .requiredMessageField{float:right;margin-right: 35px;margin-top:0px;color:#de0002;font-weight: 700;font: inherit;}
+.refundHeaderPane {margin:10px 10px 10px 20px; color: #000; font: inherit;}
+.refundHeaderPane p { line-height: 18px;width: 95%;color: #000;}
+.refundHeaderPane h2 { margin-top: 15px;}
+.refundHeaderPane h3 { color: #00aef2;margin-right: 8px;font-weight: bold;font-size: 14px;padding-bottom: 5px;}
+.refundRegisterFrom label{display:block;margin-top:10px; font-weight:700; }
+.refundRegisterFrom div label span,.label-control span{color:red}
+.refundRegisterFrom select.drop-down,.refundRegisterFrom input.text-box,.refundRegisterFrom .emailAddress
+{background:none repeat scroll 0 0 #fff;border:1px solid #00aef2;border-radius:5px;box-shadow:0 0 1px 1px #ccc;color:#666;font-size:13px;height:27px;margin-top:5px;outline:medium none;padding:4px 0 4px 8px;width:285px}
+.refundRegisterFrom .emailAddress{display:inline-table;height:18px;width:275px; background-color:#e1e1e1; }
+.refundRegisterFrom input.text-box{width:275px;height:18px;}
+.refundRegisterFrom ul,.refundReceiptPane ul{width:100%;list-style-type:none}
+.refundRegisterFrom ul li,.refundReceiptPane ul li{padding: 5px 0;}
+.min-width-column{width: 4%;display:inline-block; vertical-align:top; }  
+.min-width-column input { margin-left: 10px;}                                                                                                                                             
+.medium-width-column{width:20%;display:inline-block; vertical-align:top;}.max-width-column{width:70%;display:inline-block;vertical-align:top;margin-left:5px;}
+.refundRegisterFrom label{text-align:left}
+.refundRegisterFrom .eligibleSubscriptionsForRefund,.refundReceiptPane .eligibleSubscriptionsForRefund
+{margin-top:10px;padding:5px 0;height:auto;width:91%;background:none repeat scroll 0 0 #fff;border:1px solid #00aef2;border-radius:5px;box-shadow:0 0 1px 1px #ccc;color:#666;font-size:12px}
+.refundReceiptPane .eligibleSubscriptionsForRefund{width:90%;margin-left:auto;margin-right:auto;border:none;border-bottom:1px solid #ccc;box-shadow:none;border-radius:0}
+.refundRegisterFrom .fieldInfo{width:100%; margin-top: 5px; display: block;}
+.refundRegisterFrom .two-fields-row{padding-top:10px}
+ .first-field-row{float:left;padding-right:5px}
+.first-field-row span.label-control,.second-field-row span.label-control{display:block; font-weight:700; }
+.second-field-row input.text-box{width:180px}
+.first-field-row input.text-box{width:70px}
+.refundReceiptPane {margin:10px;width:100%;float: left;}
+.refundReceiptPane .refundReceiptSection{display:block;height:auto;margin:1px 36px; padding: 5px;text-align:center}
+.refundReceiptPane .refundReceiptSection label{width:20%;display:inline-block;text-align:left;padding:5px; font-weight: 700;}
+.refundReceiptPane .refundReceiptSection span{width:60%;display:inline-block;text-align:left;padding:5px}
+.refundReceiptPaneActionControls,.refundReceiptPaneActionControlsPrint { margin-left: auto;    margin-right: auto;    text-align: center;    width: 250px; }
+.refundReceiptPaneActionControls .btnMozyBlue,.refundReceiptPaneActionControlsPrint .btnMozyBlue { margin:5px; width:110px; text-align:center; padding: 0px !important;}
+.genericErrorMessagePane {margin:40px 10px 10px 30px}
+.refundReceipteven1 { background-color:#f1f1f1;}
+.refundReceiptodd1 { background-color:#f8f8f8;}
+.left-content-section, .right-content-section {width:90%;}
+.next-button-pane {float: left;}
+.headerSubscriptionRow { border-bottom:1px solid #ccc; font-weight:700;}
+.refunformspecific { margin:0 55px 10px 0; color:#de0002; }
+.refundReceiptPaneHeader .confirmheader {font-size: 12px;width: 93%;}
+.refundReceiptPaneActionControlsPrint {background: url(https://secureimages.mcafee.com/legacy/common/icons/icon_print.gif) no-repeat; float: right; height: 20px; margin-right: 15px; width: auto;}
+.refunformspecific .validationHeaderSummary {font-weight: 700;margin-bottom: 5px;}
+.refund-license-pane { clear:both;  }
+.error-help-confirm { margin-left: 20px;float: left;font: inherit;}
+.error-help-confirm1 {float: left;font: inherit;}
+#printConfirmBill {padding-left: 30px}
+.displayNone {display: none;}
+/*UI fix for Ticket# 1064246 - chrome only*/
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+#globalNav ul#ulCountry{top:15px;}
+}
+.gNav ul ul.productSub .second .prodList1{width:100px;margin-left:30px;}
+html[lang=ko] .gNav ul ul.productSub .second .prodList1{margin-left:3px; width: inherit;}
+html[lang=zh] .gNav ul ul.productSub .second .prodList1{margin-left:3px; width: inherit;}
+html[lang=ja] .gNav ul ul.productSub .first, .gNav li ul.productSub li.first:hover {width:160px;}  
+html[lang=ja] .gNav ul ul.productSub li{ width: 171px;}
+html[lang=ja] .gNav ul ul.productSub .second .prodList1{margin-left:15px; width:140px;}
+html[lang=ja] .v2014 .mButton.blue, .v2014 button.btn-sml-trynow input, .v2014 .mButton.grdtgray-lnk .mButton, .v2014 button.btn-sml-trynow, .refBtnBlue{padding:5px;}
+html[lang=ja] .v2014 button, .v2014 .mButton, .v2014 span.btn-sml-buynow input, .v2014 span.btn-sml-blue input, .v2014 button.btn-sml-buynow, .refBtnBlue{box-shadow:none;}
+
+/*PLATCORE145 - India Payment */
+#merchntRcrdPlus { margin-bottom5px; font-weight:bold; cursor: pointer;}
+#walletRedirectMessage {float:left; margin-bottom:10px;}
+#merchntRcrdPlus p {width:10px;text-decoration:none;color:#000;display:inline-block;padding:5px;font-weight:bold;font-size:14px;}
+.merchantRecordContainer {margin-top: 15px;}
+#merchntRcrdPlus {color:#006699;}
+#merchntRcrdTextContent {margin-left: 18px; display:none;}
+#merchntRcrdPlus p {margin:0px;}
+
+.invoicemerchantofrecord {margin:20px;}
+#ctl00_MainContent_RecieptTest_m_ReceiptFormView_m_MerchantOfRecord_m_emrgentPaymentMerchantofRecord {margin: 15px 0 0 20px; width: 95%;}
+#ctl00_MainContent_SmartReceipt_m_SmartReceiptInfoFormView_m_MerchantOfRecord_m_emrgentPaymentMerchantofRecord {width: 95%;}
+
+.hdrOutrWrap{clear:both;float:left;margin:2% 3% 1.4% 1.4%;padding:0;width:94%;zoom:1;position:relative;}
+.rtl .hdrOutrWrap{margin:2% 1.4% 1.4% 3%;padding:0}

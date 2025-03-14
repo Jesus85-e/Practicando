@@ -1,0 +1,317 @@
+﻿@{
+    ViewData["Title"] = "Clientes";
+}
+
+ @model IEnumerable<Practicando.Models.Clientes> 
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="#">Cliente</a></li>
+    </ol>
+</nav>
+
+ 
+<div class="table-responsive p-2" >
+    
+    <div class=" row g-2 p-2">
+        <div class="col-md-2 align-content-center  ">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary  d-grid gap-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Nuevo Cliente
+            </button>
+        </div>
+        <div class="col-md-10  bg-light bg-opacity-50 border border-info border-start-0 rounded-end col-5 border-5">
+            <h5 class="text-center">Listado de Clientes</h5>
+        </div>
+    </div>
+    <table id="tablaclientes" class="table table-bordered">
+        
+    <thead>
+        <tr>
+            <th>Nombre Cliente</th>
+            <th>Apellidos</th>
+            <th>Email</th>
+            <th>Direccion</th>
+            <th>Telefono|Celular</th>
+            <th>Detalle Pedidos</th>
+            <th>Editar|Eliminar</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+            @Html.Partial("_tablaclientes", Model);
+    </tbody>
+    <tfoot class="bg-primary p-2">
+      
+    </tfoot>
+</table>
+</div>
+
+
+
+<!-- Modal Para Agregar Nuevo Cliente -->
+<div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h1 class="modal-title fs-5 " id="exampleModalLabel">Nuevo Cliente</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="Cliente">
+                    <div class="row g-2">
+                        <div class="col-md-6">
+                            <label class="form-label">Nombre Cliente</label>
+                            <input type="text" class="form-control" id="NombreC" placeholder="Nombre" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" id="Apellidos" placeholder="Apellidos" required>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="example@gmail.com" required>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                        <label  class="form-label">Direccion</label>
+                        <input type="text" class="form-control" id="Direccion" placeholder="Direccion" required>
+                    </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Tel|Cel</label>
+                            <input type="text" class="form-control" id="Telefono" placeholder="Telefono o celular" required>
+                        </div>
+                    </div>
+                   
+                    <div class="d-grid gap-2 col-6 mx-auto p-3 ">
+                        <button class="btn btn-success" type="submit" id="Guardar">Guardar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-primary p-2">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modal Para Editar Nuevo cliente-->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h1 class="modal-title fs-5 " id="exampleModalLabel2">Editar Cliente</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="EditarCliente">
+                    <div class="row g-2">
+                        <input id="IdCliente" class="form-control" name="IdCliente" type="hidden"/>
+                        <div class="col-md-6">
+                            <label class="form-label">Nombre Cliente</label>
+                            <input type="text" class="form-control" id="NombreC" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" id="Apellidos" disabled>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Direccion</label>
+                            <input type="text" class="form-control" id="Direccion">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Tel|Cel</label>
+                            <input type="text" class="form-control" id="Telefono">
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2 col-6 mx-auto p-3 ">
+                        <button class="btn btn-success" type="submit" id="Editar">Editar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-primary p-2">
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modal Para Eliminar Cliente-->
+<div class="modal fade" id="Eliminar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content text-center">
+            <div class="modal-header border-1 bg-danger text-white ">
+                <h5 class="modal-title text-white" id="Eliminar">Eliminar cliente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                ¿Estas seguro de que desea eliminar este cliente?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                <button type="button" class="btn btn-danger" id="Aceptar">Si</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    // Usar jQuery para mostrar el modal cuando se hace clic en el botón
+  
+        Cliente.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            var NombreC = document.getElementById("NombreC").value;
+            var Apellido = document.getElementById("Apellidos").value;
+            var CorreoElectronico = document.getElementById("email").value;
+            var Direccion = document.getElementById("Direccion").value;
+            var Telefono = document.getElementById("Telefono").value;
+
+            var datos ={
+                NombreC : NombreC,
+                Apellido : Apellido,
+                CorreoElectronico : CorreoElectronico,
+                Direccion : Direccion,
+                Telefono : Telefono
+            };
+
+            $.ajax({
+                url:'/Home/Guardar',
+                type:'POST',
+                data: JSON.stringify(datos),
+                contentType: "application/json",
+                success: function(data){
+                    if(data.success){
+                        alert(data.message);
+                        $("#Cliente")[0].reset();
+                        $("#exampleModal").modal('hide');
+                        actualizartabla();
+                    }
+                },
+                error: function(error) {
+                    console.error("Error al enviar los datos:", error);
+                    $("#resultados").html("<p>Error al enviar los datos: " + error.responseText + "</p>");
+                }
+
+            });
+
+        });
+
+        function Editar(IdCliente){
+
+          var IdCliente = IdCliente;
+          var CorreoElectronico = $("#EditarCliente #email").val();
+          var Direccion = $("#EditarCliente #Direccion").val();
+          var Telefono = $("#EditarCliente #Telefono").val();
+      
+            var datos ={
+                IdCliente:IdCliente,
+                CorreoElectronico : CorreoElectronico,
+                Direccion : Direccion,
+                Telefono : Telefono
+            }; 
+
+            $.ajax({
+                url:'/Home/EditarCliente',
+                type:'POST',
+                data:JSON.stringify(datos),
+                contentType: "application/json",
+                success:function(data){
+                    if(data.success){
+                        alert(data.menssage);
+                    }else{
+                        alert(data.menssage);
+                    }
+                },
+                error:function(error){
+                    console.error("error al enviar los datos", error);
+                }
+            });
+
+        }
+      
+        function Recuperardatos(IdCliente){   
+
+            $.ajax({
+                    url:'/Home/GetById',
+                    type:'GET',
+                    data: {IdCliente:IdCliente},
+                    success: function(data){
+                      
+                       $("#EditarCliente #IdCliente").val(data.idCliente);
+                       $("#EditarCliente #NombreC").val(data.nombreC);
+                       $("#EditarCliente #Apellidos").val(data.apellido);
+                       $("#EditarCliente #email").val(data.correoElectronico);
+                       $("#EditarCliente #Direccion").val(data.direccion);
+                       $("#EditarCliente #Telefono").val(data.telefono);
+
+                       $("#EditarCliente #Editar").on('click', function(){
+                            
+             
+                           Editar(IdCliente);
+
+                       });
+                    },
+                    error: function(error) {
+                        console.error("Error al enviar los datos:", error);
+                    }
+
+                });
+              
+    
+    }
+
+        function EliminarCliente(IdCliente){
+
+            var IdCliente = IdCliente;
+            
+            $('#Aceptar').on('click', function() {
+                Aceptar(IdCliente);
+                
+            });
+           
+        }
+      
+        function Aceptar(IdCliente){
+
+                $.ajax({
+                    url:'/Home/EliminarCliente',
+                    type:'POST',
+                    data:{IdCliente:IdCliente},
+                    success:function(data){
+                       if(data.success){
+                           alert(data.menssage);
+                          $("#Eliminar").modal('hide');
+                          actualizartabla();
+                       
+                       } else {
+                            alert('Error al eliminar el registro.');
+                        }
+                    },
+                    error: function() {
+                        alert('Ocurrió un error al comunicarse con el servidor.');
+                    }
+                });
+            }
+
+        function actualizartabla(){
+            $.ajax({
+                url:'/Home/recargartabla',
+                type:'GET',
+                success: function(data){
+                    console.log(data)
+                    $("#tablaclientes tbody").html(data);
+                },
+                error: function(xhr,status,error){
+                    console.error("error al actualizar la tabla", error);
+                }
+            });
+        }
+
+</script>

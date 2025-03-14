@@ -1,0 +1,163 @@
+﻿$(document).ready(function () {
+    Mcafee.WebDownload.init();
+});
+
+var Mcafee = Mcafee || {};
+Mcafee.WebDownload = (function () {
+    var _$anchortagInsideIframe = [],
+        _$hiddenAnchor = [],
+        _downloadData = {},
+        _isAnchorDownload = false,
+        _$divAutoDownload = [],
+        _$btnDownload = [];
+
+    var _init = function () {
+        document.domain = "mcafee.com";
+        _$divAutoDownload = $('#divAutoDownload');
+        _$btnDownload = $('.btnDownload');
+
+        if (_$divAutoDownload.length) {
+            _$divAutoDownload.attr('id', 'btnDownload');
+            setDownloadDOM(_$divAutoDownload, true);
+        }
+        else
+            if (_$btnDownload.length) {
+                _$btnDownload.attr('id', 'btnDownload');
+                _$btnDownload.parent().closest('div').attr('id', 'downloadContainer');
+                setDownloadDOM(_$btnDownload, false);
+                _$btnDownload.on("click",function (e) {
+                    e.preventDefault();
+                    if (_isAnchorDownload) {
+                        if (_$anchortagInsideIframe.length) {
+                            _$anchortagInsideIframe[0].click();
+                        }
+                        else if (_$hiddenAnchor.length) {
+                            _$hiddenAnchor[0].click();
+                        }
+                    }
+                    else {
+                        try { top.postMessage("smart download;" + jQuery(this).attr("data-packageid") + ";" + jQuery(this).attr("data-classificationtype"), top.location.href); } catch (err) { }
+                        window.open(_downloadData.downloadurl, '_parent');
+                    }
+                    return false;
+                });
+            }
+    }
+
+    var setDownloadDOM = function (jQueryDOMObj, isAutoDownload) {
+        /* data-navelement; data-classificationtype; data-downloadtype; data-packageid; data-url; data-setupname; data-btnname */
+        var downloadURL = jQueryDOMObj.attr("data-url");
+        var setupName = jQueryDOMObj.attr("data-setupname");
+        var btnname = jQueryDOMObj.attr("data-btnname");
+        var navelement = jQueryDOMObj.attr("data-navelement");
+        var classificationtype = jQueryDOMObj.attr("data-classificationtype");
+        var packageid = jQueryDOMObj.attr("data-packageid");
+        var downloadtype = jQueryDOMObj.attr("data-downloadtype");
+        var ismgs = jQueryDOMObj.attr("data-ismgs");
+        _downloadData = {
+            'isautodownload': isAutoDownload,
+            'downloadurl': downloadURL,
+            'ismgsdownload': (ismgs != undefined && ismgs.toLowerCase()) == "true",
+            'setupname': setupName,
+            'btnname': btnname,
+            'anchordata': {
+                'data-navelement': navelement,
+                'data-classificationtype': classificationtype,
+                'data-packageid': packageid,
+                'data-downloadtype': downloadtype
+            }
+        }
+
+        downloadNow(_downloadData);
+    }
+
+    var downloadNow = function (downloadData) {
+        var a = document.createElement('a');
+        if (typeof a.download != "undefined") {
+            _isAnchorDownload = true;
+            if ($('#ifrmHidden').length) {
+                _$anchortagInsideIframe[0].click();
+                return;
+            }
+
+            // var downloadButtonUrl = "/root/downloadButton.html";
+            var issloc = "iss-loc";
+            var iframeUrl = downloadData.ismgsdownload ?
+                downloadData.downloadurl.substring(0, downloadData.downloadurl.toLowerCase().indexOf(issloc) + issloc.length + 1) + "common/downloadButton.html" :
+                downloadData.downloadurl.substring(0, downloadData.downloadurl.lastIndexOf("/") + 1) + "downloadButton.html";
+            var $externalIframe = $('<iframe />', {
+                id: 'ifrmHidden',
+                'frameBorder': '0',
+                'height': '45px',
+                'src': iframeUrl
+            });
+
+            a.setAttribute('href', downloadData.downloadurl);
+            a.setAttribute('class', 'btnDownload css3 small buy');
+            //a.setAttribute('href', downloadData.downloadurl);
+            if (downloadData.setupname !== "") {
+                a.setAttribute('download', downloadData.setupname);
+            }
+            if (downloadData.isautodownload) {
+                a.setAttribute('style', '{display:none}');
+                window.open(downloadData.downloadurl, '_parent');
+            }
+            a.innerHTML = downloadData.btnname;
+            //a.setHTML(downloadData.btnname);
+            $externalIframe.on("load",function () {
+                //$(this)[0].contentWindow.document.domain = "home.mcafee.com";
+                _$anchortagInsideIframe = $(this).contents().find('#idLnkPlaceholder');
+              
+                if (downloadData.isautodownload)
+                    _$anchortagInsideIframe.hide();
+
+                _$anchortagInsideIframe.attr(downloadData.anchordata);
+                _$anchortagInsideIframe.attr({
+                    'href': downloadData.downloadurl,
+                    'class': 'btnDownload css3 small buy',
+                    'style': ''
+                }).html(downloadData.btnname);
+                //console.log(downloadData.btnname);
+                if (downloadData.setupname !== "") {
+                    _$anchortagInsideIframe.attr('download', downloadData.setupname);
+                }
+                if (downloadData.isautodownload) {
+                    //hack to enable firefox to autodownload when iframe is hidden
+                    var browser = navigator.userAgent.toLowerCase();
+                    if (browser.indexOf('firefox') > -1) {
+                        $(this).height(0);
+                        $(this).width(0);
+                        $(this).show();
+                    }
+                    setTimeout(function () {
+                        _$anchortagInsideIframe[0].click();
+                    }, 250);
+                }
+            });
+           
+            if (downloadData.isautodownload) {
+                //$externalIframe.attr('style', 'display:none');
+                //_$divAutoDownload.after($externalIframe);
+                _$divAutoDownload.after(a);
+                window.open(downloadData.downloadurl, '_parent');
+            }
+            else {
+                //_$btnDownload.after($externalIframe);
+                _$btnDownload.after(a);
+            }
+        }
+        else {
+            if (downloadData.isautodownload) {
+                window.open(downloadData.downloadurl, '_parent');
+            }
+            else {
+                _$btnDownload.show();
+            }
+        }
+    }
+
+    return {
+        init: _init
+    };
+
+})();

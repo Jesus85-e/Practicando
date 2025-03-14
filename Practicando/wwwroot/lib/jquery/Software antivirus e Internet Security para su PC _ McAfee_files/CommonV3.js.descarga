@@ -1,0 +1,1543 @@
+var isRtl, isRtlLang;
+/*! HTML5 Shiv vpre3.6 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
+Uncompressed source: https://github.com/aFarkas/html5shiv  */
+(function (a, b) { function h(a, b) { var c = a.createElement("p"), d = a.getElementsByTagName("head")[0] || a.documentElement; return c.innerHTML = "x<style>" + b + "</style>", d.insertBefore(c.lastChild, d.firstChild) } function i() { var a = l.elements; return typeof a == "string" ? a.split(" ") : a } function j(a) { var b = {}, c = a.createElement, f = a.createDocumentFragment, g = f(); a.createElement = function (a) { if (!l.shivMethods) return c(a); var f; return b[a] ? f = b[a].cloneNode() : e.test(a) ? f = (b[a] = c(a)).cloneNode() : f = c(a), f.canHaveChildren && !d.test(a) ? g.appendChild(f) : f }, a.createDocumentFragment = Function("h,f", "return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&(" + i().join().replace(/\w+/g, function (a) { return c(a), g.createElement(a), 'c("' + a + '")' }) + ");return n}")(l, g) } function k(a) { var b; return a.documentShived ? a : (l.shivCSS && !f && (b = !!h(a, "article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}audio{display:none}canvas,video{display:inline-block;*display:inline;*zoom:1}[hidden]{display:none}audio[controls]{display:inline-block;*display:inline;*zoom:1}mark{background:#FF0;color:#000}")), g || (b = !j(a)), b && (a.documentShived = b), a) } var c = a.html5 || {}, d = /^<|^(?:button|form|map|select|textarea|object|iframe|option|optgroup)$/i, e = /^<|^(?:a|b|button|code|div|fieldset|form|h1|h2|h3|h4|h5|h6|i|iframe|img|input|label|li|link|ol|option|p|param|q|script|select|span|strong|style|table|tbody|td|textarea|tfoot|th|thead|tr|ul)$/i, f, g; (function () { var c = b.createElement("a"); c.innerHTML = "<xyz></xyz>", f = "hidden" in c, f && typeof injectElementWithStyles == "function" && injectElementWithStyles("#modernizr{}", function (b) { b.hidden = !0, f = (a.getComputedStyle ? getComputedStyle(b, null) : b.currentStyle).display == "none" }), g = c.childNodes.length == 1 || function () { try { b.createElement("a") } catch (a) { return !0 } var c = b.createDocumentFragment(); return typeof c.cloneNode == "undefined" || typeof c.createDocumentFragment == "undefined" || typeof c.createElement == "undefined" }() })(); var l = { elements: c.elements || "abbr article aside audio bdi canvas data datalist details figcaption figure footer header hgroup mark meter nav output progress section summary time video", shivCSS: c.shivCSS !== !1, shivMethods: c.shivMethods !== !1, type: "default", shivDocument: k }; a.html5 = l, k(b) })(this, document);
+
+var agt = navigator.userAgent.toLowerCase();
+var is_major = parseInt(navigator.appVersion);
+var is_ie = ((agt.indexOf("msie") != -1));
+var is_ie6 = (is_ie && (is_major == 4) && (agt.indexOf("msie 6.") != -1));
+var is_ie7 = (is_ie && (is_major == 4) && (agt.indexOf("msie 7.") != -1));
+var is_ie8 = (is_ie && (is_major == 4) && (agt.indexOf("msie 8.") != -1));
+
+var mc_utils = window.mc_utils || {};
+mc_utils.browser = window.mc_utils.browser || {};
+mc_utils.browser = (function () {
+
+    var browser = {},
+        ua = navigator.userAgent,
+        ua_lc = navigator.userAgent.toLowerCase(),
+        temp_ver,
+        temp_str,
+        match = ua_lc.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*([\w.]+)/i) || [];
+    if (/trident/i.test(match[1])) {
+        temp_ver = /\brv[ :]+([\w.]+)/g.exec(ua) || [];
+        match[1] = "msie";
+        match[2] = temp_ver[1];
+    }
+    if (match[1] === 'chrome') {
+        temp_str = ua.match(/\b(OPR|Edge)\/([\w.]+)/i);
+        if (temp_str != null) {
+            for (var i = 0; i < temp_str.length; i++) {
+                temp_str[i] = temp_str[i].replace(/OPR/g, 'opera');
+                temp_str[i] = temp_str[i].replace(/Edge/g, 'edge');
+            }
+            match = temp_str;
+        }
+    }
+    match = match[2] ? [match[1], match[2]] : [navigator.appName, navigator.appVersion, '-?'];
+    if ((temp_ver = ua.match(/version\/([\w.]+)/i)) != null) match.splice(1, 1, temp_ver[1]);
+
+    if (match[1]) {
+        {
+            browser[match[0]] = true;
+            browser.version = match[1];
+        }
+    }
+    return browser;
+})();
+
+function BreakoutOfFrames() {
+    if (top.location != self.location)
+        top.location = self.location;
+}
+function openPrivacyFeedback() {
+    openNoMenuWindow('https://home.mcafee.com/supportpages/privacyFeedback.aspx', '', '700', '652');
+}
+function openWin(url, title, width, height) {
+    // read resolution and set variables
+    var x = screen.width;
+    var y = screen.height;
+    var top = parseInt((y - height) / 2);
+    var left = parseInt((x - width) / 2);
+    // open new window and use the variables to position it
+    window.open(url, title, 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top + ',scrollbars=yes,resize=yes,resizable=yes,menubar=no,toolbar=no,directories=no,location=no');
+}
+function openMenuWindow(url, title, width, height) {
+    // read resolution and set variables
+    var x = screen.width;
+    var y = screen.height;
+    var top = parseInt((y - height) / 2);
+    var left = parseInt((x - width) / 2);
+    // open new window and use the variables to position it
+    window.open(url, title, 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top + ',scrollbars=yes,resize=yes,resizable=yes,menubar=yes,toolbar=yes,directories=no');
+}
+
+// for Sales Pitch. In Upsell/CrossSell contents users are providing links which should use this function.
+function openNoMenuWindow(url, title, width, height) {
+    // read resolution and set variables
+    var x = screen.width;
+    var y = screen.height;
+    var top = parseInt((y - height) / 2);
+    var left = parseInt((x - width) / 2);
+    // open new window and use the variables to position it
+    //window.open(url, title, 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top + ',scrollbars=yes,resize=yes,resizable=yes,menubar=no,toolbar=no,directories=no');
+    window.open(url, title, 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top + ',scrollbars=yes,resize=yes,resizable=yes,menubar=no,toolbar=no,directories=no');
+}
+
+function openNoScrollWindow(url, title, width, height) {
+    // read resolution and set variables
+    var x = screen.width;
+    var y = screen.height;
+    var top = parseInt((y - height) / 2);
+    var left = parseInt((x - width) / 2);
+    // open new window and use the variables to position it
+    window.open(url, title, 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top + ',scrollbars=no,resize=yes,resizable=yes,menubar=no,toolbar=no,directories=no');
+}
+function modifyClass(elementID, newClass, styleAttr) { // For old LPs which is not using jquery
+    var element = document.getElementById(elementID);
+    element.setAttribute("class", newClass); //For Most Browsers
+    element.setAttribute("className", newClass); //For IE; harmless to other browsers.
+}
+function shoDemo() {
+    try {
+        if (document.getElementById('ctl00_MainContent_ViewDemoPanel')) {
+            modifyClass('ctl00_MainContent_ViewDemoPanel', 'viewLinks');
+        }
+    } catch (err) { }
+}
+
+//utility Custom Dropdown
+startList = function () {
+    var iFrame;
+    var objList = document.getElementById('global_country');
+    shoDemo();
+    // if (document.all && document.getElementById);
+    globalSites = document.getElementById("globalNav");
+
+    if (globalSites == null)
+        return;
+
+    if (is_ie6 && objList != null) {
+        var o_CountryList = document.getElementById("ulCountry");
+
+        iFrame = document.createElement('iframe');
+        iFrame.id = 'ieIframe';
+        iFrame.src = 'https://secureimages.mcafee.com/brand/images/spacer.gif';
+
+        objList.appendChild(iFrame);
+        objList.insertBefore(iFrame, o_CountryList);
+    }
+
+    for (x = 0; x < globalSites.childNodes.length; x++) {
+        node = globalSites.childNodes[x];
+
+        if (node.nodeName == "LI") {
+            if (node.id == "global_country" || node.id == "global_currency" || node.id == "global_language") {
+                node.onmouseover = function () {
+                    if (is_ie6) {
+                        for (y = 0; y < this.childNodes.length; y++) {
+                            oSubNode = this.childNodes[y];
+                            if (oSubNode.nodeName == "UL") {
+                                oSubNode.style.display = "block";
+                                if (this.id == "global_country")
+                                    iFrame.style.display = "block";
+                            }
+                        }
+                    } else {
+                        this.className += " over";
+                    }
+                }
+            }
+        }
+        node.onmouseout = function () {
+            if (is_ie6) {
+                for (y = 0; y < this.childNodes.length; y++) {
+                    oSubNode = this.childNodes[y];
+                    if (oSubNode.nodeName == "UL") {
+                        oSubNode.style.display = "none";
+                        iFrame.style.display = "none";
+                    }
+                }
+            } else {
+
+                this.className = this.className.replace(" over", "");
+            }
+        }
+    }
+    //}
+}
+
+if (window.attachEvent)
+    window.attachEvent("onload", startList)
+else
+    window.onload = startList;
+
+function pageLoad() {
+    Ie6LastChildCSSFix();
+    AddClientSideErrorHandling();
+}
+
+function Ie6LastChildCSSFix() {
+    //var isIE6 = false/*@cc_on || @_jscript_version < 5.7@*/;
+    if (is_ie) {
+        var footerMenu = document.getElementById("ctl00_ucFooterMenu_m_Menu");
+        if (footerMenu == null)
+            return;
+        var listItems = footerMenu.getElementsByTagName("li");
+
+        if (listItems != null) {
+            var lastListItem = listItems[listItems.length - 1];
+
+            if (lastListItem != null) {
+                if (is_ie6 || is_ie7) {
+                    lastListItem.setAttribute('className', 'last-child_ie');
+                } else {
+                    lastListItem.setAttribute('class', 'last-child_ie');
+                }
+            }
+        }
+    }
+}
+
+function AddClientSideErrorHandling() {
+    Sys.Net.WebRequestExecutor.prototype.checkError = function () {
+
+        var e = null;
+
+        if (this.get_aborted())
+            e = Error.create('Request Aborted.', { name: 'RequestAbortedError' });
+        else if (this.get_timedOut())
+            e = Error.create('Request Timed Out.', { name: 'RequestTimeoutError' });
+        else {
+            var statusCode;
+            try {
+                statusCode = this.get_statusCode();
+            }
+            catch (e) {
+                statusCode = 0;
+            }
+
+            if (statusCode < 100 || statusCode >= 600)
+                e = Error.create('Connection Error.', { name: 'ConnectionError' });
+            else if ((statusCode < 200) || (statusCode >= 300))
+                e = Error.create('HTTP Error.', { name: 'HTTPError', "statusCode": statusCode, statusText: this.get_statusText() });
+        }
+
+        return e;
+    }
+}
+
+////utility Custom Dropdown for Global Currency in subnav
+startTheList = function () {
+    var agt = navigator.userAgent.toLowerCase();
+    var is_major = parseInt(navigator.appVersion);
+    var is_ie = ((agt.indexOf("msie") != -1));
+    var is_ie6 = (is_ie && (is_major == 4) && (agt.indexOf("msie 6.") != -1));
+
+    // if (document.all && document.getElementById);
+    globalCurrency = document.getElementById("currencyNav");
+
+    if (globalCurrency == null)
+        return;
+
+    for (x = 0; x < globalCurrency.childNodes.length; x++) {
+        node = globalCurrency.childNodes[x];
+        if (node.nodeName == "LI") {
+            if (node.id == "global_currency") {
+                node.onmouseover = function () {
+                    if (is_ie6) {
+                        for (y = 0; y < this.childNodes.length; y++) {
+                            oSubNode = this.childNodes[y];
+                            if (oSubNode.nodeName == "UL") {
+                                oSubNode.style.display = "block";
+                            }
+                        }
+                    } else {
+                        this.className += " over";
+                    }
+                }
+            }
+        }
+        node.onmouseout = function () {
+            if (is_ie6) {
+                for (y = 0; y < this.childNodes.length; y++) {
+                    oSubNode = this.childNodes[y];
+                    if (oSubNode.nodeName == "UL") {
+                        oSubNode.style.display = "none";
+                    }
+                }
+            } else {
+                this.className = this.className.replace(" over", "");
+            }
+        }
+    }
+    //}
+}
+
+if (window.attachEvent)
+    window.attachEvent("onload", startTheList)
+else
+    window.onload = startTheList;
+
+function fnAutoPostback(ctl) {
+    var id, loc;
+    id = ctl.options[ctl.selectedIndex].id;
+    loc = ctl.options[ctl.selectedIndex].value;
+    if (id == "autopostback") {
+        location.href = loc;
+        return;
+    }
+}
+
+//This FN is to submit single form
+function submitSingleForm(ctl) {
+    var id, loc;
+
+    id = ctl.options[ctl.selectedIndex].id;
+    loc = ctl.options[ctl.selectedIndex].value;
+
+    if (id == "redirect") {
+        location.href = loc;
+        return false;
+    }
+    if (id == "newWindow") {
+        window.open(loc, "newWindow");
+        return false;
+    }
+}
+
+// For tabbing
+function navOn(elm) {
+    if (elm.className == "tab-link")
+        elm.className = "tab-link on";
+    if (elm.className == "nav-off") {
+        elm.className = "nav-on";
+    }
+}
+
+function navOff(elm) {
+    if (elm.className == "tab-link on")
+        elm.className = "tab-link";
+
+    if (elm.className == "nav-on")
+        elm.className = "nav-off";
+}
+var prevTab;
+var prevTabContent;
+
+function tabSelect(objLI, objID) {
+    var selectedTab = document.getElementById(objLI);
+    var selectedTabContent = document.getElementById(objID);
+
+    if (prevTab != null && prevTab !== objLI) {
+        document.getElementById(prevTab).className = "tab-link";
+        document.getElementById(prevTabContent).style.display = "none";
+    }
+    selectedTab.className = "tab-link selected";
+
+    selectedTabContent.style.display = "block";
+    prevTab = objLI;
+    prevTabContent = objID;
+}
+
+function _StringFormatInline() {
+    var txt = this;
+    for (var i = 0; i < arguments.length; i++) {
+        var exp = new RegExp('\\{' + (i) + '\\}', 'gm');
+        txt = txt.replace(exp, arguments[i]);
+    }
+    return txt;
+}
+
+function _StringFormatStatic() {
+    for (var i = 1; i < arguments.length; i++) {
+        var exp = new RegExp('\\{' + (i - 1) + '\\}', 'gm');
+        arguments[0] = arguments[0].replace(exp, arguments[i]);
+    }
+    return arguments[0];
+}
+
+if (!String.prototype.format) {
+    String.prototype.format = _StringFormatInline;
+}
+
+if (!String.format) {
+    String.format = _StringFormatStatic;
+}
+
+function PopUpWinOpen(content) {
+    if (content == "eula") {
+        window.open('/Secure/Payment/PrintEula.aspx?content=' + encodeURIComponent(content) + "&title=" + encodeURIComponent(window.document.title),
+            'PrintWin', 'width=640,height=640,toolbar=no,scrollbars=yes,menubar=no,resizable=yes');
+    }
+}
+function EulaPopUpWinOpen(packageId, flexPackageId) {
+    window.open('/SupportPages/PrintEula.aspx?ftype=ProductDownload&flex_pkg_id=' + flexPackageId + "&pkg_id" + packageId + "&title=" + encodeURIComponent(window.document.title),
+        'PrintWin', 'width=640,height=640,toolbar=no,scrollbars=yes,menubar=no,resizable=yes');
+}
+
+
+function PrintPreview(printLink, Content, Culture) {
+    var elmContent = document.getElementById(Content);
+    var elmPrintLink = document.getElementById(printLink);
+
+    //if (document.getElementById('eulaAcceptanceTypeHidden') != null)
+    //    document.getElementById('eulaAcceptanceTypeHidden').value = 'Explicit';
+
+    if (!elmContent && !elmPrintLink) {
+        return;
+    }
+    var winOpen = window.open("about:blank", "_blank", "width=640,height=640,toolbar=no,scrollbars=yes,menubar=no,resizable=yes");
+    var doc = winOpen.document;
+
+    doc.write("<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>");
+    if ((Culture == "ar-AE") || (Culture == "he-IL") || (Culture == "ar") || (Culture == "he")) {
+        doc.write("<html xmlns='http://www.w3.org/1999/xhtml' dir='rtl'><head>");
+        doc.write("<title>" + window.document.title + "</title>");
+        doc.write("<link rel='Stylesheet' type='text/css' href='/UIDesign/LegacySite/Styles/PGStyles/printpreview.css'></link>");
+        doc.write("<script type='text/javascript'> function openPrivacyFeedback(){ openNoMenuWindow('https://home.mcafee.com/supportpages/privacyFeedback.aspx', '', '700', '652')} function openNoMenuWindow(url, title, width, height) {var x = screen.width;var y = screen.height;var top = parseInt((y - height) / 2);var left = parseInt((x - width) / 2);window.open(url, title, 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top + ',scrollbars=yes,resize=yes,resizable=yes,menubar=no,toolbar=no,directories=no');}</script>");
+        doc.write("</head><body id='Eula_RTL'>");
+    }
+    else {
+        doc.write("<html xmlns='http://www.w3.org/1999/xhtml' dir='ltr'><head>");
+        doc.write("<title>" + window.document.title + "</title>");
+        doc.write("<link rel='Stylesheet' type='text/css' href='/UIDesign/LegacySite/Styles/PGStyles/printpreview.css'></link>");
+        doc.write("<script type='text/javascript'> function openPrivacyFeedback(){ openNoMenuWindow('https://home.mcafee.com/supportpages/privacyFeedback.aspx', '', '700', '652')} function openNoMenuWindow(url, title, width, height) {var x = screen.width;var y = screen.height;var top = parseInt((y - height) / 2);var left = parseInt((x - width) / 2);window.open(url, title, 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top + ',scrollbars=yes,resize=yes,resizable=yes,menubar=no,toolbar=no,directories=no');}</script>");
+        doc.write("</head><body id='Eula'>");
+    }
+
+    doc.write("<a id='lnkPrint' class='print-icon' href='javascript:window.print();'>" + elmPrintLink.innerHTML + "</a>" + elmContent.innerHTML);
+    doc.write("</body></html>");
+    doc.close();
+}
+
+function SmartPrintPreview(url) {
+    window.open(url, "title", "width=640,height=640,toolbar=no,scrollbars=yes,menubar=no,resizable=yes");
+}
+
+
+// for pkg page redesign -- crao
+
+// Set ID's for all LIs
+function setDemoID() {
+    ContainerElement = document.getElementById('vcd-carousel')
+    if (ContainerElement == null)
+        return;
+    LICol = ContainerElement.getElementsByTagName('LI');
+    LICol.item(0).attributes.getNamedItem("class").value = "sel-vdo";
+
+    if (LICol != null) {
+        for (i = 0; i < LICol.length; i++) {
+            LICol.item(i).setAttribute('id', "image_" + eval(i));
+
+            //to focus selected image - begin
+            var strTitle1, strTitle2, strHiddenVal;
+            strTitle = LICol.item(i).getElementsByTagName('A')[0].title;
+            strHiddenVal = document.getElementById('ctl00_MainContent_m_ViewDemo_hiddenSelectedCaption').value;
+            if (strTitle == strHiddenVal) {
+                LICol.item(0).attributes.getNamedItem("class").value = "";
+                LICol.item(i).attributes.getNamedItem("class").value = "sel-vdo";
+            }
+            //to focus selected image - end  
+
+        }
+    }
+    //GTM Product Detail Page - Hide scroll in case of 1 video - 
+    if (LICol.length == 1 && document.getElementById('dvScroll') != null)
+        document.getElementById('dvScroll').style.display = 'none';
+
+    if (document.getElementById('ctl00_MainContent_hiddenCanFlash')) {
+        if (document.getElementById('ctl00_MainContent_hiddenCanFlash').value == 'false') {
+            document.getElementById('dvNoFlash').style.display = 'block';
+            document.getElementById('dvDemos').style.display = 'none';
+        }
+        else {
+            document.getElementById('dvNoFlash').style.display = 'none';
+            document.getElementById('dvDemos').style.display = 'block';
+        }
+    }
+
+    //hi-light demos tab
+    if (document.getElementById('ctl00_MainContent_m_ViewDemo_m_ViewLinks_linkViewDemo') != null)
+        document.getElementById('ctl00_MainContent_m_ViewDemo_m_ViewLinks_linkViewDemo').setAttribute("class", "demo-sel-lnk");
+
+    if (document.getElementById('ctl00_MainContent_m_ViewDemo_m_ViewLinks_linkViewScreenShots') != null)
+        document.getElementById('ctl00_MainContent_m_ViewDemo_m_ViewLinks_linkViewScreenShots').setAttribute("class", "");
+
+}
+function DisplayDemo() {
+
+    if (document.getElementById('popups') != null)
+        document.getElementById('popups').style.display = 'none';
+
+    if (document.getElementById('popups') != null)
+        document.getElementById('popups').style.display = 'none';
+
+    var demoDiv = document.getElementById('dvDemos');
+    var sShotDiv = document.getElementById('sShots');
+    var noflash = document.getElementById('dvNoFlash');
+    if (demoDiv != null) {
+        document.getElementById('popups').style.display = 'block';
+    }
+    else if (sShotDiv != null) {
+        if (!$('.v2013 #popups').length && !$('.v2014 #popups').length) {
+            $('#popups').css('bottom', '-40px');
+        }
+        document.getElementById('popups').style.display = 'block';
+    }
+    else if ((noflash != null) && (noflash.style.display == 'block')) {
+        if (!$('.v2013 #popups').length && !$('.v2014 #popups').length) {
+            $('#popups').css('bottom', '-40px');
+        }
+        document.getElementById('popups').style.display = 'block';
+    }
+    else {
+
+    }
+}
+function popClose() {
+    document.getElementById('popups').style.display = 'none';
+    if ($('#m_Demos').length == 1) {
+        $('#dvDemos').remove();
+    }
+}
+function initSlideshow() {
+    setDemoID();
+    setScreenshotsID();
+
+}
+function moveLeft() {
+
+    ContainerElement = document.getElementById("vcd-carousel");
+    firstLI = document.getElementById("image_0");
+    dupfirstLI = firstLI.cloneNode(false)
+    dupfirstLI.innerHTML = firstLI.innerHTML
+    ContainerElement.removeChild(firstLI);
+    ContainerElement.appendChild(dupfirstLI);
+    setDemoID();
+
+}
+
+function moveRight() {
+    lastLI = document.getElementById("image_" + eval(LICol.length - 1));
+    duplastLI = lastLI.cloneNode(false)
+    duplastLI.innerHTML = lastLI.innerHTML
+    firstLI = document.getElementById("image_0");
+    ContainerElement = document.getElementById("vcd-carousel");
+    ContainerElement.insertBefore(duplastLI, firstLI);
+    ContainerElement.removeChild(lastLI);
+    setDemoID();
+
+}
+function ToggleUpsell(type, flag) {
+    if (type == 'PopUp') {
+        if (flag == true) {
+            document.getElementById('dvUpsellPopup').style.display = 'block';
+        }
+        else {
+            document.getElementById('dvUpsellPopup').style.display = 'none';
+            return false;
+        }
+    }
+    else {
+        if (flag == true) {
+            document.getElementById('dvUpsell').style.display = 'block';
+        }
+        else {
+            document.getElementById('dvUpsell').style.display = 'none';
+            return false;
+        }
+    }
+}
+
+//GTM Product Detail Page - product demos
+function fnShowHide(obj) {
+
+    if (obj.id == 'lnkViewDemo') {
+
+        if (document.getElementById('dvDemos') != null)
+            document.getElementById('dvDemos').style.display = 'block';
+
+        if (document.getElementById('dvScreenShots') != null)
+            document.getElementById('dvScreenShots').style.display = 'none';
+    }
+    else if (obj.id == 'lnkViewScreenShots') {
+        if (document.getElementById('dvDemos') != null)
+            document.getElementById('dvDemos').style.display = 'none';
+
+        if (document.getElementById('dvScreenShots') != null)
+            document.getElementById('dvScreenShots').style.display = 'block';
+    }
+
+}
+
+function ToggleLink(obj) {
+
+    if (obj.id == 'linkViewDetails') {
+        document.getElementById('dvMoreDetails').style.display = 'block';
+        document.getElementById('linkHideDetails').style.display = 'block';
+        document.getElementById('linkViewDetails').style.display = 'none';
+        if (document.getElementById('price-sec') != null)
+            document.getElementById('price-sec').className = 'price-sec pkg2price';
+    }
+    else {
+        document.getElementById('dvMoreDetails').style.display = 'none';
+        document.getElementById('linkHideDetails').style.display = 'none';
+        document.getElementById('linkViewDetails').style.display = 'block';
+        if (document.getElementById('price-sec') != null)
+            document.getElementById('price-sec').className = 'price-sec';
+    }
+}
+function setAwardsDisplay(award) {
+    ContainerElement = document.getElementById(award);
+    if (ContainerElement == null)
+        return;
+
+    arrImg = ContainerElement.getElementsByTagName('A');
+    awdCntr = document.getElementById('dvAllAwards');
+
+    if (arrImg.length > 6) {
+        awdCntr.className = 'awd-scroll';
+    }
+
+    if (arrImg != null) {
+        for (i = 0; i < arrImg.length; i++) {
+            arrImg[i].style.display = (i < 4) ? 'block' : 'none';
+        }
+        if (document.getElementById('ctl00_MainContent_m_ProductAwards_m_AwardsStrip_viewall') != null)
+            document.getElementById('ctl00_MainContent_m_ProductAwards_m_AwardsStrip_viewall').style.display = (arrImg.length > 6) ? 'block' : 'none';
+        if (document.getElementById('ctl00_MainContent_PackageDetailv1_m_ProductAwards_m_AwardsStrip_viewall') != null)
+            document.getElementById('ctl00_MainContent_PackageDetailv1_m_ProductAwards_m_AwardsStrip_viewall').style.display = (arrImg.length > 6) ? 'block' : 'none';
+        if (document.getElementById('ctl00_MainContent_m_UcSingleProduct_m_ProductAwards_m_AwardsStrip_viewall') != null)
+            document.getElementById('ctl00_MainContent_m_UcSingleProduct_m_ProductAwards_m_AwardsStrip_viewall').style.display = 'block';
+        if (document.getElementById('ctl00_MainContent_ucSingleProductWithFeatures_m_SingleProductViewPearl_ctl01_m_AwardsStrip_viewall') != null)
+            document.getElementById('ctl00_MainContent_ucSingleProductWithFeatures_m_SingleProductViewPearl_ctl01_m_AwardsStrip_viewall').style.display = 'block';
+        if (document.getElementById('ctl00_MainContent_ctl00_m_ProductAwards_m_AwardsStrip_viewall') != null)
+            document.getElementById('ctl00_MainContent_ctl00_m_ProductAwards_m_AwardsStrip_viewall').style.display = 'block';
+        if (document.getElementById('viewall') != null)
+            document.getElementById('viewall').style.display = 'block';
+        if (document.getElementById('dvClose') != null)
+            document.getElementById('dvClose').style.display = 'block';
+
+    }
+}
+function pngDimFix() {
+    var imgList, arrList;
+    imgList = document.getElementById('dvAllAwards');
+    arrList = (imgList != null) ? imgList.getElementsByTagName('img') : null;
+
+    if (arrList != null) {
+        for (a = 0; a < arrList.length; a++) {
+            var imgHgt = arrList[a].height;
+            var imgWdt = arrList[a].width;
+            arrList[a].setAttribute("style", "height:" + imgHgt + "px; display:block; float:left; width:" + imgWdt + "px");
+        }
+    }
+
+}
+//Award Yellow Tooltip
+function ttip(awd) {
+    var awdTip = document.getElementById(awd);
+    var awdElm = document.getElementById('awdList');
+    var awdTag = awdElm.getElementsByTagName('span');
+    var awdSpan = awdTip.getElementsByTagName('span');
+    for (i = 0; i < awdTag.length; i++) {
+        awdTag[i].style.display = 'none';
+        for (j = 0; j < awdSpan.length; j++) {
+            awdSpan[j].style.display = 'block';
+        }
+    }
+    awdTip.style.display = 'block';
+
+    awdElm.onmouseout = function () {
+        for (y = 0; y < awdTag.length; y++) {
+            awdTag[y].style.display = 'none';
+        }
+    }
+}
+
+//Buy with confidence hover Popup
+function ttipbwc(elm, parElm) {
+    var bwcTip = document.getElementById(elm);
+    var bwcElm = document.getElementById(parElm);
+    bwcTip.style.display = 'block';
+
+    bwcElm.onmouseout = function () {
+        bwcTip.style.display = 'none';
+    }
+}
+
+function hidepopup(me) {
+    var shdiv = document.getElementById(me);
+    shdiv.style.display = 'none';
+}
+function showpopup(me, div) {
+    var shdiv = document.getElementById(me);
+    if (div == 'allawards') {
+        shdiv.setAttribute("class", "awards-pop");
+        document.getElementById('dvAllAwards').style.display = 'block';
+    }
+}
+
+
+
+/*
+function EndRequestHandler()
+{
+ 
+}
+*/
+
+/* Top Promo - Start */
+var crossobj;
+var contentwidth;
+var arrStr = new Array;
+var BttnsClass;
+
+function initPromos() {
+    //Modified the actual demo script, chala needs to rework on this & ChangePromo FNs
+    if (document.getElementById("PromoTabs") != null) {
+        crossobj = document.getElementById("PromoTabs");
+        Elms = crossobj.getElementsByTagName("a");
+        selectedBttnCount = 0;
+        selectedBttnId = Elms[0].id;
+        LoopCount = (Elms.length - 1);
+        contentwidth = crossobj.offsetWidth;
+        ElmsCount = Elms.length;
+
+        if (ElmsCount == 2)
+            BttnsClass = "TwoBttns";
+        if (ElmsCount == 3)
+            BttnsClass = "ThreeBttns";
+        if (ElmsCount == 4)
+            BttnsClass = "FourBttns";
+
+        for (var arr = 0; arr < ElmsCount; arr++) {
+            arrStr[arr] = Elms[arr].href;
+            arrStr[arr] = arrStr[arr].replace(")", "");
+            arrStr[arr] = arrStr[arr].replace("javascript", "");
+            //arrStr[arr] = arrStr[arr].replace(":toppromo(", "");
+            arrStr[arr] = arrStr[arr].replace(":selPromo(", "");
+        }
+        ChangePromo(0);
+    }
+    // if ( (document.getElementById ('dvScreenShots'))!= null)
+    //document.getElementById ('dvScreenShots').style.display = 'none';
+}
+
+function GetSelcetedTabCount(id) {
+    id = "tab" + id;
+    for (var s = 0; s < Elms.length; s++) {
+        if (id == Elms[s].id)
+            selectedBttnCount = s;
+    }
+}
+
+function selectRight() {
+
+    if (crossobj != null) {
+        Elms[selectedBttnCount].className = BttnsClass;
+
+        if (selectedBttnCount >= LoopCount) {
+            selectedBttnCount = 0;
+        } else {
+            selectedBttnCount++;
+        }
+
+        if (is_ie6) {
+            setTimeout(function () { ChangePromo(selectedBttnCount) }, 10);
+        } else {
+            ChangePromo(selectedBttnCount);
+        }
+    }
+}
+
+function selectLeft() {
+
+    if (crossobj != null) {
+        Elms[selectedBttnCount].className = BttnsClass;
+
+        if (selectedBttnCount == 0) {
+            selectedBttnCount = LoopCount;
+        } else {
+            selectedBttnCount--;
+        }
+
+        if (is_ie6) {
+            setTimeout(function () { ChangePromo(selectedBttnCount) }, 10);
+        } else {
+            ChangePromo(selectedBttnCount);
+        }
+    }
+}
+
+function toppromo(imagefile, contentID) {
+    var timer = 0;
+    var divid = "acpromo";
+    var millisec = 50;
+    var speed = Math.round(millisec / 100);
+
+    selectedBttnId = "tab" + contentID;
+    document.getElementById(divid).style.background = "url(" + imagefile + ") no-repeat center center";
+
+    var TabItems = crossobj.getElementsByTagName("a");
+    for (j = 0; j < TabItems.length; j++) {
+        TabItems[j].className = BttnsClass;
+    }
+
+    GetSelcetedTabCount(contentID);
+    if (document.getElementById("tab" + contentID)) {
+        document.getElementById("tab" + contentID).className = "selected " + BttnsClass;
+    }
+    var dontentDiv = document.getElementById(divid).getElementsByTagName("div");
+    for (j = 0; j < dontentDiv.length; j++) {
+        if (dontentDiv[j].className == "promodiv") {
+            dontentDiv[j].style.display = "none";
+        }
+    }
+    document.getElementById(contentID).style.display = "block";
+
+    //hi-light screenshots tab
+    if (document.getElementById('ctl00_MainContent_m_ViewDemo_m_ViewLinks_linkViewDemo') != null)
+        document.getElementById('ctl00_MainContent_m_ViewDemo_m_ViewLinks_linkViewDemo').style.color = "#166494";
+
+    if (document.getElementById('ctl00_MainContent_m_ViewDemo_m_ViewLinks_linkViewScreenShots') != null)
+        document.getElementById('ctl00_MainContent_m_ViewDemo_m_ViewLinks_linkViewScreenShots').style.color = "#000";
+
+}
+
+function changeOpac(opacity, id) {
+    var object = document.getElementById(id).style;
+    object.filter = "alpha(opacity=" + opacity + ")";
+    object.opacity = (opacity / 100);
+    object.MozOpacity = (opacity / 100);
+    object.KhtmlOpacity = (opacity / 100);
+}
+
+function ChangePromo(BttnCount) {
+
+    Elms[BttnCount].className = "selected " + BttnsClass;
+    var arrString = arrStr[BttnCount];
+    arrString = arrString.replace(/['"]/g, '');
+    var arrSplit = arrString.split(",");
+
+    //toppromo(arrSplit[0], arrSplit[1]);
+    selPromo(arrSplit[0], arrSplit[1]);
+}
+/* Top Promo - End */
+
+var elmsArr = new Array();
+
+function switchMenu(obj, getEl, tmpl, tglHolder) {
+    if (tmpl == '-blist' || tmpl == '-3party' || tmpl == '-tbl' || tmpl == '-tblsml' || tmpl == '-blist no-head') {
+        return;
+    }
+    var getElm = getEl;
+    var el = document.getElementById(obj);
+    var ParentElm = getElm.parentNode;
+    var ChildElm = getElm.getElementsByTagName('th')[0];
+    //        var parHldr = document.getElementById(tglHolder);
+    //        var parTbl = parHldr.getElementsByTagName("div");
+
+    if ((tmpl == 'cmprTbd') || (tmpl == 'pcTblBdy')) { getElm = ChildElm; }
+
+    if (el.style.display != "block") {
+        el.style.display = 'block';
+
+        if (is_ie6) {
+            setTimeout(function () { ToggleIcons(getElm, "ExpandIcon") }, 10);
+        } else { getElm.className = "ExpandIcon"; }
+        //                for (u = 0; u < parTbl.length; u++) {
+        //                   if (parTbl[u].className = "expCntr") {
+        //                        this.className = 'expCntr disable';
+        //                    }
+        //                    if (parTbl[u].className = "colCntr disable") {
+        //                        this.className = 'colCntr';
+        //                    }
+        //                }
+    }
+    else {
+
+        el.style.display = 'none';
+
+        if (is_ie6) {
+            setTimeout(function () { ToggleIcons(getElm, "CollapseIcon") }, 10);
+        } else { getElm.className = "CollapseIcon"; }
+    }
+}
+function ToggleIcons(obj, styleName) { obj.className = styleName; }
+function descElms(el) {
+    var TBody = document.getElementById(el);
+    var TDesc = TBody.getElementsByTagName('div');
+    var THead = TBody.getElementsByTagName('th');
+
+    var e;
+    for (e = 0; e < TDesc.length; e++) {
+        var str = TDesc[e].id;
+
+        if (str.match("proddesc"))
+            elmsArr[e] = str;
+    }
+}
+var disablElm;
+var disablElm1;
+
+function expandAll(elem, o, disID) {
+    var selTbd = o;
+    var divId = disID;
+    descElms(selTbd);
+    var i;
+
+    for (i = 0; i < elmsArr.length; i++) {
+
+        var obj = document.getElementById(elmsArr[i]);
+        var PrevSib = obj.parentNode;
+
+        if (obj != null) {
+            obj.style.display = 'block';
+            PrevSib.className = "ExpandIcon";
+        }
+    }
+    disablElm = document.getElementById(divId);
+    var disElm = divId + '1';
+    disablElm1 = document.getElementById(disElm);
+    disablElm.parentNode.setAttribute('class', 'expCntr disable-exp');
+    disablElm1.parentNode.setAttribute('class', 'colCntr');
+    /*IE reject the above code, so adding className*/
+    disablElm.parentNode.setAttribute('className', 'expCntr disable-exp');
+    disablElm1.parentNode.setAttribute('className', 'colCntr');
+}
+function collapseAll(elem, o, disID) {
+    var selTbd = o;
+    var divId = disID;
+    descElms(selTbd);
+    var i;
+    for (i = 0; i < elmsArr.length; i++) {
+        var obj = document.getElementById(elmsArr[i]);
+        var PrevSib = obj.parentNode;
+
+        if (obj != null) {
+            obj.style.display = 'none';
+            PrevSib.className = "CollapseIcon";
+        }
+    }
+    disablElm = document.getElementById(divId);
+    var disElm = divId + '1';
+    disablElm1 = document.getElementById(disElm);
+    disablElm.parentNode.setAttribute('class', 'expCntr');
+    disablElm1.parentNode.setAttribute('class', 'colCntr disable-col');
+    /*IE reject the above code, so adding className*/
+    disablElm.parentNode.setAttribute('className', 'expCntr');
+    disablElm1.parentNode.setAttribute('className', 'colCntr disable-col');
+}
+function toggleVdl(togLnk, togDiv, togImg) {
+    var e = document.getElementById(togDiv);
+    var el = document.getElementById(togLnk);
+    var img = document.getElementById('upsel-box');
+    if (e.style.display == 'block') {
+        e.style.display = 'none';
+        el.className = "hid-dtl";
+        if (togImg == true)
+            img.className = "upsel-box";
+    } else {
+        e.style.display = 'block';
+        el.className = "vew-dtl";
+        if (togImg == true)
+            img.className = "upsel-box usbig";
+    }
+}
+
+//compare hover fn
+comparebg = function (tbody) {
+    var tb = document.getElementById(tbody);
+    if (tb == null) return;
+    var tbid = tb.getElementsByTagName("tr");
+    if (tbid != null) {
+        for (var e = 0; e < tbid.length; e++) {
+            if (tbid[e].className == 'altrow') {
+                tbid[e].onmouseover = function () { this.className = 'altrow compareon'; }
+                tbid[e].onmouseout = function () { this.className = 'altrow'; }
+            } else {
+                tbid[e].onmouseover = function () { this.className = 'compareon'; }
+                tbid[e].onmouseout = function () { this.className = ''; }
+            }
+        }
+    }
+}
+
+
+
+function setScreenshotsID() {
+    ContainerElement = document.getElementById('PromoTabs');
+    if (ContainerElement == null)
+        return;
+    LICol = ContainerElement.getElementsByTagName('a');
+
+    if (LICol != null) {
+        for (i = 0; i < LICol.length; i++) {
+            LICol.item(i).setAttribute('id', "tab" + eval(i + 1));
+        }
+    }
+    //        document.getElementById("tab1").setAttribute("class", "selected");
+}
+
+//function moveUp() {
+// 
+//    ContainerElement = document.getElementById("PromoTabs");
+//	firstLI = document.getElementById("tab1");
+//    dupfirstLI = firstLI.cloneNode(false);
+//	dupfirstLI.innerHTML = firstLI.innerHTML;
+//	ContainerElement.removeChild(firstLI);
+//    ContainerElement.appendChild(dupfirstLI);
+//    setScreenshotsID();
+//}
+//function moveDown() {
+//    lastLI = document.getElementById("tab" + eval(LICol.length - 1));
+//    duplastLI = lastLI.cloneNode(false);
+//    duplastLI.innerHTML = lastLI.innerHTML;
+//    firstLI = document.getElementById("tab1");
+//    ContainerElement = document.getElementById("PromoTabs");
+//    ContainerElement.insertBefore(duplastLI, firstLI);
+//	ContainerElement.removeChild(lastLI);
+//    setScreenshotsID();
+//   
+//}
+
+
+
+/*Screenshots Javascript - Works only with jQuery*/
+var Sstep = 2;
+var Scurrent = 0;
+var Svisible = 0;
+var Sspeed = 200;
+var SliSize = 200;
+var SliHeight = 54;
+var Scarousel_height = 337;
+var Smaximum;
+function sShot() {
+	Smaximum = $('#PromoTabs a').length;
+    var ulSize = SliHeight * Smaximum;
+    var divSize = SliHeight * Svisible;
+    $('#PromoTabs').css("height", ulSize + "px").css("top", -(Scurrent * SliHeight)).css("position", "absolute");
+    $('#sShots').css("height", divSize + "px").css("height", Scarousel_height + "px").css("visibility", "visible").css("overflow", "hidden").css("position", "relative");
+}
+function moveUp() {
+    sShot();
+
+    if (Scurrent - Sstep < 0 || Scurrent - Sstep > Smaximum - Svisible) {
+        $('.sShot-prev').addClass('sSprev-dis');
+        $('.sShot-nxt').removeClass('sSnxt-dis');
+    }
+    else {
+        Scurrent = Scurrent - Sstep;
+        $('.sShot-prev').removeClass('sSprev-dis');
+        $('#PromoTabs').animate({ top: -(SliHeight * Scurrent) }, Sspeed, null);
+    }
+    return false;
+}
+
+function moveDown() {
+    sShot();
+    if (Scurrent + Sstep < 0 || Scurrent + Sstep > Smaximum - Svisible) {
+        $('.sShot-nxt').addClass('sSnxt-dis');
+        $('.sShot-prev').removeClass('sSprev-dis');
+    }
+    else {
+        Scurrent = Scurrent + Sstep;
+        $('.sShot-nxt').removeClass('sSnxt-dis');
+        $('#PromoTabs').animate({ top: -(SliHeight * Scurrent) }, Sspeed, null);
+    }
+    return false;
+}
+function selPromo(imagefile, contentID) {
+    $('#PromoTabs').find('a.selected').removeClass('selected');
+    //selectedBttnId = "tab" + contentID;
+    if ($("#tab" + contentID)) {
+        $("#tab" + contentID).addClass("selected ");
+        $('#acpromo').css('background', 'url(' + imagefile + ') no-repeat center center');
+    }
+}
+
+function MLpopupClose(cid) {
+    document.getElementById(cid).style.display = "none";
+    return false;
+}
+
+function MlpopupOpen(cid) {
+    $('.Mlpopup').hide();
+    var mllink = $("#" + cid).closest('td');
+    $(mllink).find('.Mlpopup').css('display', 'block');
+    return false;
+}
+
+/*Loading PC Tune up Popup content*/
+function loadPCTuneupPopup() {
+    $(".pkg-sec").css("position", "static");
+    $('#PCtuneupPopup').css('display', 'block');
+    $('.dimmed').css('display', 'block');
+
+}
+/*Closing PC Tune up Popup content*/
+function closePCTuneupPopup() {
+    $(".pkg-sec").css("position", "relative");
+    $('.dimmed').css('display', 'none');
+    $('#PCtuneupPopup').css('display', 'none');
+}
+
+var DefaultTabSelected = "tab1-content";
+function selectTab(TabID) {
+
+    var TabSelContentID = TabID + "-content";
+    var previousSelTab = DefaultTabSelected.replace("-content", "");
+    document.getElementById(previousSelTab).className = "";
+    document.getElementById(TabID).className = "selected";
+
+    document.getElementById(DefaultTabSelected).style.display = "none";
+    document.getElementById(TabSelContentID).style.display = "block";
+    DefaultTabSelected = TabSelContentID;
+}
+
+function dragResize() {
+    $.fn.jqDrag = function (h) { return i(this, h, 'd'); };
+    $.fn.jqResize = function (h) { return i(this, h, 'r'); };
+    $.jqDnR = {
+        dnr: {}, e: 0,
+        drag: function (v) {
+            if (M.k == 'd') E.css({ left: M.X + v.pageX - M.pX, top: M.Y + v.pageY - M.pY });
+            else E.css({ width: Math.max(v.pageX - M.pX + M.W, 0), height: Math.max(v.pageY - M.pY + M.H, 0) });
+            return false;
+		},
+		stop: function () { E.css('opacity', M.o); $().off('mousemove', J.drag).off('mouseup', J.stop); }
+    };
+    var J = $.jqDnR, M = J.dnr, E = J.e,
+        i = function (e, h, k) {
+            return e.each(function () {
+                h = (h) ? $(h, e) : e;
+                h.on('mousedown', { e: e, k: k }, function (v) {
+                    var d = v.data, p = {}; E = d.e;
+                    // attempt utilization of dimensions plugin to fix IE issues
+                    if (E.css('position') != 'relative') { try { E.position(p); } catch (e) { } }
+                    M = { X: p.left || f('left') || 0, Y: p.top || f('top') || 0, W: f('width') || E[0].scrollWidth || 0, H: f('height') || E[0].scrollHeight || 0, pX: v.pageX, pY: v.pageY, k: d.k, o: E.css('opacity') };
+                    E.css({ opacity: 1 }); $().on("mousemove", $.jqDnR.drag).on("mouseup", $.jqDnR.stop);
+                    return false;
+                });
+            });
+        },
+        f = function (k) { return parseInt(E.css(k)) || false; };
+    setTimeout(function () { $(".mpopContainer .mpopBody").find("ol").hide().delay(1).show(); }, 2);
+}
+
+
+
+function ViewDemo(demoType) {
+
+    $('#m_demo2').html("");
+
+    var parameters = "{'demoType': '" + demoType +
+        "','packageId': '" + packageId +
+        "','affiliateId': '" + l_affid + "'}";
+
+    $.ajax({
+        type: "POST",
+        url: "https://home.mcafee.com/WebServices/AjaxPopup.asmx/LoadPopupControl",
+        data: parameters,
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (msg) {
+            $('#m_demo2').html(msg.d);
+        },
+
+        error: function (xhr, textStatus) {
+
+            alert(textStatus);
+        }
+    });
+}
+function perNavUi() {
+    if ($('html[dir="rtl"] #nav .personal.main>li').length < 3) {
+        $('html[dir="rtl"] #nav .personal.main').addClass('rtlNav');
+    }
+    $('#nav').find('.personal>li>a:empty').parent().addClass('emptyItem');
+    if ($('#nav .personal>li:not(.emptyItem)').length == 1) { $('#nav .personal>li:not(.emptyItem)').addClass('sglItem'); }
+    $('#nav').find('.personal>li').each(function (i) {
+        var curLi = $(this).attr('id');
+
+        if (curLi != undefined && $(this).find('ul.sub li').length == 0) {
+            if (curLi == "currency") {
+                $(this).addClass('noItem');
+            }
+            if (curLi.indexOf("MyAccount") >= 0) {
+                if (i == 0) $(this).addClass('noItem'); else $(this).addClass('noMidItem');
+            }
+        }
+        if ($(this).find('ul.sub li ul').length > 0) {
+            $('#nav ul.personal li#currency .sub li li:even').addClass('even');
+            $('#nav ul.personal li#currency .sub li li:odd').addClass('odd');
+            if ($('#nav ul.personal li#currency').find('#ulCurrency').length) {
+                if ($('#nav ul.personal li#currency span') != undefined && ($('#nav ul.personal li#currency span')[0] == undefined || $('#nav ul.personal li#currency span')[0] == null))
+                    $('#nav ul.personal li#currency').not('#ulCurrency').wrapInner('<span></span>');
+            }
+            $('#nav ul.personal li#currency span').after($("#nav ul.personal li#currency .sub"));
+        }
+    });
+}
+if (typeof jQuery != 'undefined') {    
+    $(function () {
+        var ie6 = mc_utils.browser.msie && (mc_utils.browser.version == "6.0");
+        isRtl = $("html").attr("dir");
+        isRtlLang = $("html").attr("lang");
+        if ((isRtl === 'rtl') || (isRtlLang === 'ar') || (isRtlLang === 'he')) { $('body').addClass('rtl'); } else { $('body').addClass('ltr'); }
+        //Adding Browser as a class in HTML
+        var userAgent = navigator.userAgent.toLowerCase(); var chromeRegex = /chrome\/([0-9]+).([0-9]+)/g; var safariRegex = /safari\/([0-9]+).([0-9]+)/g; var chromematch = chromeRegex.exec(userAgent); var safarimatch = safariRegex.exec(userAgent); var chrome = Boolean(chromematch); var safari = Boolean(safarimatch);
+        //if ($.browser.webkit && !$.browser.opera && !$.browser.msie && !$.browser.mozilla) { if (userAgent.indexOf("chrome") === -1) { $('html').addClass('safari'); } else { $('html').addClass('chrome'); } }
+        if (mc_utils.browser.firefox) { $('html').addClass('firefox'); }
+        if (mc_utils.browser.msie) { userAgent = mc_utils.browser.version; userAgent = userAgent.substring(0, userAgent.indexOf('.')); version = userAgent; $('html').addClass('ie' + userAgent); }
+        if (safari) {
+            if (chrome)
+                $('html').addClass('chrome');
+            else
+                $('html').addClass('safari');
+        }
+        perNavUi();
+        $($('.trialDesc').find('.icons')).prependTo('.downloadCntr');
+        $($('#Ftrials .hdl')).appendTo('.trialDesc');
+
+        //Buy with Confidence mouse move event capture
+        if ($("#bwct").length > 0) {
+            $("#bwct").on("mouseover", function () { ttipbwc('bwct', 'bwct'); });
+        }
+        // For AU Legal
+        if ($('div').hasClass('au_legal_note')) {
+            $('.v2013 .pp-top-promo').addClass('cul-au');
+            $('.v2014 .pp-top-promo').addClass('cul-au');
+        }
+    });
+}
+
+
+function PluginZipFormat(autoFormat) {    
+    if (autoFormat) {
+        $("input:text[id$='m_ZipText']").on("keypress", function (event) {
+            var keyCode = (event.which) ? event.which : event.keyCode;
+            var reChar = String.fromCharCode(keyCode);
+            var txtZip = $(this);
+            if (!isNaN(reChar)) {
+                if (keyCode == 9) return true;
+                if (this.value.length > txtZip.attr("maxlength") - 1) {
+                    if (this.selectionStart != undefined && this.selectionStart == this.selectionEnd) {
+                        return false;
+                    } else if (document.selection && document.selection.type == "None") {
+                        return false;
+                    }
+                }
+                FormatZiporCPF(this, keyCode, false);
+                event.preventDefault();
+                return true;
+            } else if (IsValidKeyStroke(event, keyCode)) {
+                return true;
+            }
+            event.preventDefault();
+            return false;
+        });
+    }
+    else {
+        $("input:text[id$='m_ZipText']").off("keypress");
+    }
+}
+
+function FormatZiporCPF(input, charCode, isCPF) {
+    var actualLoc = GetCursorLocation(input);
+
+    var actualData = $(input).val();
+    var data = actualData.replace(/[-]/g, "");
+
+    if (charCode >= 48 & charCode <= 57) {
+        var loc = actualLoc;
+        if ((loc > 5 && !isCPF) || (loc > 9 && isCPF)) loc = loc - 1;
+        data = data.slice(0, loc) + String.fromCharCode(charCode) + data.slice(loc);
+    }
+
+    data = (!isCPF) ? FormatZipCode(data) : FormatCPF(data);
+
+    $(input).val(data);
+
+    if (actualLoc == isCPF ? 9 : 5) actualLoc += 2;
+    else if (actualData != data) actualLoc++;
+
+    SetCaretPosition(input, actualLoc);
+}
+
+function IsValidKeyStroke(evt, charCode) {
+    if ((charCode == 0) || (charCode == 8) || (charCode == 9) || (charCode == 13) || (charCode == 27) || (charCode == 127)) { //backspace,tab,return,escape,DEL
+        return true;
+    }
+    if (evt.charCode == 0) {
+        if ((charCode == 35) || (charCode == 36) || (charCode == 37) || (charCode == 39) || (charCode == 46)) { //HOME/END/left arrow/right arrow/delete buttons for firefox only
+            return true;
+        }
+    }
+    if (evt.ctrlKey && ((charCode == 65 || charCode == 97) || (charCode == 67 || charCode == 99) || (charCode == 86 || charCode == 118) || (charCode == 88 || charCode == 120))) { //allow ctrl + A/C/V/X
+        return true;
+    }
+    return false;
+}
+
+function FormatZipCode(zip) {
+    if (zip.length > 5 && zip.indexOf('-') == -1) {
+        zip = zip.slice(0, 5) + "-" + zip.slice(5, zip.length);
+    }
+    return zip;
+}
+
+// To set the cursor loaction
+
+function SetCaretPosition(textBox, caretPos) {
+    if (textBox != null) {
+        if (textBox.createTextRange) {
+            var range = textBox.createTextRange();
+            range.move('character', caretPos);
+            range.select();
+        } else {
+            if (textBox.selectionStart) {
+                textBox.focus();
+                textBox.setSelectionRange(caretPos, caretPos);
+            } else
+                textBox.focus();
+        }
+    }
+}
+
+// To fetch the location where the key is pressed
+
+function GetCursorLocation(textBox) {
+    var currentTextBox = textBox;
+    var currentSelection, fullRange, selectedRange, endPosition, locationIndex = -1;
+    if (typeof currentTextBox.selectionStart == "number") {
+        locationIndex = currentTextBox.selectionStart;
+        endPosition = currentTextBox.selectionEnd;
+        // clear the selected text
+        $(textBox).val(currentTextBox.value.substring(0, locationIndex) + currentTextBox.value.substring(endPosition, currentTextBox.value.length));
+    } else if (document.selection && currentTextBox.createTextRange) {
+        currentSelection = document.selection;
+        if (currentSelection) {
+            selectedRange = currentSelection.createRange();
+            fullRange = currentTextBox.createTextRange();
+            fullRange.setEndPoint("EndToStart", selectedRange);
+            locationIndex = fullRange.text.length;
+            // clear the selected text for (< IE9)
+            selectedRange.text = '';
+        }
+    }
+    return locationIndex;
+}
+
+
+function GetParameterValues(param) {
+    var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    var value;
+    for (var i = 0; i < url.length; i++) {
+        var urlparam = url[i].split('=');
+        if (urlparam[0] === param) {
+            value = urlparam[1];
+            break;
+        }
+    }
+    return value;
+}
+
+
+$(function () {
+    $("#faqAccordion dt").slice(1).each(function () {
+        $(this).next('dd').hide();
+        $(this).addClass('topicCollapse').removeClass('topicExpand');
+    })
+
+    $("#faqAccordion dt").on("click", function () {
+        if ($(this).hasClass('topicExpand')) {
+            $(this).addClass('topicCollapse').removeClass('topicExpand');
+            $(this).next('dd').hide();
+        }
+        else {
+            $(this).addClass('topicExpand').removeClass('topicCollapse');
+            $(this).next('dd').show();
+        }
+    });
+});
+
+
+//Added as a part of Mozy license upgrade project
+function MozyUpgrade() { }
+MozyUpgrade.MozyKeyValidator = function () {
+    var downloadBtn = $("#m_SubmitButton");
+
+    var licenseKeyVal = $.trim($("#m_txtLicenseCode").val());
+    var confirmKeyVal = $.trim($("#m_txtConfirmCode").val());
+
+    if (licenseKeyVal == "" || confirmKeyVal == "" || licenseKeyVal != confirmKeyVal) {
+        downloadBtn.removeClass("btnMozyBlue").addClass("btnMozyGry");
+        downloadBtn.prop("disabled", true);
+        return false;
+    }
+    else {
+        downloadBtn.removeClass("btnMozyGry").addClass("btnMozyBlue");
+        downloadBtn.prop("disabled", false);
+        return true;
+    }
+};
+
+MozyUpgrade.ValidateKeyEntry = function (event) {
+    var allow = true;
+    var key = event.which ? event.which : event.charCode ? event.charCode : event.keyCode ? event.keyCode : 0;
+    if (key != 0) {
+        var charValue = String.fromCharCode(key);
+        var regex = new RegExp("^[a-zA-Z0-9\b]+$");
+        if (!regex.test(charValue)) {
+            allow = false;
+        }
+    }
+    //For Firefox and Chrome Keycode and which will be 0. Keycode: Backspace 8, , Tab 9, Delete 46, Left 37, Top 38, Right 39, Down 40
+    if ((event.charCode == 0 && event.which == 0)) {
+        if (event.keyCode == 37 || event.keyCode == 39 || event.keyCode == 9 || event.keyCode == 46 || event.keyCode == 8) allow = true;
+    }
+
+    if (!allow)
+        (event.preventDefault) ? event.preventDefault() : event.returnValue = false;
+
+    MozyUpgrade.ResetScreen();
+    MozyUpgrade.MozyKeyValidator();
+};
+
+MozyUpgrade.ResetScreen = function () {
+    $("#m_ServerErrorMsgBlock").css("display", "none");
+    $("#m_txtLicenseCode").removeClass("text-box-error").addClass("text-box");
+    $("#m_txtConfirmCode").removeClass("text-box-error").addClass("text-box");
+}
+
+function OSSupport() {
+    $(".supported_os_list").show();
+}
+
+function winDownload(cidURL) {
+    var winEXEURL = "https://download.mcafee.com/products/safefamily/v1/SafeFamilySetup.exe";
+    $.ajax({
+        url: cidURL,
+        type: "post",
+        success: function () {
+            window.location.href = winEXEURL;
+        }
+    });
+}
+
+function IsWin10SOperatingSystem() {
+    try {
+        var requiredValues = [
+            "browser-name",
+            "browser-platform-version",
+            "browser-version",
+            "os-architecture",
+            "os-manufacturer",
+            "os-mode"
+        ];
+        var browserInfo = window.external.getHostEnvironmentValue(requiredValues);
+        if (browserInfo != null && typeof (browserInfo) != 'undefined' && browserInfo.length > 0) {
+            var isOsLocked = JSON.parse(browserInfo)["os-mode"];
+            if (isOsLocked != null && typeof (isOsLocked) != 'undefined' && isOsLocked.trim().length > 0 && isOsLocked !== "0") {
+                return true;
+            }
+        }
+    }
+    catch (err) {
+    }
+    return false;
+}
+
+function IsNullOrUndefinedObject(objToVerify) {
+    try {
+        if (objToVerify != null && typeof (objToVerify) != "undefined") {
+            for (var name in objToVerify) {
+                return false;
+            }
+        }
+    }
+    catch (err) {
+    }
+    return true;
+}
+
+$(document).ready(function () {
+    if ($(".osclose") !== null) {
+        $(".osclose").on("click", function () {
+            $(this).parent().parent().hide();
+        });
+    }
+    if ($(".radioOS") !== null) {
+        $(".radioOS").on("click", function () {
+            if ($(this).prop("title") === "Windows") {
+                $(".btn-blue-v2").attr("onClick", "winDownload('" + $(this).val() + "'); return false;");
+            } else {
+                $(".btn-blue-v2").attr("onClick", "window.location='" + $(this).val() + "'; return false;");
+            }
+        });
+    }
+
+    $('#merchntRcrdPlus').on("click", function () {
+        if ($("#merchntRcrdTextContent").is(":visible")) {
+            $("#merchntRcrdTextContent").hide();
+            $("#merchantRecordIcon").text("+");
+        }
+        else {
+            $("#merchntRcrdTextContent").show();
+            $("#merchantRecordIcon").text("-");
+        }
+    });
+
+    $('#Mobile').find('.cBig:last').addClass('noSeparator');
+});
+
+
+function UpdateStorePageNavigationLinks() {
+    $("#nav .productSub li").each(function () {
+        $(this).find('.viewAll a').on("click", function (event) {
+            var isStorePage = $("#nav").data("isStorePage");
+            if (isStorePage == "True") {
+                var href = $(this).attr("href");
+                if (href.indexOf("free") > 0) return true;
+                event.preventDefault();
+                var categoryId = href.substring(href.indexOf("CategoryId="), href.length);
+                categoryId = categoryId.substring(categoryId.indexOf("=") + 1, categoryId.length).toLowerCase();
+                LoadStoreContentByCategoryId(categoryId);
+                return false;
+            }
+            return true;
+        });
+    });
+}
+
+function LoadStoreContentByCategoryId(categoryId) {
+    if (categoryId === null) return;
+    if (categoryId.trim.len <= 0) return;
+    var associatedIds = "";
+    $(".pkg-cntr").each(function () {
+        var id = (this).id.toLowerCase();
+        if (id == categoryId) {
+            $(this).css("display", "block");
+            associatedIds = $(this).attr("associatedid").split(",");
+        } else {
+            $(this).css("display", "none");
+        }
+    });
+    if (associatedIds != '') {
+        $.each(associatedIds, function () {
+            $("#" + this).css("display", "block");
+        });
+    }
+    $(".gNav .productSub").addClass('prodHide');
+    $('.gNav .products').on("mouseover", function () {
+        $(".gNav .productSub").removeClass('prodHide');
+    });
+    var pkgVcount = $(".pkg-cntr:visible").length;
+    if (pkgVcount == 0) {
+        $(".pkg-cntr").show();
+    }
+}

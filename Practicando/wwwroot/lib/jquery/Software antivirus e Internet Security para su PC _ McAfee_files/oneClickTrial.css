@@ -1,0 +1,364 @@
+﻿body #bdy{padding:0;}
+.btnDownload, .btnDownload:active, .btnDownload:focus, .mpop button, .mpop button:active, .mpop button:focus{outline:0;outline-style:none;outline-width:0}
+.mpop .btnRight button{background:#10acf4;border-radius:5px;border:1px solid #7eb4e3;border-bottom:1px solid #058edf;font-family:Segoe UI,Arial;color:#fff;font-size:16px;padding:6px 30px;margin:0;cursor:pointer}
+
+/* Lightbox Popup */
+#dimMask{background-color:#000;position:fixed;left:0;top:0;z-index:9000;opacity:.5;width:100%;height:100%;display:none;
+-webkit-transition:250ms opacity;background:-webkit-radial-gradient(rgba(127, 127, 127, 0.5), rgba(127, 127, 127, 0.5) 35%, rgba(0, 0, 0, 0.7));
+background:-moz-radial-gradient(rgba(127, 127, 127, 0.5), rgba(127, 127, 127, 0.5) 35%, rgba(0, 0, 0, 0.7));}
+.ie7 #dimMask, .ie8 #dimMask{filter:alpha(opacity=50)}
+.mpop h3, .mpop p, .mpop h4, .mpopBody .openNewWin, .mpop .btnRight a, .mpop .mpopHead a, .mpop .mpopHead .close{font-family:Segoe UI,Arial;font-weight:normal}
+.mpop{background:#fff;border:1px solid #c4c4c4;box-shadow:0 5px 80px #505050;font-size:12px;margin:0;padding: 0;position:absolute;text-align:left;width:675px;z-index:10000;display:none;top:170px;left:45px}
+.mpop .mpopHead{background:#fff;padding:20px 25px 25px}
+.mpop .mpopHead h3{color:#179bf1;font-size:20px;margin:0}
+.mpop .mpopHead a{color:#179bf1;font-size:13px;font-weight:normal}
+.mpop .mpopHead a.close{position:absolute;color:#179bf1;font-size:20px;font-weight:bold;top:3px;right:10px}
+.mpop .mpopHead a.close:hover{color:#000}
+.mpop .mpopHead p, .mpop .mpopBody p{color:#666;margin:10px 0 0;font-size:13px;line-height:15px}
+.mpop .mpopHead p{margin:15px 0 0;line-height:17px}
+.mpop .mpopBody{background:#fff;margin:0 50px 25px}
+.mpop .mpopBody h4{color:#555;font-size:18px;margin:0;display:inline-block;width:60%}
+.ie7 .mpop .mpopBody h4{float:left}
+.mpopBody .openNewWin{float:right;margin:4px 0 0;font-size:13px;color:#179bf1}
+.mpopBody .scrollEula{height:214px;padding:0 15px;margin:5px 0;overflow-x:auto;overflow-y:scroll;clear:both;border:1px solid #999}
+.scrollEula a{color:#179bf1;font-weight:normal;}
+.scrollEula h5{display:inline;font-size:13px;font-weight:bold}
+.scrollEula ol{padding:0 0 0 20px}
+.scrollEula li{padding:15px 0 0}
+.mpopBody .scrollEula li p{margin:0}
+.scrollEula li ol li{padding:10px 0 0}
+.mpopBody .scrollEula li ol li p{margin:5px 0 0}
+.mpop .btnRight{text-align:right;padding:0;margin:20px 0 0}
+.mpop .btnRight a{color:#179bf1;font-size:16px}
+.mpop .btnRight button{margin:0 0 0 25px;padding:3px 30px 6px}
+.ie7 .mpop .btnRight button{padding:3px 0 7px;vertical-align:middle}
+
+/* One Click Success Control*/
+.oneClickSuccess{margin:20px 20px 20px 50px}
+.oneClickSuccess p, .oneClickSuccess a{font-family:Segoe UI,Arial;font-weight:normal}
+.oneClickSuccess p{color:#647d88;font-size:16px;font-weight:normal;margin:25px 0 0}
+.oneClickSuccess h2{color:#179bf1;font-family:Segoe UI,Arial;font-size:34px;font-weight:lighter;;margin-bottom:20px;padding:0}
+.oneClickSuccess h4{color:#647d88;font-size:19px;font-weight:normal;margin:27px 0 0}
+.serialKey span{color:#b1001f;padding:0 0 0 9px;font-size:20px;font-weight:bold}
+.oneClickSuccess .mgrT2{margin:2px 0 0;font-size:14px;font-weight:bold;color:#179bf1}
+
+.instSteps{position:relative;padding:10px 0 50px}
+.instSteps h4{padding:27px 0 24px;margin:0}
+.instSteps .stepConnect{background:#00a2e5;margin:0 auto;position:absolute;top:108px;left:98px;height:3px;width:470px}
+.ie7 .instSteps .stepConnect, .ie8 .instSteps .stepConnect,.ie9 .instSteps .stepConnect, .ie10 .instSteps .stepConnect, .ie11 .instSteps .stepConnect{top:106px}
+.instSteps .steps{position:relative;margin:0 0 0 -30px}
+.steps .cntr{float:left;width:211px;text-align:center;padding:61px 15px 0}
+.ie7 .steps .cntr{width:209px}
+.steps .step1{background:transparent url(https://secureimages.mcafee.com/legacy/oneClick/icon_1.png) no-repeat center top}
+.steps .step2{background:transparent url(https://secureimages.mcafee.com/legacy/oneClick/icon_2.png) no-repeat center top}
+.steps .step3{background:transparent url(https://secureimages.mcafee.com/legacy/oneClick/icon_3.png) no-repeat center top}
+.steps h5{color:#647d88;font-size:16px;font-family:Segoe UI,Arial;font-weight:normal;margin:0;padding:0;}
+.steps p{margin:5px 0 0}
+
+.oneClickSuccess ul{list-style:none;margin:6px 0 0}
+.oneClickSuccess ul li{padding:0 0 8px}
+.oneClickSuccess ul a{color:#048de4;font-size:13px}
+.lnkChat{padding:0 0 0 27px;background:transparent url(https://secureimages.mcafee.com/en-us/landingpages/oneclicklp/icon_chat.png) no-repeat left center}
+.lnkSupport{padding:0 0 0 27px;background:transparent url(https://secureimages.mcafee.com/en-us/landingpages/oneclicklp/icon_support.png) no-repeat left center}
+
+.oneClickDownload .processImg{display:none;background:transparent url(https://secureimages.mcafee.com/legacy/dashboard/loader.gif) no-repeat center 39%;z-index:999999;position:fixed;text-align:center;height:100%;width:765px;top:0;margin:0 auto;overflow:hidden}
+
+.coachMark {
+	display: none;
+	border: 1px solid #0c8bc6;
+	border-radius: 50%;
+	background-color: #0c8bc6;
+	width: 600px;
+	height: 600px;
+	opacity: .7;
+	position: absolute;
+	z-index: 1000;
+}
+.coachMarks-close { 
+	position: absolute;
+	background-image: url('https://secureimages.mcafee.com/legacy/oneClick/closeBtn.png') no-repeat;
+	width: 44px;
+	height: 44px;
+	text-indent: -99999px;
+}
+.coachMarks-close:hover { 
+	cursor: pointer;
+}
+.coachMark-firefox .coachMarks-close { 
+	top: 600px;
+	left: 375px;
+} 
+.coachMark-chrome .coachMarks-close { 
+	top: 30px;
+	right: 40px;
+}
+.coachMark-firefox { 
+	top: -295px;
+	right: -130px;
+}
+.coachMark-chrome { 
+	bottom: -295px;
+	left: -130px;
+}
+.coachMark-msg {
+	position: relative;
+	display: inline-block;
+	color: #ffffff;
+	width: 340px;
+	text-align: center;
+				
+}
+.coachMark-firefox .coachMark-msg {
+    top: 440px;
+	left: 100px;
+	font-size: 21px;
+}
+.coachMark-chrome .coachMark-msg { 
+	top: 75px;
+	left: 160px;
+	font-size: 27px;
+}
+.coachMark-img { 
+	position: absolute;
+}
+.coachMark-firefox .coachMark-img { 
+	top: 320px;
+	left: 200px;
+}
+.coachMark-chrome .coachMark-img { 
+	bottom: 320px;
+	right: 200px;
+}
+.firefoxStepsImgs, .chromeStepsImgs { 
+	display: none;
+}
+.stepsImgs { 
+	margin-top: 30px;
+}
+.stepsImgs-img { 
+	margin: 0 8px;
+}
+
+
+/*landingpage 2*/
+a { text-decoration: none;}
+.lp p{color:#000}
+.lp h3 { 
+	font-size: 3em;
+	font-weight: normal;
+}
+.lp h4 { 
+	margin: 6px 0 42px;
+    font-size: 1.4em;
+}
+.lp .red { 
+    color: #a80e2c; 
+}
+.lp .sprite { 
+	background: url(https://secureimages.mcafee.com/download/lp/mlsSprite.png) 0 0 no-repeat;
+}
+.lp .spritespritesb {
+                background: url("https://images.mcafee.com/download/lp/icon_safe_browsing.png") 0 0 no-repeat!important;
+}
+.redDown, .redUp { 
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+}
+.lp .redDown { 
+	background-position: -6px -32px;
+}
+.lp .redUp { 
+	background-position: -5px -45px;
+}
+.lp .fixed {
+    position: fixed;
+    top:0; 
+    width: inherit;
+    }
+.lp .mainBanner { 
+    background-position: 0 -390px;
+    width: 765px;
+	height: 553px;
+}
+.lp .title, .lp .subTitle, .buyBtn, .lp .msg, .lp input {    
+    font-family: "Segoe UI Light","Segoe UI";
+    font-weight: 300;}
+.mainBuyNow { 
+	position: absolute;
+	top: 135px;
+	left: 19px;
+	color: #fff;
+}
+.mainBuyNow .title { 
+    font-size:40px;
+    width: 6.6em;
+    margin-bottom: 58px;
+}
+.mainBanner .subTitle { 
+    font-size:22px;
+    width: 14em;
+}
+.buyBtn { 
+	padding: 3px 3px 6px 3px;
+	border: 1px solid #96281B;
+    font-size:21px;
+    width: 10em;
+    background: none repeat 0 0 #a80e2c;
+    border-radius: 5px; 
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+.buyBtn:hover {border: 1px solid #eee;color:#fff}
+.mainBanner .msg { 
+    font-size:12px;
+    width: 19em;
+    line-height: 18px;
+}
+.mainBanner input { 
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px; 
+    -moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5); 
+    padding: 5px 0px 8px 10px;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 8px;
+    width: 11.4em;
+}
+.soMuchProtection { 
+	text-align: center;
+	color: #53565a;
+	margin: 60px 10px; 
+}
+
+.soMuchProtection .secondList { 
+	margin: 30px 0;
+}
+.soMuchProtection .topList .item, .soMuchProtection .secondList .item { 
+	padding: 0 20px;
+	display: inline-block;
+	vertical-align: top;
+	cursor: pointer;
+    width: 204px;
+    text-align: center;
+}
+.soMuchProtection .topList .item p, .soMuchProtection .secondList .item p { 
+	font-size: 1.2em;
+}
+.soMuchProtection .itemDesc { 
+	display: none;
+}
+.soMuchProtection .listItemLogo { 
+	margin: 0 auto;
+}
+.soMuchProtection .topList .item .itemTitle, .soMuchProtection .secondList .item .itemTitle { 
+	color: #a80e2c;
+	font-weight: bold;
+	font-size: 1.4em;
+}
+.soMuchProtection .allDevices .listItemLogo { 
+	background-position: -4px -238px;
+	width: 162px;
+	height: 98px;
+}
+.soMuchProtection .protection .listItemLogo { 
+	background-position: -194px -252px;
+	width: 89px;
+	height: 97px;
+}
+.soMuchProtection .mobileSecurity .listItemLogo { 
+	background-position: -310px -253px;
+	width: 106px;
+	height: 96px;
+}
+.soMuchProtection .passwordManager .listItemLogo { 
+	background-position: -449px -252px;
+	width: 157px;
+	height: 75px;
+}
+.soMuchProtection .cloudStorage .listItemLogo { 
+	background-position: -639px -261px;
+	width: 158px;
+	height: 74px;
+}
+.yourDigitalLife { 
+	background-color: #5D5F62;
+	text-align: center;
+	padding: 50px 0 70px;
+}
+.yourDigitalLife h3, .yourDigitalLife h4 { 
+	color: #fff;
+}
+.yourDigitalLife .deviceList div { 
+	display: inline-block;
+    margin: 20px 20px 0 20px;
+}
+.yourDigitalLife .deviceList .PC { 
+	background-position: -4px -81px;
+    width: 152px;
+	height: 100px;
+}
+.yourDigitalLife .deviceList .laptop { 
+	background-position: -188px -80px;
+	width: 149px;
+	height: 101px;
+}
+.yourDigitalLife .deviceList .tablet { 
+	background-position: -364px -80px;
+	width: 136px;
+	height: 101px;
+}
+.yourDigitalLife .deviceList .phone { 
+	background-position: -529px -80px;
+	width: 63px;
+	height: 101px;
+}
+.emailForm .lblErr {
+    font-family: Segoe UI,Arial;
+    font-size: 12px;
+    color: #ec1c24;
+    display: block;
+    margin: 16px 0 5px;
+    width: 23em;
+    visibility: hidden;
+}
+.emailForm .visible {
+    visibility: visible;
+}
+.emailForm .errTxt {
+    background-color: rgba(255, 0, 0, 0.25);
+}
+.lp .note { 
+    font-family: Segoe UI,Arial;
+	text-align: center;
+	color: #fff;
+	padding: 60px 25px 0px;
+    font-size:12px;
+}
+#mbOverlay { 
+	background-color: #ffffff;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+.ie7 .clearfix {
+	display:block;
+}
+.ie7 .soMuchProtection .topList .item, .ie7 .soMuchProtection .secondList .item, .ie7 .deviceList div {float:left;}
+.ie7 .soMuchProtection .secondList .item {width:300px}
+.ie7 .deviceList {width:56em;}
+.ie7 .footer ul li {display: inline;} 
+.ie7 .redDown, .ie7 .redUp {height: 11px;}
+
+
+

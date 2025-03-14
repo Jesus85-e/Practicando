@@ -1,0 +1,287 @@
+﻿var PDP = window.PDP || {};
+
+PDP.setCompareTableTDHeight = function(tNode){
+	if(arguments[0])
+	{	
+	var tn = $('.'+tNode);
+	tn.show().css('visibility','hidden');
+	}
+	$('.compare').find('.cTmain').each(function(){
+	var $this = $(this),ht=$this.height();
+	$this.parent().siblings('td').each(function(){										
+
+		$(this).find('.tick').height(ht);
+	});
+});
+	if(typeof culture!='undefined') 
+	checkSubcultures();
+	if(arguments[0]) tn.hide().css('visibility','');
+};
+var checkSubcultures=function(){
+var subCultures="EN-IN|EN-MY|EN-PH|ES-CL|HR-HR";/*Making default width of column to auto so that it will align correctly for 3 product compare tables.*/
+	if(subCultures.indexOf(culture)!=-1)
+		{
+			$(".boxShot").css({'width':'120px','margin':'0px auto'});
+			$(".devicedesc").css({'padding':'8px 8px 5px 8px'});
+			$(".ie7 .devicedesc").css({'padding':'8px 0px 5px 0px'});
+		}
+};
+$(document).ready(function () {
+
+    
+
+	if($('.prodId395').length) {$('#dvCompareProducts').parent().show().css
+
+('visibility','visible');PDP.setCompareTableTDHeight();}
+	else PDP.setCompareTableTDHeight('compare-content',true);
+	var frameSignIn = $('#iFrameSignIn.loginFrameCnt');
+    if (frameSignIn.length) frameSignIn.attr("src", "about:blank");
+
+	$('.gNav .main > li').on("mouseover", function(){
+		$(".gNav .main > li.mHover").removeClass('mHover');
+		$(this).addClass('mHover');
+	}).on("mouseout", function(){
+		//if(!$(".sub", this).length){ $(this).removeClass('mHover'); }
+		$(this).removeClass('mHover');
+	});
+	/*$(document).click(function(e){
+		var targetMenu = 'sub', mClicked = $(e.target).attr('class');
+		if(mClicked !== targetMenu) {
+			$('.gNav .main > li.mHover').removeClass('mHover');
+		}
+	});*/
+	$('.v2013 .compare tbody th a,.v2013 .compare tbody th > span').on("click", function(){
+		if($(this).parent().hasClass('ExpandIcon'))
+		{
+			$(this).parent().addClass('CollapseIcon').removeClass('ExpandIcon');
+		}
+		else if($(this).parent().hasClass('CollapseIcon'))
+		{
+			$(this).parent().addClass('ExpandIcon').removeClass('CollapseIcon');
+		}
+});
+$('.v2014 .compare tbody th p a,.v2014 .compare tbody th > span').on("click", function () {
+    if ($(this).parent().hasClass('ExpandIcon')) {
+        $(this).parent().addClass('CollapseIcon').removeClass('ExpandIcon');
+    }
+    else if ($(this).parent().hasClass('CollapseIcon')) {
+        $(this).parent().addClass('ExpandIcon').removeClass('CollapseIcon');
+    }
+});
+$('.v2014 .compare tbody th p a,.v2014 .compare tbody th p > span').on("click", function () {
+    if ($(this).parent().parent().hasClass('ExpandIcon')) {
+        $(this).parent().parent().addClass('CollapseIcon').removeClass('ExpandIcon');
+    }
+    else if ($(this).parent().parent().hasClass('CollapseIcon')) {
+        $(this).parent().parent().addClass('ExpandIcon').removeClass('CollapseIcon');
+    }
+});
+   $('.v2012 .compare tbody th').on("click", function () {
+        if ($(this).hasClass('ExpandIcon')) {
+            $(this).addClass('CollapseIcon').removeClass('ExpandIcon');
+        }
+        else if ($(this).hasClass('CollapseIcon')) {
+            $(this).addClass('ExpandIcon').removeClass('CollapseIcon');
+        }
+    }); 
+
+
+$('#prodFeature .expCntr, #prodFeature .colCntr, .prodfeat .expcntr, .prodfeat .colcntr').on("click", function(){
+if(!$(this).hasClass('disable-col')){
+var state = $(this).prop('class').toLowerCase();
+	$('.compare tbody').find('th').each(function(){
+		if(state==="expcntr")
+		{
+		$(this).addClass('ExpandIcon').removeClass('CollapseIcon');
+		}
+		else if(state==='colcntr')
+		{
+			$(this).addClass('CollapseIcon').removeClass('ExpandIcon');
+		}
+	});
+	$(this).addClass('disable-col');
+	$(this).siblings().removeClass('disable-col');
+	}
+});
+    $("li.last a").on("click", function () {
+        $(this).parent().addClass("login");
+    });
+    $(".loginHolder .close").on("click", function () {
+        CloseInLineLogin();
+        $("#topnav .personalnav.level1 li").removeClass("login");
+    });
+    if (($("#loginMain").length)) {
+        $("#topnav .personalnav.level1 li").addClass("login");
+    }
+    //    if ($('.v2013 #VRS.cMed .wrap').length == 1) {
+    //        $('.v2013 #VRS.cMed .wrap').css('background','');
+    //    }
+    //    else {
+    //        $('.v2013 #VRS.cMed .wrap:first,').addClass('wrapFirst');
+    //        $('.v2013 #VRS.cMed .wrap:last').addClass('wrapLast');
+    //        $('.v2013 #VRS.cMed .wrap').not('.wrapFirst').prepend('<div class="wrapSeperator" />');
+    //    }
+
+    if ($('.v2013 #VRS.cMed .wrap').length > 1) {
+        $('.v2013 #VRS.cMed .wrap:first').addClass('wrapFirst');
+        $('.v2013 #VRS.cMed .wrap:last').addClass('wrapLast');
+    }
+    else {
+        $('.v2013 #VRS.cMed .wrap:first').addClass('wrapFirst');
+        $('<div>').appendTo($('.v2013 #VRS.cMed')).addClass('emptyLastWrap');
+        $('.v2013 #VRS.cMed').css('margin-bottom', '0');
+    }
+    if ($('.v2013 .PCUtilities .wrap').length > 1) {
+        $('.v2013 .PCUtilities .wrap:first').addClass('wrapFirst');
+        $('.v2013 .PCUtilities .wrap:last').addClass('wrapLast');
+    }
+    else {
+        $('.v2013 .PCUtilities .wrap:first').addClass('wrapFirst');
+        $('<div>').appendTo($('.v2013 .PCUtilities .wrap')).addClass('emptyLastWrap');
+        $('.v2013 .PCUtilities').css('margin-bottom', '0');
+    }
+    if ($('.v2013 .cMed.MAC .wrap').length > 1) {
+        $('.v2013 .cMed.MAC .wrap').addClass('wrapFirst');
+        $('.v2013 .cMed.MAC .wrap').addClass('wrapLast');
+    }
+    else {
+        $('.v2013 .cMed.MAC .wrap:first').addClass('wrapFirst');
+        $('<div>').appendTo($('.v2013 .cMed.MAC')).addClass('emptyLastWrap');
+        $('.v2013 .cMed.MAC').css('margin-bottom', '0');
+    }
+    if ($('.v2013 .cMed.PCSecurity .wrap').not('.cBig').length > 1) {
+        $('.v2013 .cMed.PCSecurity .wrap').not('.cBig').addClass('wrapFirst');
+        $('.v2013 .cMed.PCSecurity .wrap').not('.cBig').addClass('wrapLast');
+    }
+    else {
+        if ($('.v2013 .cMed.PCSecurity .wrap').not('.cBig').length){ $('.v2013 .cMed.PCSecurity .wrap').not
+
+('.cBig').addClass('wrapFirst'); }
+        $('<div>').appendTo($('.v2013 .cMed.PCSecurity')).addClass('emptyLastWrap');
+        $('.v2013 .cMed.PCSecurity').css('margin-bottom', '0');
+    }
+    if ($('.v2013 .cMed.Mobile .wrap').not('.cBig').length > 1) {
+        $('.v2013 .cMed.Mobile .wrap').not('.cBig').addClass('wrapFirst');
+        $('.v2013 .cMed.Mobile .wrap').not('.cBig').addClass('wrapLast');
+    }
+    else {
+        if ($('.v2013 .cMed.Mobile .wrap').not('.cBig').length) {
+            $('.v2013 .cMed.Mobile .wrap').not('.cBig').addClass('wrapFirst');
+            $('<div>').appendTo($('.v2013 .cMed.Mobile')).addClass('emptyLastWrap');
+            $('.v2013 .cMed.Mobile').css('margin-bottom', '0');
+        }
+    }
+
+    //For GTM 2014
+
+    if ($('.v2014 #VRS.cMed .wrap').length > 1) {
+        $('.v2014 #VRS.cMed .wrap:first').addClass('wrapFirst');
+        $('.v2014 #VRS.cMed .wrap:last').addClass('wrapLast');
+    }
+    else {
+        $('.v2014 #VRS.cMed .wrap:first').addClass('wrapFirst');
+        $('<div>').appendTo($('.v2014 #VRS.cMed')).addClass('emptyLastWrap');
+        $('.v2014 #VRS.cMed').css('margin-bottom', '0');
+    }
+    if ($('.v2014 .PCUtilities .wrap').length > 1) {
+        $('.v2014 .PCUtilities .wrap:first').addClass('wrapFirst');
+        $('.v2014 .PCUtilities .wrap:last').addClass('wrapLast');
+    }
+    else {
+        $('.v2014 .PCUtilities .wrap:first').addClass('wrapFirst');
+        $('<div>').appendTo($('.v2014 .PCUtilities .wrap')).addClass('emptyLastWrap');
+        $('.v2014 .PCUtilities').css('margin-bottom', '0');
+    }
+    if ($('.v2014 .cMed.MAC .wrap').length > 1) {
+        $('.v2014 .cMed.MAC .wrap').addClass('wrapFirst');
+        $('.v2014 .cMed.MAC .wrap').addClass('wrapLast');
+    }
+    else {
+        $('.v2014 .cMed.MAC .wrap:first').addClass('wrapFirst');
+        $('<div>').appendTo($('.v2014 .cMed.MAC')).addClass('emptyLastWrap');
+        $('.v2014 .cMed.MAC').css('margin-bottom', '0');
+    }
+    if ($('.v2014 .cMed.PCSecurity .wrap').not('.cBig').length > 1) {
+        $('.v2014 .cMed.PCSecurity .wrap').not('.cBig').addClass('wrapFirst');
+        $('.v2014 .cMed.PCSecurity .wrap').not('.cBig').addClass('wrapLast');
+    }
+    else {
+        if ($('.v2014 .cMed.PCSecurity .wrap').not('.cBig').length) { $('.v2014 .cMed.PCSecurity .wrap').not
+
+('.cBig').addClass('wrapFirst'); }
+        $('<div>').appendTo($('.v2014 .cMed.PCSecurity')).addClass('emptyLastWrap');
+        $('.v2014 .cMed.PCSecurity').css('margin-bottom', '0');
+    }
+    if ($('.v2014 .cMed.Mobile .wrap').not('.cBig').length > 1) {
+        $('.v2014 .cMed.Mobile .wrap').not('.cBig').addClass('wrapFirst');
+        $('.v2014 .cMed.Mobile .wrap').not('.cBig').addClass('wrapLast');
+    }
+    else {
+        if ($('.v2014 .cMed.Mobile .wrap').not('.cBig').length) {
+            $('.v2014 .cMed.Mobile .wrap').not('.cBig').addClass('wrapFirst');
+            $('<div>').appendTo($('.v2014 .cMed.Mobile')).addClass('emptyLastWrap');
+            $('.v2014 .cMed.Mobile').css('margin-bottom', '0');
+        }
+    }
+
+});
+//News letter email validation and submit
+$('#newsLetterSignUp').on("click", function () {
+    //    $("#errorMsgDiv").hide();
+    //    var hasError = false;
+    //    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+    var emailaddressVal = $("#newsLetterEmail").val();
+    //    if (emailaddressVal == '' || !emailReg.test(emailaddressVal)) {
+    if (emailaddressVal == '') {
+        //$("#errorMsgDiv").show();
+        return false;
+    }
+    else {
+        window.location.href = "/Root/NewsLetter.aspx?ea=" + emailaddressVal.replace('@', '%40') + "&sid=1";
+        return false;
+    }
+	
+});
+function RefreshParentPage() {
+    window.location.href = window.location.href;
+}
+function DisplayLogin() {
+    if (document.getElementById("exportControlCheck").value == "1"){ document.location.href = document.getElementById
+
+("exportControlURL").value; }
+    else {
+        var frameSignIn = document.getElementById('iFrameSignIn');
+        var loadingDisplay = $("#ajaxLoginLoad");
+        loadingDisplay.css("display", "block");
+
+        if (frameSignIn.onload == null) {
+            frameSignIn.onload = function () {
+                loadingDisplay.css("display", "none");
+            };
+
+            if (window.attachEvent){ frameSignIn.attachEvent('onload', frameSignIn.onload); }
+        }
+
+        $(".loginHolder").show();
+        $(frameSignIn).show();
+        $(frameSignIn).prop("src", "https://home.mcafee.com/Secure/Protected/InLineLogin.aspx");
+    }
+}
+function CloseInLineLogin() {
+    $("iframe#iFrameSignIn").prop("src", "about:blank");
+    $(".loginHolder").hide();
+}
+
+function IsWin8() {
+    var userAgent = navigator.userAgent;
+    return (/Windows NT 6(\.2|\.3)/i.test(userAgent));
+}
+
+/** for gtm2014 MFP-Android (added because used same 2013 classes) **/
+if ($(".benefit-blist2").children().hasClass("pcTab")) {
+    $("*:not(li) > .benefit-blist2 > .pcTab > li:odd").addClass("odd-row").removeProp("onclick");
+    $("*:not(li) > .benefit-blist2 > .pcTab > li:even").addClass("even-row").removeProp("onclick");
+    $("*:not(li) > .benefit-blist2 >.pcTab > li:last").addClass("last");
+}
+

@@ -1,0 +1,576 @@
+/* Start - HackerSafe logo */
+body{
+-moz-box-shadow: none;-webkit-box-shadow:  none;box-shadow:  none;
+}
+body .header {
+	padding:0 0 14px 0;
+}
+.header a.affbrandlogo { /* Partner logo */
+	display:block;
+	float:right;
+	margin:24px 18px 0 0;
+	overflow:hidden;
+}
+body .header a.brandlogo,
+body .header img.brandlogoimg { /* McAfee logo */
+	margin-top:9px;
+	width: 138px;
+	top: 15px;
+}
+.header a.hslogo {  /* McAfee Secure (Hacker Safe) logo */
+	position:relative;
+	float:left;
+	top:27px;
+	left:18px;
+}
+h3.headingtext {
+	color: #777777;
+	font-size: 14px;
+	font-weight: bold;
+	float: left;
+	margin-left:40px;
+	margin-top:15px;
+}
+.header.simple {height:90px;}
+.loginHolder{top:30px;} 
+.ftrcurve{clear:both;position:relative;bottom:-4px;height:8px;margin:0 auto;background:#fff;bottom:0;padding:0 10px 8px 10px;display:block}
+/* Affiliates personal nav 
+#nav{padding-top:24px;}
+#nav ul.personal{margin-right:3px;}
+#nav ul.personal ul{margin-left:0;right:2px;}
+#nav ul.personal li{display:inline-block;zoom:1;*display:inline;float:none}
+#nav ul.personal span{padding-right:0;}
+#nav ul.personal, #nav ul.personal span, #nav ul.main > li:hover, li#currency:first-child:hover,li#currency:hover a
+{background:none;border:none;}
+#nav ul.personal li:first-child:hover,#nav ul.personal ul li{background-image:none;} 
+#nav ul.personal li a:hover,li#currency ul li ul li:hover{color:#cc0033;}
+#nav ul.personal li.cart span{background:#fff url("https://secureimages.mcafee.com/common/nav/navSprite.gif") no-repeat right -779px;}
+#nav ul.personal a{color:#0d6c98;padding:4px 5px 2px 9px;}
+#nav ul.personal li,#nav ul.main > li:hover{background:#fff url("https://secureimages.mcafee.com/common/nav/navSprite.gif") no-repeat 0 -448px;border-width:0 1px;border-style:solid;border-color:transparent;}
+#nav ul.personal li#currency {color:#0d6c98;cursor:pointer;font-weight:normal;}
+#nav ul.sub li{box-shadow: 1px 3px 4px #DFDFE0;}
+#nav li:hover ul.sub{top:20px;}
+*/
+#nav .main .verticalMyAccountLi span.arrowSelect { display: none; }
+#nav{padding-top:24px;background-color:#FFF;clear:both}
+#nav ul.main li{background:url("https://secureimages.mcafee.com/common/nav/navSprite.gif") no-repeat -2px -380px;border-width:0 1px;border-style:solid;border-color:transparent;float:left;position:relative;z-index:99;}
+#nav ul.main > li:hover, li#currency:hover{background:#dadada url("https://secureimages.mcafee.com/common/nav/navSprite.gif") repeat-x 0 -581px;border-width:0 1px;border-style:solid;border-color:#d8d8d8;}
+#nav ul.main li:first-child{background-image:none;}
+#nav ul.main a, ul.main li#currency{color: #535353;font-weight:bold;display:block;padding:6px 7px 6px 8px;cursor:pointer}
+#nav ul.personal{background-position:0 -176px; background-repeat:repeat;float:right;list-style-type:none;margin-top:-29px;width:auto;}
+*[lang|="zh"].ie7 #nav ul.personal{margin-top:-31px;}/*Navigation overlap with background image fix for IE7 browsers*/
+#nav ul.personal ul{margin-left:auto;border:1px solid #ddd;}
+#nav ul.personal li{background-position:-1px -449px;}
+#nav ul.sub{background-color:#fff;border:1px solid #ddd;display:none;list-style:none;margin-left:-1px;position:absolute;top:26px;z-index:99999;-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=158, Color='#dfdfe0')";}
+#nav ul.sub li a,li#currency ul.sub li ul li{padding:4px 8px;}
+#nav ul.sub li.odd{background-color:#f4f4f4;}
+#nav ul.sub li.even{background-color:#fcfcfc;}
+#nav ul.sub li{float:none;background:#fff;-moz-box-shadow: 1px 2px 4px #dfdfe0;-webkit-box-shadow: 1px 2px 4px #dfdfe0;box-shadow: 1px 2px 4px #dfdfe0;/*-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=158, Color=%#dfdfe0')";*/}
+#nav li:hover ul.sub{display:block;left:0;min-width:220px;width:auto;white-space:nowrap;}
+#nav li:hover ul a{font-weight: normal;color:#535353;} 
+#nav li:hover ul li:hover{background:#eceeed none;border-color:#e7e7e7 transparent;}
+#nav ul.main a:hover{text-decoration:none;} /*just for purchase flow*/
+#nav ul.main span.noArrow{background-image:none;padding:0;}
+#nav ul.main li.noItem span{background-image:none;padding-right:0}
+#nav li:hover ul.sub{display:block;white-space:nowrap;-moz-box-shadow: none;-webkit-box-shadow:  none;box-shadow:  none;}
+#nav ul.main > li:hover, li#currency:hover {background: url("https://secureimages.mcafee.com/common/nav/navSprite.gif") repeat-x scroll 0 -581px #DADADA;   border-color: #D8D8D8;border-style: solid;border-width: 0 1px;}
+#nav.legacyNav{padding-top:30px;*height:0px;position:relative;}
+.ie9 #nav.legacyNav {height:1px;}
+#nav ul.main{background:#FFF}
+#nav ul.main a, #nav.legacyNav ul.main a, ul.main li#currency{color:#006699}
+#nav ul.main a:hover, #nav.legacyNav li ul a:hover{color:#cc0033}
+#nav ul.personal li.cart, #nav ul.personal li.last,#nav ul.main > li.cart:hover,#nav ul.main > li.last:hover{background:#fff url("https://secureimages.mcafee.com/common/nav/navSprite.gif") no-repeat 0 -448px;border-width:0 1px;border-style:solid;border-color:transparent;}
+#nav ul.personal li:hover ul.sub{margin-left:auto;right:-1px;left:auto;position:absolute;min-width:195px;*width:100%;}
+#nav ul.personal li .sub li{width:99%;*width:99.5%;display:block;zoom:1;position:relative;word-wrap: break-word;white-space:normal}
+#nav ul.personal li#currency{color:#0d6c98;cursor:pointer;font-weight:normal;}
+#nav ul.personal li#currency span:hover, #nav ul.personal li#currency ul li:hover{color:#cc0033;}
+#nav ul.personal li#currency ul li{color:#454545}
+#nav ul.personal li#currency .sub ul{border:1px solid #ddd;right:auto;left:0;}
+#nav ul.personal li#currency .sub li{width:auto;cursor:pointer;border-width:0;}
+#nav ul.personal li .sub li a{display:block;zoom:1;word-wrap: break-word;white-space:normal}
+.ie9 #nav ul.main li a, .ie9 #nav ul.main li, .ie9 #nav ul.personal li#currency ul.sub li ul li{ padding-bottom:4px;}/* IE9 */
+.ie9 #nav ul.main li li a, .ie9 #nav ul.main li span#cart{ padding-bottom:4px;}/* IE9 */
+#nav .main span#cart, #nav .main span#cartSpan{background:url("https://secureimages.mcafee.com/common/nav/navSprite.gif") no-repeat -1px -780px;padding:0 7px 0 6px;
+-khtml-opacity:.70; -moz-opacity:.70;-ms-filter:"alpha(opacity=70)";filter:alpha(opacity=70);opacity:.70;}
+.ie9 #nav ul.main li#currency{ padding-bottom:8px;}/* IE9 */
+.ie9 #nav ul.personal li#currency ul.sub li{padding-bottom:0px;}
+#nav ul.personal li#currency ul.sub li ul li{min-width:auto}
+#nav ul.personal li{background-position:0px -449px;}
+#nav li.noMidItem a{padding: 6px 5px 6px 9px;}
+#nav li.noMidItem {border-color:transparent}
+#nav li.noMidItem a span{background:none;padding-right:0}
+#nav ul.main>li.noMidItem:hover{background: url("https://secureimages.mcafee.com/common/nav/navSprite.gif") no-repeat scroll 0px -449px transparent;border-color:transparent}
+html #nav ul.personal li.sglItem, html #nav ul.personal li.sglItem:hover{background-image:none}
+
+/* for custom headers */
+.McafeeLogos_AOL {
+	top: 30px;
+	position: absolute;
+	width:766px;	
+}
+.McafeeLogos_BCentral {
+	top: 60px;
+	position: absolute;
+	width:766px;	
+}
+.McafeeLogos {
+	top: 60px;
+	position: absolute;
+}
+
+/* for MSN only */
+img#logo-msn {position: relative; top: 5px; left: 295px;}
+
+/* for NSM & MSNTG */
+.header div.msnbackground {
+	background:#fff url(https://secureimages.mcafee.com/common/msnGradient.gif) repeat-y top left;
+	height:85px;
+	width:766px;
+}
+#nav-affiliate {
+	margin: 10px 0 0 0;
+	padding: 5px 0 10px 0;
+	text-align: right;
+	font-size:12px;
+}
+#nav-affiliate li {
+	display: inline;
+	margin: 0;
+	padding: 0 5px 0 8px;
+	font: bold 1.1em arial, sans-serif;
+	color: #fff;
+	border-left: 1px solid #fff;
+}
+#nav-affiliate li.first { border: none; }
+
+h2.title-affiliate { 
+	float: right;
+	clear: right;
+	padding-top: 10px;
+	margin-top: -10px;
+	font: bold 2em arial, sans-serif;
+}
+h2.title-affiliate a {
+	padding: 10px 120px 2px 0;
+	background: url(https://sc.msn.com/global/c/lg/msft_118x35.gif) no-repeat top right;
+}
+#nav-affiliate a:link, h2.title-affiliate a:link { color: #fff; text-decoration: none; }
+#nav-affiliate a:visited, h2.title-affiliate a:visited { color: #fff; text-decoration: none; }
+#nav-affiliate a:hover { color: #fff; text-decoration: underline; }
+h2.title-affiliate a:hover { color: #fff; text-decoration: none; }
+.access-aid, ol#toc {display: none;}
+
+#bdy h2{
+/*margin-left:10px;*/
+}
+#bdy div .accActTitle{
+margin-bottom:10px;
+}
+
+/*Fix for 457443*/
+span.btnMfeBlue{
+margin-left:10px !important;
+}
+
+/* MyAccount page left navigation styles */
+.ajax__tab_body ol li, .ajax__tab_body ul li{line-height:22px;}
+.ajax__tab_body #welcome p.instruction{margin-left:4px;}
+.ajax__tab_body ol a {font-weight:normal;}
+.ajax__tab_body ol, .ajax__tab_body ul {margin-bottom:5px;}
+
+.myaccountLeftNav .leftnav, .myaccountLeftNav .leftnav .leftnavlist {
+background:none !important;
+}
+.myaccountLeftNav .leftnav {
+border-top:3px solid #fff;
+margin:-5px 0 0 0;
+}
+.myaccountLeftNav .leftnav ul {
+margin-top:5px;	
+}
+.myaccountLeftNav .leftnav ul li {
+padding-left:8px;
+border-bottom:1px solid #f1f1f1;
+}
+
+/* MyAccount page left navigation styles ends here */
+/* contextual popup*/
+.contextualPopup .contextualWrapper {height:434px;}
+
+.contextualPopup .instructionList{
+border:none;
+height:238px;
+}
+.contextualPopup .tabDesc ol{
+height:174px;
+}
+
+/* product download */
+.agreeEula{margin:0 14px;_margin-right:0;}
+#CustEulaPrintContent h2,
+#EulaPrintContent h2{margin-left:0;}
+.leftnav .Root.Leaf{padding-left:10px;}
+#bdy .appDldLtCol{background:none;width:96% !important;}
+#bdy .appDldLtCol iframe{width:100%;}
+
+/*PDP*/
+#popups, #dvUpsellPopup{top: 120px;left:-5px}
+#dvUpsellPopup, x:-moz-any-link {top:-307px;}
+
+/* SM-II product card */
+#bdy .pinHolder h2,
+#bdy .downloadStep h2{margin:0;}
+#bdy .pageHead h2.black{margin-left:0;}
+
+/* Product details page Pricing */
+#pricingsection .pkg-sec #PriceOptionsContainer ul li, .pp-btm-price .price-sec #PriceOptionsContainer ul li {list-style:none; font-size:.8em; margin-top:5px;}
+#pricingsection .pkg-sec #PriceOptionsContainer ul li span.priceText, .pp-btm-price .price-sec #PriceOptionsContainer ul li span.priceText {margin-left:0px;}
+
+/*Logout page changes for partners*/
+.logoutContainer{height:auto;}
+.weAccept{display:none;}
+body div#footer{background:none;padding:20px 0;*padding-top:10px;font-size: 11px;clear: both;}
+body div#footer p {color: #FEFEFE; text-align:center;}
+#footer .copyRight{position:static;display:block;}
+
+/*NEWPROJ-3200 Hides For Home text from displaying in header on aff pages*/
+.header a.brandlogo,
+.header img.brandlogoimg{
+border-right:none;  
+padding-right:0;
+}
+.logoHomeTxt{display:none;}
+#nav ul.personal span, #nav ul.personal span.showMenu{background:url(https://secureimages.mcafee.com/common/nav/navSprite.gif) no-repeat right -59px;padding:0 10px 0 0;}
+/*End*/
+
+/*Account Extension*/
+.acctLvlNotifications{margin-bottom:0}
+#Notification{padding-bottom:13px}
+.mTab{padding-top:5px}
+.acctExt .mTabContent{/*display:inline;*/width:96%;}/*breaks in aff page, unless display inline*/
+h1.acctLvl{margin-top:0}
+.dbSubNav{margin:2px 3px 0 0;width:460px}
+#nav ul.personal li.noItem, #nav ul.personal li.noItem a span, #nav ul.personal li#currency.noItem{border-color:transparent;background:none}
+#nav ul.personal li.noItem a span, #nav ul.personal li#currency.noItem span{padding:0}
+#nav ul.personal li#currency.noItem{color:#535353}
+.subNavWelcome{margin-right:0}
+#ARLink a{padding-right:0}
+.linkBig #ARLink{padding-right:1px}
+.benefit .improved, .PCTbl3Column .heighlight, #pcTblBdy .pcHeighlight, .pkg-tab .new, .pkg-tab .improved, .pkg-tab .heighlight{display:inline-block}
+/*MAA2.0*/
+.maa2 .dbSubNav{margin-top:-36px}
+.smartContainer{background-image:none;width:100%}
+.benefit .improved, .PCTbl3Column .heighlight, #pcTblBdy .pcHeighlight, .pkg-tab .new, .pkg-tab .improved, .pkg-tab .heighlight{display:inline-block}
+
+form#aspnetForm{background:transparent;}
+div#footer .copyRight{text-align:center;color:#FFF; position:relative;}
+div#footer .copyRight #affFtrHkrSfe {position:absolute; right:10px; top:2px;}
+div#footer,.ftrcurve{z-index:1;}
+div#footer ul{margin:0 auto;}
+div#footer ul li{background: url("https://secureimages.mcafee.com/common/nav/navSprite.gif") no-repeat right -490px;display:inline;padding:0 7px;margin-top:4px;font-size:11px;float:left;}
+div#footer ul li.last-child_ie{padding-right:0;background:none;}
+div#footer li:last-child{padding-right:0;background:none;}
+span.crLnkFirst{margin:7px;padding-right:12px;border-right:1px solid #d9d9d9;}
+span.crLnkLast{margin:7px;padding-left:12px;border-left:1px solid #d9d9d9;}
+.ftrcurve .bl,.ftrcurve .br{width:8px;height:8px;}
+.ftrcurve .bl{bottom:-1px;background-position:-24px 0;}
+.ftrcurve .br{bottom:-1px;background-position:-28px 0;}
+.ftrcurve{display:block}
+.legacyNav#nav{background-color:#FFF}
+div.Gtm2013#footer,div.Gtm2014#footer{background-color:transparent;}
+div.Gtm2013#footer .copyRight,div.Gtm2014#footer .copyRight{color:#FFF;text-align:center}
+
+/* Screenshot text alignment */
+.pp-363 #ctl00_MainContent_ViewDemoPanel{clear: both;cursor: pointer;float: left;margin-left: 140px;white-space: nowrap;z-index: 1006;display: block;margin-top: -35px;}
+.pp-363 #ctl00_MainContent_ViewDemoPanel a.vScreenShots{float: left;margin-left: -50px;}
+.custPartnerNotif{padding:10px;border:1px solid #c5d0d6;background-color:#d8e4eb;color:#333;width:90.5%;margin:10px 0;}
+#flexBoxWrap.noSupport .custPartnerNotif{width:96.5%;}
+
+
+/*Secondary nav for partners*/
+.dbSnWrap{word-spacing:0;letter-spacing:-1px;}
+.dbSnWrap li{padding:0 0 0 4px;background:#fff url("https://secureimages.mcafee.com/common/nav/navSprite.gif") no-repeat 3px -452px;}
+.dbSnWrap li:first-child{padding:0;background:none;}
+.dbSnWrap li div.prodAvailMenu ul{right:0;}
+/*Secondary nav for partners - need to remove these after EOL for AE*/
+.dbSubNav{padding-right:5px;}
+/*Secondary nav for partners - need to remove these after EOL for AE*/
+.noSupport .box #next {left:633px;}
+.dbSnWrap li i{display:none;}
+.ie7 .box .messageNotify{margin-top:15px;}
+
+/* McAfee AntiVirus for Linux */
+.prodId341 .new2013 .cnt-flt {width:700px; padding-left:15px;  }
+.prodId341 .new2013 .cnt-flt ul {padding-left:25px; list-style:disc;}
+.prodId341 .new2010 .cnt-flt {width:700px; padding: 15px 0 35px 15px;}
+.ie7 .prodId341 .new2010 .cnt-flt {width:700px; padding: 5px 0 20px 15px;}
+
+/* Product page price section height */
+.v2013 .pp-top-promo .pkg-sec, .v2014 .pp-top-promo .pkg-sec{ height:auto; min-height: 294px;}
+
+.v2014 .pp-top-promo {height:auto !important}
+
+/* Product page tab width */
+.v2013 .ajax__tab_header .ajax__tab_tab, .v2014 .ajax__tab_header .ajax__tab_tab {max-width: 260px;}
+
+/*Width for 2013 PDP tabs on 2014 migration*/
+*[lang|="hu"] .v2014 .ptab-theme .ajax__tab_header .ajax__tab_inner {width:auto !important;}
+
+/* PL, FR, PT, RU, EL, HU site listbox width for Partners */
+*[lang|="pl"] .HpPartners select, *[lang|="pl"] .v2013 #PriceOptionsContainer select, *[lang|="pl"] .v2014 #PriceOptionsContainer select,
+*[lang|="fr"] .HpPartners select, *[lang|="fr"] .v2013 #PriceOptionsContainer select, *[lang|="fr"] .v2014 #PriceOptionsContainer select, 
+*[lang|="pt"] .HpPartners select, *[lang|="pt"] .v2013 #PriceOptionsContainer select, *[lang|="pt"] .v2014 #PriceOptionsContainer select,
+*[lang|="ru"] .HpPartners select, *[lang|="ru"] .v2013 #PriceOptionsContainer select, *[lang|="ru"] .v2014 #PriceOptionsContainer select,
+*[lang|="el"] .HpPartners select, *[lang|="el"] .v2013 #PriceOptionsContainer select, *[lang|="el"] .v2014 #PriceOptionsContainer select,
+*[lang|="hu"] .HpPartners select, *[lang|="hu"] .v2013 #PriceOptionsContainer select, *[lang|="hu"] .v2014 #PriceOptionsContainer select {width: 192px;}
+
+/* 2014 v2 EL site padding fix to keep button text on one line*/
+[lang|="el"] .v2014.v2 .pkg-sec .pkg-main button.btn-blue-v2 {padding:8px 6px !important}
+
+/*IE7 button v2 issue for some locales*/
+.ie7 .v2014.v2 .pkg-sec .pkg-main button.btn-blue-v2 {overflow: visible !important}
+
+/* ES, DE, NL, EL site button width for Partners */
+*[lang|="es"] .v2013 #PriceOptionsContainer .btn-sml-buynow,
+*[lang|="de"] .v2013 #PriceOptionsContainer .btn-sml-buynow,
+*[lang|="nl"] .v2013 #PriceOptionsContainer .btn-sml-buynow,
+*[lang|="el"] .v2013 #PriceOptionsContainer .btn-sml-buynow,
+*[lang|="es"] .v2014 #PriceOptionsContainer .btn-sml-buynow,
+*[lang|="de"] .v2014 #PriceOptionsContainer .btn-sml-buynow,
+*[lang|="nl"] .v2014 #PriceOptionsContainer .btn-sml-buynow,
+*[lang|="el"] .v2014 #PriceOptionsContainer .btn-sml-buynow {padding: 5px 8px;}
+
+*[lang|="es"] .v2013 #PriceOptionsContainer .btn-sml-buynow span, 
+*[lang|="de"] .v2013 #PriceOptionsContainer .btn-sml-buynow span, 
+*[lang|="nl"] .v2013 #PriceOptionsContainer .btn-sml-buynow span, 
+*[lang|="el"] .v2013 #PriceOptionsContainer .btn-sml-buynow span,
+*[lang|="es"] .v2014 #PriceOptionsContainer .btn-sml-buynow span, 
+*[lang|="de"] .v2014 #PriceOptionsContainer .btn-sml-buynow span, 
+*[lang|="nl"] .v2014 #PriceOptionsContainer .btn-sml-buynow span, 
+*[lang|="el"] .v2014 #PriceOptionsContainer .btn-sml-buynow span {*font-size:1em;}
+
+/* McAfee Anti-Theft 2013 */
+.prodId408 .new2013 .cnt-flt {width:700px; padding-left:15px;  }
+/** Login popup update for ie7 **/
+.ie7 .mboxDefault{position:relative;z-index:999;}
+.ie7 #bdy .mboxDefault {position:static;}
+#nav ul.personal li#currency .sub ul{margin-left:0;}
+
+/* 2013 Flex Packages for Partners */
+.v2013 .pp-507,
+.v2013 .pp-427, 
+.v2013 .pp-421{background: url("https://secureimages.mcafee.com/legacy/2013/product/maa_bg.jpg") no-repeat scroll 0 0 transparent;}
+.v2013 .pp-507 .awards,
+.v2014 .pp-507 .awards,
+.v2013 .pp-427 .awards,
+.v2014 .pp-427 .awards,
+.v2013 .pp-421 .awards,
+.v2014 .pp-421 .awards{width: 220px; padding: 7px 0 12px 15px;}
+.v2013 .pp-507 .awards b,
+.v2014 .pp-507 .awards b,
+.v2013 .pp-427 .awards b,
+.v2014 .pp-427 .awards b,
+.v2013 .pp-421 .awards b,
+.v2014 .pp-421 .awards b{display:block; padding: 0 5px 15px 0;}
+
+/* 2013 AU legal note */
+#bdy .v2013 .cul-au h2.prod-tag{font-size:1.25em}
+.v2013 .pp-top-promo.cul-au .au_legal_note, .v2014.v1 .pp-top-promo.cul-au .au_legal_note{top:370px}
+.v2013 .pp-top-promo.cul-au .pp-boxshot, .v2014.v1 .pp-top-promo.cul-au .pp-boxshot{height:450px}
+.ie7 .v2013 #pricingsection .cul-au .pkg-sec #PriceOptionsContainer ul li{margin-top:0}
+
+.outrWrap .zeroStateDash{z-index:95} /*Fix for - 902818*/
+
+/* 2013 PC Security  Center */
+.v2013 .pp-322{background: url(//secureimages.mcafee.com/legacy/2013/product/mtp_bg.jpg) no-repeat 0 0;}
+.prodId322 .new2013 .cnt-flt {width:700px; padding-left:15px;  }
+.prodId322 .new2013 .cnt-flt  img.img-flt{padding:0 20px 15px 0; margin-left:0}
+.ie7 .prodId322 .new2010 .cnt-flt {width:700px; padding-left:15px;}
+*[lang|="fr"] .prodId322 .new2010 .cnt-flt .tab-pcNote2011{padding: 0 0 0 220px;}
+*[lang|="fr"] .prodId322 .new2013 .cnt-flt p.paraSAlive{padding: 0 0 0 260px;}
+.prodId322 .new2013 .cnt-flt p{padding-bottom:15px;}
+
+/***** 2014 GTM *****/
+.v2014.v2 .pkg-sec .pkg-main .prod-features a.win8link{display:none;}
+
+/* PL listbox width for Partners */
+*[lang|="pl"] .HpPartners select, *[lang|="pl"] .v2014 #PriceOptionsContainer select,  *[lang|="pl"] .v2015 #PriceOptionsContainer select{width: 200px;} 
+
+/* Need to Protect... Learn More link */
+.prodId273.v2014.v2 .pkg-sec .pkg-main .prod-features .AspNet-FormView .AspNet-FormView-Data ul+div,
+.prodId272.v2014.v2 .pkg-sec .pkg-main .prod-features .AspNet-FormView .AspNet-FormView-Data ul+div,
+.prodId232.v2014.v2 .pkg-sec .pkg-main .prod-features .AspNet-FormView .AspNet-FormView-Data ul+div {display:none}
+
+.v2014.v2 .pp-271 {background: url('//secureimages.mcafee.com/legacy/2014/product/PDP_MAV_BG.png') no-repeat scroll 0px 0px #F7F2F2;}
+.v2014.v2 .pp-232 {background: url('//secureimages.mcafee.com/legacy/2014/product/PDP_MIS_BG.png') no-repeat 0 0 #F9F6F6;}
+
+/* MMA hide and show  */
+.prodId507.v2014.v2 .tabThemeV2 .FeatureSecWrap li ul,
+.prodId411.v2014.v2 .tabThemeV2 .FeatureSecWrap li ul,
+.prodId421.v2014.v2 .tabThemeV2 .FeatureSecWrap li ul,
+.prodId427.v2014.v2 .tabThemeV2 .FeatureSecWrap li ul,
+.prodId428.v2014.v2 .tabThemeV2 .FeatureSecWrap li ul,
+.prodId461.v2014.v2 .tabThemeV2 .FeatureSecWrap li ul,
+.prodId462.v2014.v2 .tabThemeV2 .FeatureSecWrap li ul,
+.prodId467.v2014.v2 .tabThemeV2 .FeatureSecWrap li ul,
+.prodId468.v2014.v2 .tabThemeV2 .FeatureSecWrap li ul   {display: none;margin-top: 10px;}
+
+.prodId507.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li,
+.prodId411.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li,
+.prodId421.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li,
+.prodId427.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li,
+.prodId428.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li,
+.prodId461.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li,
+.prodId462.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li,
+.prodId467.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li,
+.prodId468.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li {list-style-type: none;margin-left: 0px;}
+
+.prodId507.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li li,
+.prodId411.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li li,
+.prodId421.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li li,
+.prodId427.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li li,
+.prodId428.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li li,
+.prodId461.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li li,
+.prodId462.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li li,
+.prodId467.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li li,
+.prodId468.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li li {margin-left: 27px;list-style-type: disc;margin-bottom: 12px;color: #444;line-height: 24px;}
+
+.prodId507.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p:first-child,
+.prodId411.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p:first-child,
+.prodId421.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p:first-child,  
+.prodId427.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p:first-child,  
+.prodId428.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p:first-child,
+.prodId461.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p:first-child,
+.prodId462.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p:first-child,
+.prodId467.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p:first-child,
+.prodId468.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p:first-child {background: url('//secureimages.mcafee.com/legacy/ProductDetail/2014/plus_icon_off.png') no-repeat 0 50%;padding-left: 14px;cursor: pointer;color: #008EE5;font-size: 12px;line-height: 18px;font-weight: bold;}
+
+.prodId507.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p:first-child:hover,
+.prodId411.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p:first-child:hover, 
+.prodId421.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p:first-child:hover, 
+.prodId427.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p:first-child:hover, 
+.prodId428.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p:first-child:hover,
+.prodId461.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p:first-child:hover,
+.prodId462.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p:first-child:hover,
+.prodId467.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p:first-child:hover,
+.prodId468.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p:first-child:hover {background: url('//secureimages.mcafee.com/legacy/ProductDetail/2014/plus_icon_on.png') no-repeat 0 50%;}
+
+.prodId507.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p.collaps,
+.prodId411.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p.collaps,
+.prodId421.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p.collaps,
+.prodId427.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p.collaps,
+.prodId428.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p.collaps,
+.prodId461.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p.collaps,
+.prodId462.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p.collaps,
+.prodId467.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p.collaps,
+.prodId468.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p.collaps  {background: url('//secureimages.mcafee.com/legacy/ProductDetail/2014/minus_icon_off.png') no-repeat 0 50%;color: #B71234;}
+
+.prodId507.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p.collaps:hover,
+.prodId411.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p.collaps:hover,
+.prodId421.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p.collaps:hover,
+.prodId427.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p.collaps:hover,
+.prodId428.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p.collaps:hover,
+.prodId461.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p.collaps:hover,
+.prodId462.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p.collaps:hover,
+.prodId467.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p.collaps:hover,
+.prodId468.v2014.v2 .tabThemeV2 .FeatureSecWrap .MaaTabCus li p.collaps:hover {background: url('//secureimages.mcafee.com/legacy/ProductDetail/2014/minus_icon_on.png') no-repeat 0 50%;}
+/* ends here */
+
+.prodId411.v2014.v2 .pp-411, .prodId421.v2014.v2 .pp-421, .prodId507.v2014.v2 .pp-507, .prodId427.v2014.v2 .pp-427, .prodId428.v2014.v2 .pp-428, .prodId461.v2014.v2 .pp-461, .prodId462.v2014.v2 .pp-462, .prodId467.v2014.v2 .pp-467, .prodId468.v2014.v2 .pp-468 {background: url("//secureimages.mcafee.com/legacy/2014/product/PDP_MAA_bg.png") no-repeat scroll 0px 0px transparent;}
+
+.prodId507.v2014.v2 .tabThemeV2 .FeatureSecWrap li p.learnMore a,
+.prodId394.v2014.v2 .tabThemeV2 .FeatureSecWrap li p.learnMore a,
+.prodId395.v2014.v2 .tabThemeV2 .FeatureSecWrap li p.learnMore a,
+.prodId411.v2014.v2 .tabThemeV2 .FeatureSecWrap li p.learnMore a,
+.prodId421.v2014.v2 .tabThemeV2 .FeatureSecWrap li p.learnMore a,
+.prodId427.v2014.v2 .tabThemeV2 .FeatureSecWrap li p.learnMore a,
+.prodId428.v2014.v2 .tabThemeV2 .FeatureSecWrap li p.learnMore a,
+.prodId461.v2014.v2 .tabThemeV2 .FeatureSecWrap li p.learnMore a,
+.prodId462.v2014.v2 .tabThemeV2 .FeatureSecWrap li p.learnMore a,
+.prodId467.v2014.v2 .tabThemeV2 .FeatureSecWrap li p.learnMore a,
+.prodId468.v2014.v2 .tabThemeV2 .FeatureSecWrap li p.learnMore a {display:none;}
+
+/*Hide MAA links on MMA pdp page*/
+.prodId411.v2014 .viewLinks, .prodId421.v2014 .viewLinks, .prodId507.v2014 .viewLinks, .prodId427.v2014 .viewLinks, .prodId428.v2014 .viewLinks,.prodId461.v2014 .viewLinks, .prodId462.v2014 .viewLinks, .prodId467.v2014 .viewLinks, .prodId468.v2014 .viewLinks {display:none;}
+
+/*Display Buy now button in MMS Unified SKU (459) page*/
+.v2014.prodId459 .pp-top-promo.pp-459 .pkg-sec .price-sec .priceDisplay, .v2014.prodId459 .pp-top-promo.pp-459 .pkg-sec .price-sec .btn-sml-buynow {display: inline-block;}
+.v2014.prodId459 .pkg-sec b {float:none;}
+
+/*Fix for BZ ID 891038 - Screenshots link content is not available for PT-BR 341 package. Hence hiding the element only for the below scenario i.e PT-BR 341 package*/
+*[lang|="pt"] .v2013 .pp-341 .viewLinks a.vScreenShots{padding-bottom:0}
+*[lang|="pt"].ie7 .v2013 .pp-341 .viewLinks a.vScreenShots{display:none}
+
+/*Store Optimization - removed header and footer links for direct and affiliates for ecard flow*/
+#ecardform {margin-top:10px;}
+#eCardReceiptform{margin-top:20px;}
+body #bdy .ECards div#ecardform.ecardMLS{margin-top:0;}
+
+.header a.HSLogo{display:block}
+.header .ISLogo{display:none}
+
+
+/* Start - 2015 GTM Boxshot Styles Override */
+/* Stles will override new 2015 GTM ECard Updates */
+
+#bgImg276yr12 h3, 
+#bgImg444yr12 h3, 
+#bgImg272yr12 h3, 
+#bgImg273yr12 h3, 
+#bgImg274yr12 h3, 
+#bgImg275yr12 h3, 
+#bgImg430yr12 h3, 
+#bgImgMMSMultiSKUTablet h3,
+#bgImgMMSMultiSKU h3, 
+#bgImg358yr12 h3 { 
+	color: #000000;
+} 
+
+.ECards.v2014 #bgImg276yr12.up, 
+.ECards.v2014 #bgImg444yr12.up, 
+.ECards.v2014 #bgImg272yr12.up, 
+.ECards.v2014 #bgImg273yr12.up, 
+.ECards.v2014 #bgImg274yr12.up, 
+.ECards.v2014 #bgImg275yr12.up, 
+.ECards.v2014 #bgImg430yr12.up, 
+.ECards.v2014 #bgImgMMSMultiSKUTablet.up,
+.ECards.v2014 #bgImgMMSMultiSKU.up, 
+.ECards.v2014 #bgImg358yr12.up { 
+	width:745px;
+	padding-top:0;
+}
+
+
+
+
+#cdKeyImg430{ background: url(https://secureimages.mcafee.com/productcard/2013/key_mls.gif) no-repeat 0 24px;}
+#cdKeyImg277yr12{background: url(https://secureimages.mcafee.com/productcard/2012/key_avp.jpg) no-repeat 0 24px;} /* 3-User McAfee AntiVirus Plus */
+
+
+#cdKeyImg276yr12 span.regNum, 
+#cdKeyImg277yr12 span.regNum, 
+#cdKeyImg273yr12 span.regNum,
+#cdKeyImg275yr12 span.regNum,
+#cdKeyImg272yr12 span.regNum,
+#cdKeyImg274yr12 span.regNum,
+#cdKeyMIM14 span.regNum,
+#cdKeyMAV14 span.regNum, 
+#cdKeyMIS14 span.regNum, 
+#cdKeyMTP14 span.regNum, 
+#cdKeyImg430 span.regNum, 
+#cdKeyMMS14 span.regNum { 
+	float: right;
+	top: 33px; 
+	left: 20px;
+}
+
+/* End - 2015 GTM Boxshot Styles Override */
+
+/*start - Affiliate ECard Styles */
+.footerLogo { display: none; }
+/*end - Affiliate ECard Styles */
+#keycardWrapper{margin-top:0}/*Keycard page*/
+
+.v2014 .pp-391 {
+    background: url("//secureimages.mcafee.com/legacy/2014/product/PDP_MAV_BG.png") no-repeat scroll 0 0 #f7f2f2;
+}

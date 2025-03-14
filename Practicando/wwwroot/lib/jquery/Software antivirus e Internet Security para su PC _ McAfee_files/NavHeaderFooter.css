@@ -1,0 +1,464 @@
+﻿/* OpenSans Fonts */
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url('/UIDesign/fonts/OpenSans-Regular.ttf') format("truetype"), url('/UIDesign/fonts/OpenSans-Regular.woff') format("woff"), url('/UIDesign/fonts/OpenSans-Regular.eot?#iefix"') format("eot");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans-Bold";
+    src: url('/UIDesign/fonts/OpenSans-Bold.ttf') format("truetype"), url('/UIDesign/fonts/OpenSans-Bold.woff') format("woff"), url('/UIDesign/fonts/OpenSans-Bold.eot?#iefix"') format("eot");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans-Light";
+    src: url('/UIDesign/fonts/openSans-Light.ttf') format("truetype"), url('/UIDesign/fonts/openSans-Light.woff') format("woff"), url('/UIDesign/fonts/openSans-Light.eot?#iefix"') format("eot");
+    font-weight: 200;
+    font-style: normal;
+}
+/* Header CSS Start */
+.headerPageBar {
+    background-color: #000;
+    height: 60px;
+}
+
+.header, .off-canvas.fixed .header {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    font-family: OpenSans-Regular !important;
+}
+
+    .header .navbarContainer {
+        display: table;
+        width: 100%;
+    }
+
+    .header .header-wrap {
+        padding: 26px 5% 22px;
+        background: #000000;
+        max-height: 80px;
+    }
+
+.dropbtn {
+    cursor: pointer;
+    margin: 1px 1px 1px 1px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+    .dropbtn:hover, .dropbtn:focus, .dropdown-content.link a:hover, .dropdown-content.link a:focus {
+        color: #c2c3c5;
+        text-decoration: none;
+    }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content-container {
+    display: none;
+}
+
+.dropdown-content.link {
+    position: absolute;
+    background-color: #262626;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 5%;
+    padding: 1rem;
+    left: -7%;
+    width: 280px;
+}
+
+    .dropdown-content.link.dropDownProductServices, .dropdown-content.link.dropDownDevices, .dropdown-content.link.dropDownResources {
+        display: flex;
+        padding: 60px 250px;
+        width: 100%;
+        left: 0;
+        z-index: 15;
+        margin-top: 15px;
+        position: fixed;
+    }
+
+.linkHeading {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: normal;
+    padding: 0 0 5px 0;
+    display: inline-block;
+    width: 85%;
+    border-bottom: 1px solid #4258FF;
+    color: #fff;
+    margin: 20px 0;
+}
+
+.linkContainer > a {
+    font-size: 14px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    display: block;
+    color: #fff;
+}
+
+    .linkContainer > a:hover, .buttonLinkContainer-a > a:hover, .buttonLinkContainer-b > a:hover {
+        cursor: pointer;
+        color: #EA1010 !important;
+    }
+
+.buttonLinkContainer-a {
+    margin: 3rem 0;
+}
+
+.buttonLinkContainer-b {
+    margin: 1rem 0;
+}
+
+a.buttonLink-a {
+    border: 1px solid #fff;
+    max-width: 270px;
+}
+
+a.buttonLink-b {
+    border: 1px solid #fff;
+    max-width: 100px;
+}
+
+    a.buttonLink-a:hover, a.buttonLink-b:hover {
+        border-color: #EA1010;
+    }
+
+.buttonLinkContainer-a > a, .buttonLinkContainer-b > a {
+    margin-bottom: 20px;
+    font-weight: bold;
+    display: block;
+    color: #fff;
+    text-align: center;
+}
+
+.buttonLinkContainer-a > a {
+    padding: .9rem 1.0rem;
+}
+
+.buttonLinkContainer-b > a {
+    padding: .5rem;
+}
+
+.dropdownMarker {
+    margin-left: -5px;
+    border-width: 12px;
+    border-style: solid;
+    border-color: transparent transparent #262626 transparent;
+    z-index: 1000;
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 180px;
+}
+
+    .dropdownMarker.dropDownProductServices {
+        top: 70%;
+        left: 80px;
+    }
+
+    .dropdownMarker.dropDownDevices {
+        top: 70%;
+        left: 230px;
+    }
+
+    .dropdownMarker.dropDownResources {
+        top: 70%;
+        left: 340px;
+    }
+/*.dropdown-content::before {
+    content: "";
+    position: absolute;
+    top: -3%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #262626 transparent;
+    z-index: 1000;
+}*/
+.dropdown-content.link > a {
+    color: #FFF;
+    padding: 6px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: OpenSans-Regular;
+    font-weight:400;
+    font-size: 14px;
+}
+
+.container-default-margin-top {
+    margin-top: 10%;
+}
+
+.dropdown a:hover {
+    color: #c2c3c5 !important;
+}
+
+.displaynavbar {
+    display: block;
+}
+
+.mcafeeLogo > a > img {
+    width: 108px;
+    height: 22px;
+}
+.mcafeeLogo {
+    display: flex;
+    align-items: center;
+}
+
+.navRegion {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navCountryLogo {
+    width: 30px;
+    height: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.navProductContainer > div {
+    font-size: 16px;
+}
+
+.navProductContainer {
+    display: flex;
+}
+
+a i {
+    margin-left: 8px;
+}
+
+i.fa-globe {
+    margin-top: 2px;
+}
+
+.navAccountContainer {
+    display: flex;
+}
+
+.navAccountContainer > div {
+    margin-right: 5%;
+}
+
+.partnerLogoContainer {
+    text-align: center;
+    margin: 0px 9px 0px;
+}
+.partnerlogo_separator {
+    border-left: 1px solid #6c757d;
+    height: 38px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+.partnerlogo__separatorContainer {
+    margin: -4px 0px 0px;
+}
+
+.partnerLogoText {
+    color: white;
+    font-size: 10px;
+}
+
+.partnerImg {
+    vertical-align: middle;
+    max-height: 36px;
+    padding-bottom: 5px;
+}
+
+.displayNone {
+    display: none;
+}
+/* Header CSS End */
+/*Footer CSS Start*/
+.supportContainer, .aboutContainer {
+    display: flex;
+}
+
+.footerContainer, .footerContainer a {
+    color: #FFFFFF;
+}
+
+.footerBtn a:hover {
+    color: #EA1010;
+    text-decoration: none;
+}
+
+.footerContainer {
+    background-color: #53565A;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+    margin-right: 0 !important;
+    padding-top: 16px;
+}
+
+.footer {
+    z-index: 10;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .footerContainer {
+        padding: 40px 50px 40px 150px;
+    }
+
+    .downGradeOptionSubContainer.device1 {
+        margin-left: 470px;
+    }
+
+    .downGradeOptionSubContainer.device2 {
+        margin-left: 310px;
+    }
+
+    .downGradeOptionSubContainer.device3 {
+        margin-left: 140px;
+    }
+}
+
+@media (min-width: 992px) {
+    .footerContainer {
+        padding: 40px 50px 40px 0px;
+    }
+}
+
+@media (min-width: 1380px) {
+    .footerContainer {
+        padding: 40px 50px 40px 0px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .footerContainer {
+        padding: 40px 50px 40px 50px;
+    }
+}
+
+@media (min-width: 1900px) {
+    .footerContainer {
+        padding: 40px 50px 40px 150px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .downGradeOptionSubContainer.device1 {
+        margin-left: 270px;
+    }
+
+    .downGradeOptionSubContainer.device2 {
+        margin-left: 100px;
+    }
+
+    .downGradeOptionSubContainer.device3 {
+        margin-left: 0px;
+    }
+
+    .highlighter {
+        width: 30%;
+    }
+
+    .navProductContainer > div, .navAccountContainer > div {
+        font-size: 12px;
+    }
+
+    span#m_SubscriptionBenefit_lblDeviceProtectionCount, span#m_SubscriptionList_lblProtectionCount {
+        font-size: .6em;
+    }
+
+    .settingHeading {
+        font-size: .5em;
+    }
+
+    .endMemberShipDesc, .remindMeDesc {
+        font-size: 12px;
+    }
+
+    span#m_SubscriptionBenefit_lblEmailAddressValue {
+        font-size: .7em;
+    }
+
+    .subBenefitLink, .subBenefitDesc {
+        font-size: .9em;
+    }
+
+    .subBenefitHeading {
+        font-size: 1em;
+    }
+
+    img.subBenefitImg {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.supportContainer > div, .aboutContainer > div {
+    margin-left: 20px;
+}
+
+.footerBtn {
+    text-decoration: none;
+}
+
+.footerBtn {
+    font-size: 15px;
+    line-height: 16px;
+}
+
+.footerHeading {
+    font-size: 18px;
+    line-height: 16px;
+    font-weight: 600;
+}
+
+.aboutContainer {
+    padding: 18px 0px 18px 0px;
+    border-top: 1px solid #ABB2C3;
+}
+
+.supportContainer {
+    padding-bottom: 18px;
+}
+
+.paddingLeftNone {
+    padding-left: 0 !important;
+}
+
+.marginLeftNone {
+    margin-left: 0 !important;
+}
+
+.tAndC {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left;
+}
+
+.footerLogo {
+    height: 37px;
+}
+
+
+/*Footer CSS End*/
