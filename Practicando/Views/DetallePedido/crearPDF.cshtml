@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Practicando.Models.Clientes>
+
+@foreach(var data in Model)
+{
+    <div class="text-center">
+    <h1>Factura</h1>
+    </div>
+    <div class="text-end">
+        <ul>
+            <li>Cliente: @data.NombreC + @data.Apellido</li>
+            <li>Telefono: @data.Telefono</li>
+            <li>Direccion:@data.Direccion</li>
+            <li>Email: @data.CorreoElectronico</li>
+        </ul>
+    </div>
+}
+
+

@@ -11,21 +11,18 @@
     </ol>
 </nav>
 
- 
-<div class="table-responsive p-2" >
+
+<div class=" container p-2 text-end rounded" style="background-color:white;">
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Nuevo Cliente
+    </button>
+</div>
+<br />
+<div class="table-responsive p-2 rounded" style="background-color:white " >
     
-    <div class=" row g-2 p-2">
-        <div class="col-md-2 align-content-center  ">
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary  d-grid gap-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Nuevo Cliente
-            </button>
-        </div>
-        <div class="col-md-10  bg-light bg-opacity-50 border border-info border-start-0 rounded-end col-5 border-5">
-            <h5 class="text-center">Listado de Clientes</h5>
-        </div>
-    </div>
-    <table id="tablaclientes" class="table table-bordered">
+<table id="tablaclientes" class="table table-bordered">
         
     <thead>
         <tr>
@@ -39,12 +36,13 @@
         </tr>
     </thead>
     <tbody class="table-group-divider">
-            @Html.Partial("_tablaclientes", Model);
+             @Html.Partial("_tablaclientes", Model) 
     </tbody>
     <tfoot class="bg-primary p-2">
       
     </tfoot>
 </table>
+   
 </div>
 
 
@@ -305,7 +303,7 @@
                 url:'/Home/recargartabla',
                 type:'GET',
                 success: function(data){
-                    console.log(data)
+                    console.log(data);
                     $("#tablaclientes tbody").html(data);
                 },
                 error: function(xhr,status,error){
@@ -314,4 +312,10 @@
             });
         }
 
+
+        function redirigir(IdCliente) {
+            window.location.href = `/DetallePedido/DetalleP/${IdCliente}`;
+        } 
+
+        
 </script>

@@ -1,0 +1,416 @@
+﻿@{
+    ViewData["Title"] = "Detalle Pedidos";
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+@*@model IEnumerable<Practicando.Models.VDetallePedido>*@
+<style>
+    #miDiv {
+        width: 100%; /* Se adapta al contenedor padre */
+        overflow-x: auto;
+    }
+
+    #tablaDatos.dataTable {
+        width: 100%; /* La tabla ocupará el ancho del div */
+        /* Ajusta automáticamente las columnas */
+    }
+</style>
+@*Migajas*@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="#">Cliente</a></li>
+        <li class="breadcrumb-item"><a href="#">Detalle Pedido</a></li>
+    </ol>
+</nav>
+<!--Div con botones de agregar y regresar-->
+<div class="container p-3 text-end rounded" style="background-color: white">
+    <button class="btn btn-secondary" onclick="window.history.back()"> Regresar</button>
+    <button class="btn btn-primary" id="Productos" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Nuevo pedido</button>
+</div>
+<br />
+<!--contenedor de formulario para recuperar datos del cliente-->
+<div class="container p-3 rounded" style="background-color:white">
+    <form id="ClientedId">
+        <div class="row g-2">
+            <input id="IdCliente" class="form-control" name="IdCliente" type="hidden" />
+            <div class="col-md-3">
+                <label class="form-label">Nombre Cliente</label>
+                <input type="text" class="form-control" id="NombreC"  disabled>
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="Apellidos"  disabled>
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" id="email"  disabled>
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Tel|Cel</label>
+                <input type="text" class="form-control" id="Telefono"  disabled>
+            </div>
+        </div>
+    </form>
+</div>
+<br />
+<!--Contenedor donde se encuentra mi tabla-->
+<div class="container rounded" id="miDiv" style="background-color:white; width:100%">
+    <div class=" conteiner text-center rounded bg-primary p-1" >
+        <h5 class="text-white">Pedidos cliente</h5>
+    </div>
+    <br />
+    <!--Tabla sol estoy dibujando el encabesado para traer los datos con datatable de jquery-->
+    <table id="tablaDatos" class="table table-bordered" style="width:100%;">
+
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Cantidad</th>
+                <th>Producto</th>
+                <th>Descripcion</th>
+                <th>Precio</th>
+                <th>Total</th>
+                <th>Fecha</th>
+                <th>Estatus|Eliminar</th>
+            </tr>
+        </thead>
+        <tbody >
+           <!--Aqui se mostrara el contenido de la tabla-->
+        </tbody>
+    </table>
+</div>
+
+
+<!-- Modal Agregar Pedido -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h1 class="modal-title fs-5 " id="staticBackdropLabel">Nuevo Pedido</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="AProductos">
+                    <div class="row p-2">
+                        <div class="input-group col-md-12">
+                            <label class="input-group-text" for="IdProducto">Productos</label>
+                            <select id="IdProducto" name="IdProducto" class="form-select" aria-label="Elige un producto">
+                                <option value="">Elige un producto</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row g-3 p-3">
+                        <div class="col-md-5">
+                            <label class="form-label" for="Stock">Cantidad Existente</label>
+                            <input class="form-control" type="number" id="Stock" readonly placeholder="Cantidad Existente" disabled>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label" for="Precio">Precio</label>
+                            <input type="text" id="Precio" class="form-control" readonly placeholder="Precio" disabled>
+                        </div>
+                        <div class="col-md-5">
+                            <label class="form-label" for="Cantidad">Cantidad a comprar</label>
+                            <input type="number" id="Cantidad" class="form-control" min="0" required >
+                        </div>
+                    </div>
+                    <!--Alerta cantidad-->
+                    <div class="alert alert-danger  text-center" role="alert" id="alertaCantidad" style="display: none;">
+                      La cantidad no puede superar la contidad existente
+                    </div>
+                    <div class="alert alert-danger  text-center" role="alert" id="alertStock" style="display: none;">
+                        Este producto esta agotado por favor elija otro
+                    </div>
+                    <div class="text-center d-grid gap-2 col-6 mx-auto p-2">
+                        <button type="submit" id="GuardarPedido" class="btn btn-success justify-content-end">Guardar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-primary p-2">
+        </div>
+    </div>
+</div>
+</div>
+<div class="modal fade" id="Eliminar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content text-center">
+            <div class="modal-header border-1 bg-danger text-white ">
+                <h5 class="modal-title text-white" id="Eliminar">Eliminar cliente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                ¿Estas seguro de que desea eliminar este cliente?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                <button type="button" class="btn btn-danger" id="Aceptar">Si</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Aqui se muestran las funciones-->
+<script>
+
+   
+    var $j = jQuery.noConflict(); // esta variable es para que no cause conflicto jquery por el sinbolo $
+    
+    //Aqui estamos cargando la fucnion recargar cada que se recarga la pagina
+    $j(document).ready(function() {
+        recargar();
+    });
+
+    //Esta funcion es para traer los datos del cliente
+    function recargar(){
+
+        var IdCliente=@ViewBag.IdCliente;
+        
+        $.ajax({
+        url:'/DetallePedido/DatosCliente',
+        type:'GET',
+        data:{IdCliente: IdCliente},
+        success: function(data){
+                
+            $("#ClientedId #IdCliente").val(data.idCliente);
+            $("#ClientedId #NombreC").val(data.nombreC);
+            $("#ClientedId #Apellidos").val(data.apellido);
+            $("#ClientedId #email").val(data.correoElectronico);
+            $("#ClientedId #Telefono").val(data.telefono);
+        }
+    });
+    }
+
+    //Aqui traemos los datos para mi select
+    $j("#Productos").on('click', function(){
+      
+        $.ajax({
+            url: '/DetallePedido/ObtenerProductos',
+            type: 'GET', 
+            success: function(data) {
+               
+                var select = $("#IdProducto");
+                select.empty();//se limpia el select
+                data.forEach(function(item){
+                    $("#IdProducto").append(
+                    $('<option>', { value: item.idProducto, text: item.nombreProducto })
+                );
+                });
+            },
+            error: function(error) {
+                alert("Error al cargar los productos.");
+            }
+        });
+      
+    });
+    
+    //Aqui estamos llenando automaticamente los campos de precio
+    //y stock deacuerdo con el id del producto
+    $j("#IdProducto").on('click',function() {
+
+        let IdProducto = $("#IdProducto").val();
+        var alertaStock = $("#alertStock");
+
+        $.ajax({
+            url:'/DetallePedido/Recargardatosform',
+            type:'GET',
+            data:{IdProducto:IdProducto},
+            success: function(data){
+                //console.log(data);
+                if(data != null){
+                    $("#Precio").val(data.precio);
+                    $("#Stock").val(data.stock);
+                    var stock = $("#Stock").val();  
+                    stock==0 ? alertaStock.show() : alertaStock.hide();
+                  
+                }else{
+                    $("#Precio").val("");
+                    $("#Stock").val("");
+                }
+              
+            }
+        });
+       
+    });
+
+    // Restablece todos los valores a su estado inicial
+    $j(document).ready(function () {
+        $('#staticBackdrop').on('hidden.bs.modal', function () {
+            $('#AProductos')[0].reset(); 
+        });
+    });
+
+    //Validamos que la cantidad que se desea comprar no sea mayor a la del stock
+    $j(document).ready(function(){
+
+     var stock =  $("#Stock");
+     var cantidad = $("#Cantidad");
+     var alertaCantidad = $("#alertaCantidad");
+     
+     cantidad.on('input', function(){
+        var stockMax = parseInt(stock.val(),10);
+
+        if(parseInt(cantidad.val(), 10) > stockMax){
+            alertaCantidad.show();
+            cantidad.val(stockMax);
+
+        }else
+        {
+             alertaCantidad.hide(); // Ocultar la alerta si el valor es válido
+        }
+
+        
+     });
+     
+   });
+    
+   //Funcion para guardar los datos
+    $j("#GuardarPedido").on('click', function(){
+        var IdProducto = $("#AProductos #IdProducto").val();
+        var IdCliente  = @ViewBag.IdCliente;
+        var Fecha = new Date().toISOString();
+        var Cantidad = $("#AProductos #Cantidad").val();
+        var Precio =    $("#AProductos #Precio").val();
+        var Stock = $("#AProductos #Stock").val();
+       
+
+       
+
+        datos = {
+           
+            IdCliente:IdCliente,
+            Fecha:Fecha,
+            IdProducto:IdProducto,
+            Cantidad:Cantidad,
+            Precio:Precio
+        }
+
+        $.ajax({
+            url:'/DetallePedido/GuardarPedido',
+            type:'POST',
+            data: JSON.stringify(datos),
+            contentType: "application/json",
+            success: function(data){
+
+                if(data.success == true){
+
+                    alert(data.menssage);
+                    $("#ClientedId")[0].reset();
+                    $("#staticBackdrop").modal('hide');
+                    recargar();
+                    miTabla.ajax.reload();
+                }
+                else
+                {
+                    alert("Ocurrio un error al hacer el pedido;")
+                }
+            },
+            error: function(xhr, status, error) {
+            console.error('Ocurrió un error:', error);
+            console.log('Estado:', status);
+            console.log('Respuesta:', xhr.responseText);
+            }
+        });
+       
+    });
+
+    //Funcion para recargar la tabla
+    $j(document).ready(function () {
+
+        var Id = @ViewBag.IdCliente;
+        let con = 1;
+          //const boton = ;
+
+        var miTabla=$('#tablaDatos').DataTable({
+            
+            ajax: {
+                url: '/DetallePedido/ObtenerDatosTabla',
+                data: function (d) { d.id = Id; },
+                dataSrc: '', 
+
+            },
+            columns: [
+                {
+                    data: null, // Deja el valor nulo para la columna del contador
+                    render: function (data, type, row) {
+                    return con++;}  
+    
+                },
+                { data: 'cantidad' },       
+                { data: 'nombreProducto' }, 
+                { data: 'descripcion' },    
+                { data: 'precio' },         
+                { data: 'total' },        
+                {
+                    data: 'fecha',          
+                    render: function (data) {
+                        // Formatear la fecha a un formato más legible
+                        return new Date(data).toLocaleDateString();
+                    }
+                },
+                {
+                    data: null, // Columna vacía para el botón
+                    render: function (data, type, row) {
+                              return `<button class="btn-dinamico"  onclick="EliminarPedido(${row.id_pedidos})" title:"Eliminar" data-bs-toggle="modal" data-bs-target="#Eliminar"></button>`;
+                    }
+            
+                }
+            ],
+            language: {
+            decimal: ",",
+            thousands: ".",
+            search: "Buscar:",
+            lengthMenu: "Mostrar _MENU_ registros",
+            info: "Mostrando _START_ a _END_ de _TOTAL_ registros",
+            infoEmpty: "No hay registros disponibles",
+            infoFiltered: "(filtrado de _MAX_ registros totales)",
+            loadingRecords: "Cargando...",
+            processing: "Procesando...",
+            zeroRecords: "No se encontraron registros coincidentes",
+            paginate: {
+                first: "Primero",
+                last: "Último",
+                next: "Siguiente",
+                previous: "Anterior"
+            },
+            aria: {
+                sortAscending: ": activar para ordenar la columna ascendente",
+                sortDescending: ": activar para ordenar la columna descendente"
+            }
+            },
+            pageLength: 5, // Número de filas por página
+            responsive: true, // Hace la tabla responsiva
+            scrollX: true,
+        });
+    });
+
+       function EliminarPedido(idPedido){
+
+             $('#Aceptar').on('click', function() {
+                  Aceptar(idPedido);
+
+             });
+
+       }
+
+          function Aceptar(idPedido){
+
+                 $.ajax({
+                      url:'/DetallePedido/EliminarPedidos',
+                     type:'POST',
+                       data:{idPedido:idPedido},
+                     success:function(data){
+                     
+                            alert(data.menssage);
+                           $("#Eliminar").modal('hide');
+                            miTabla.ajax.reload();
+                        
+                     },
+                     error: function() {
+                         alert('Ocurrió un error al comunicarse con el servidor.');
+                     }
+                 });
+             }
+
+    
+</script>

@@ -170,3 +170,6 @@ C:\Users\dell4\source\repos\Practicando\Practicando\obj\Debug\net8.0\refint\Prac
 C:\Users\dell4\source\repos\Practicando\Practicando\obj\Debug\net8.0\Practicando.pdb
 C:\Users\dell4\source\repos\Practicando\Practicando\obj\Debug\net8.0\Practicando.genruntimeconfig.cache
 C:\Users\dell4\source\repos\Practicando\Practicando\obj\Debug\net8.0\ref\Practicando.dll
+C:\Users\dell4\source\repos\Practicando\Practicando\obj\Debug\net8.0\Practicando.sourcelink.json
+C:\Users\dell4\source\repos\Practicando\Practicando\bin\Debug\net8.0\Rotativa.AspNetCore.dll
+C:\Users\dell4\source\repos\Practicando\Practicando\obj\Debug\net8.0\Practicando.MvcApplicationPartsAssemblyInfo.cs

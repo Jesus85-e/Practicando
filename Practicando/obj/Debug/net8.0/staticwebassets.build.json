@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DVNQvgy1PAIALr0QV4gQDoQA6Ll8XtIHGRtc9c/Bcmk=",
+  "Hash": "OIPT75t//tlSkuMO5pATIdwrTKi1/y3hJx61qcscu5Y=",
   "Source": "Practicando",
   "BasePath": "_content/Practicando",
   "Mode": "Default",
@@ -2052,6 +2052,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
+      "SourceId": "Practicando",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\",
+      "BasePath": "_content/Practicando",
+      "RelativePath": "Rotativa/wkhtmltopdf#[.{fingerprint}]?.exe",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jhzul28502",
+      "Integrity": "2bPSyBSW6Lulzfa832+D48S2LRVHoQhrw4xqa/GryGk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Rotativa\\wkhtmltopdf.exe"
     }
   ],
   "Endpoints": [
@@ -10006,6 +10027,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-n3cHPdSBb2WVTqjjLKOzBYk+a6Kww4sWxfkFFViiyAU="
+        }
+      ]
+    },
+    {
+      "Route": "Rotativa/wkhtmltopdf.exe",
+      "AssetFile": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30235648"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.microsoft.portable-executable"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2bPSyBSW6Lulzfa832+D48S2LRVHoQhrw4xqa/GryGk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 10 Jun 2020 20:03:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2bPSyBSW6Lulzfa832+D48S2LRVHoQhrw4xqa/GryGk="
+        }
+      ]
+    },
+    {
+      "Route": "Rotativa/wkhtmltopdf.jhzul28502.exe",
+      "AssetFile": "C:\\Users\\dell4\\source\\repos\\Practicando\\Practicando\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30235648"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.microsoft.portable-executable"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2bPSyBSW6Lulzfa832+D48S2LRVHoQhrw4xqa/GryGk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 10 Jun 2020 20:03:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jhzul28502"
+        },
+        {
+          "Name": "label",
+          "Value": "Rotativa/wkhtmltopdf.exe"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2bPSyBSW6Lulzfa832+D48S2LRVHoQhrw4xqa/GryGk="
         }
       ]
     }

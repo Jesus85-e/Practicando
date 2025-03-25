@@ -1152,5 +1152,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"xctn8nhrpj"},{"Name":"integrity","Value":"sha256-n3cHPdSBb2WVTqjjLKOzBYk\u002Ba6Kww4sWxfkFFViiyAU="},{"Name":"label","Value":"_content/Practicando/Practicando.bundle.scp.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1129"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022n3cHPdSBb2WVTqjjLKOzBYk\u002Ba6Kww4sWxfkFFViiyAU=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 02:55:13 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Practicando/Rotativa/wkhtmltopdf.exe">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Rotativa\wkhtmltopdf.exe'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-2bPSyBSW6Lulzfa832\u002BD48S2LRVHoQhrw4xqa/GryGk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"30235648"},{"Name":"Content-Type","Value":"application/vnd.microsoft.portable-executable"},{"Name":"ETag","Value":"\u00222bPSyBSW6Lulzfa832\u002BD48S2LRVHoQhrw4xqa/GryGk=\u0022"},{"Name":"Last-Modified","Value":"Wed, 10 Jun 2020 20:03:24 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Practicando/Rotativa/wkhtmltopdf.jhzul28502.exe">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Rotativa\wkhtmltopdf.exe'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jhzul28502"},{"Name":"integrity","Value":"sha256-2bPSyBSW6Lulzfa832\u002BD48S2LRVHoQhrw4xqa/GryGk="},{"Name":"label","Value":"_content/Practicando/Rotativa/wkhtmltopdf.exe"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"30235648"},{"Name":"Content-Type","Value":"application/vnd.microsoft.portable-executable"},{"Name":"ETag","Value":"\u00222bPSyBSW6Lulzfa832\u002BD48S2LRVHoQhrw4xqa/GryGk=\u0022"},{"Name":"Last-Modified","Value":"Wed, 10 Jun 2020 20:03:24 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

@@ -1,10 +1,11 @@
-using System.Diagnostics;
-using System.Threading.Tasks;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+
 using Practicando.Models;
 using Practicando.Models.Data;
+
+
 
 namespace Practicando.Controllers;
 
@@ -22,15 +23,16 @@ public class HomeController : Controller
     public async Task<IActionResult> Index()
     {
         var lista = await context.Clientes.ToListAsync();
-
+        
         return View(lista);
     }
 
+    [HttpGet]
     public async Task<IActionResult> recargartabla()
     {
         var lista = await context.Clientes.ToListAsync();
 
-        return PartialView("_tablaclientes",lista);
+        return PartialView("_tablaclientes", lista);
     }
 
 
@@ -94,7 +96,7 @@ public class HomeController : Controller
     {
         var buscarcliente = await context.Clientes.FindAsync(datos.IdCliente);
 
-        if(buscarcliente != null)
+        if (buscarcliente != null)
         {
 
             buscarcliente.CorreoElectronico = datos.CorreoElectronico;
@@ -115,9 +117,9 @@ public class HomeController : Controller
     {
         var buscarcliente = await context.Clientes.FindAsync(IdCliente);
 
-        if(buscarcliente != null)
+        if (buscarcliente != null)
         {
-               context.Clientes.Remove(buscarcliente);
+            context.Clientes.Remove(buscarcliente);
             _ = await context.SaveChangesAsync();
 
             return Json(new { success = true, menssage = "El cliente se elimino correctamente" });
@@ -125,5 +127,7 @@ public class HomeController : Controller
 
         return Json(new { success = false, menssage = "Ocurrio un problema al eliminar al cliente" });
     }
+
   
+
 }

@@ -6,11 +6,11 @@ namespace Practicando.Models
     {
         [Key]
         public int IdCliente { get; set; }
-        public  string NombreC { get; set; }
-        public string Apellido { get; set; }
-        public string CorreoElectronico { get; set; }
-        public  string Direccion { get; set; }
-        public  string Telefono { get; set; }
+        public  string? NombreC { get; set; }
+        public string? Apellido { get; set; }
+        public string? CorreoElectronico { get; set; }
+        public  string? Direccion { get; set; }
+        public  string? Telefono { get; set; }
 
     }
 }
